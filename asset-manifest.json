@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.3c2c9c00.css",
-    "main.js": "/static/js/main.a9349e98.js",
-    "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
+    "main.css": "/static/css/main.18ad74cd.css",
+    "main.js": "/static/js/main.b56c089d.js",
+    "static/js/488.d384302e.chunk.js": "/static/js/488.d384302e.chunk.js",
     "static/media/phodelight_1.png": "/static/media/phodelight_1.477b546f55c076a62f7e.png",
     "static/media/phodelight_2.png": "/static/media/phodelight_2.5d1da58424e76d9dcb20.png",
     "static/media/avatar.jpg": "/static/media/avatar.de41b67a4f3f29c820e1.jpg",
@@ -106,12 +106,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.3c2c9c00.css.map": "/static/css/main.3c2c9c00.css.map",
-    "main.a9349e98.js.map": "/static/js/main.a9349e98.js.map",
-    "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
+    "main.18ad74cd.css.map": "/static/css/main.18ad74cd.css.map",
+    "main.b56c089d.js.map": "/static/js/main.b56c089d.js.map",
+    "488.d384302e.chunk.js.map": "/static/js/488.d384302e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c2c9c00.css",
-    "static/js/main.a9349e98.js"
+    "static/css/main.18ad74cd.css",
+    "static/js/main.b56c089d.js"
   ]
 }
