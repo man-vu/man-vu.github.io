@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3c2c9c00.css",
-    "main.js": "/static/js/main.2eac3353.js",
+    "main.js": "/static/js/main.a9349e98.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/phodelight_1.png": "/static/media/phodelight_1.477b546f55c076a62f7e.png",
     "static/media/phodelight_2.png": "/static/media/phodelight_2.5d1da58424e76d9dcb20.png",
@@ -95,6 +95,7 @@
     "static/media/letterm.png": "/static/media/letterm.2db85f5c17475bfa0e57.png",
     "static/media/googleAssistant.jpg": "/static/media/googleAssistant.547075a751cc15673246.jpg",
     "static/media/IELTS.png": "/static/media/IELTS.6168786df26817c725d2.png",
+    "static/media/comingsoon.jpg": "/static/media/comingsoon.e346ff211513968900ca.jpg",
     "static/media/freecodecamp.png": "/static/media/freecodecamp.58ad8902d04d50246571.png",
     "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/buld.jpg": "/static/media/buld.55444b9789a64f32e2e5.jpg",
@@ -106,11 +107,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.3c2c9c00.css.map": "/static/css/main.3c2c9c00.css.map",
-    "main.2eac3353.js.map": "/static/js/main.2eac3353.js.map",
+    "main.a9349e98.js.map": "/static/js/main.a9349e98.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c2c9c00.css",
-    "static/js/main.2eac3353.js"
+    "static/js/main.a9349e98.js"
   ]
 }
