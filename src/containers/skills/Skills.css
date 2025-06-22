@@ -3,6 +3,8 @@
   margin-top: 50px;
   overflow-x: auto;
   white-space: nowrap;
+  display: flex;
+  justify-content: center;
 }
 
 .skills-main-div {
@@ -28,9 +30,23 @@
 }
 
 .skills-list {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
+}
+
+.skills-list li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
 .skills-tab-panel {

@@ -54,12 +54,12 @@ function ExperienceCard(props) {
           </div>
         </div>
         <div className="experience-card-description" style={{ color: theme.text }}>
-        {experience.description.map((desc, index) => (
-          <p key={index} className="experience-card-description" style={{ color: theme.text }}>
-            {desc}
-          </p>
-        ))}
-      </div>
+          <ul className="experience-list">
+            {experience.description.map((desc, index) => (
+              <li key={index}>{desc}</li>
+            ))}
+          </ul>
+        </div>
       
 
       </div>
