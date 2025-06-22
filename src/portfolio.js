@@ -876,7 +876,12 @@ const projects = {
     },
     {
       id: "4",
-      images: ["dreamy_nails1.png", "dreamy_nails2.png", "dreamy_nails3.png", "dreamy_nails4.png"], // Add your real image filenames here
+      images: [
+        "dreamy_nails1.png",
+        "dreamy_nails2.png",
+        "dreamy_nails3.png",
+        "dreamy_nails4.png",
+      ], // Add your real image filenames here
       videos: [],
       badge: {
         text: "Assignment 2",
@@ -925,22 +930,73 @@ const projects = {
       ],
     },
     {
-      id: "5",
-      images: ["comingsoon.jpg"],
+      id: "6",
+      images: [
+        "matching_cards1.png", // Replace with real filenames or Figma exports
+        "matching_cards2.png",
+        "matching_cards3.png",
+        "matching_cards4.png",
+      ],
       videos: [],
       badge: {
         text: "Assignment 3",
-        color: "success",
-        icon: "💡",
+        color: "info",
+        icon: "🃏", // Playing card emoji for memory game
       },
-      name: "Small Game",
-      url: "",
+      name: "Matching Cards Memory Game",
+      url: "https://my-matching-cards.netlify.app/",
       description: `
-Assignment as part of SEG 3125 
+- Developed a **responsive card-matching memory game** for web, as part of University of Ottawa's CSI 3125 (Spring 2025).
+- Features **two personas**: Anna (light theme, desktop) & David (dark theme, mobile), reflecting inclusive and accessible design.
+- Designed with **modern UI/UX principles**: large, touch-friendly cards, quick feedback, clear results, and motivational end screens.
+- Built with **React** and deployed a **high-fidelity prototype** using Figma and Netlify.
+- Visual design adapts for both desktop and mobile, focusing on readability, ease of use, and fun for all ages.
+- Integrated accessibility best practices, with keyboard/touch support and high-contrast options.
 `,
-
-      languages: [],
-      links: [],
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "HTML",
+          iconifyClass: "logos-html-5",
+        },
+        {
+          name: "CSS",
+          iconifyClass: "logos-css-3",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "Figma",
+          iconifyClass: "logos-figma",
+        },
+      ],
+      links: [
+        {
+          name: "Portfolio",
+          url: "https://manvu.ca/",
+          iconifyClass: "mdi:account",
+        },
+        {
+          name: "Prototype",
+          url: "https://my-matching-cards.netlify.app/",
+          iconifyClass: "mdi:web",
+        },
+        {
+          name: "Github",
+          url: "https://github.com/man-vu/SEG3125-Assignment3-MatchingCards",
+          iconifyClass: "ri:github-fill",
+        },
+        {
+          name: "Group Github",
+          url: "https://github.com/man-vu",
+          iconifyClass: "ri:github-fill",
+        },
+      ],
     },
     {
       id: "6",
