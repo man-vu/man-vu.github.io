@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a8b85092.css",
-    "main.js": "/static/js/main.b59789b4.js",
+    "main.js": "/static/js/main.e0d87f5f.js",
     "static/js/488.d384302e.chunk.js": "/static/js/488.d384302e.chunk.js",
     "static/media/phodelight_1.png": "/static/media/phodelight_1.477b546f55c076a62f7e.png",
     "static/media/dreamy_nails4.png": "/static/media/dreamy_nails4.6dddc3a36dd50ffbe582.png",
@@ -14,6 +14,8 @@
     "static/media/dreamy_nails3.png": "/static/media/dreamy_nails3.a728a0ff756f8e458e37.png",
     "static/media/capstone026.png": "/static/media/capstone026.26b2c3a1d63dbd490961.png",
     "static/media/capstone023.png": "/static/media/capstone023.d330ea9295f411480afc.png",
+    "static/media/matching_cards3.png": "/static/media/matching_cards3.25ea07233e126ad3a75c.png",
+    "static/media/matching_cards4.png": "/static/media/matching_cards4.ecdb2f146fe2e9b6d512.png",
     "static/media/habitbuster_3.png": "/static/media/habitbuster_3.463bbfd4c8ac3245d646.png",
     "static/media/capstone031.png": "/static/media/capstone031.38a2e5f6980b0727de9e.png",
     "static/media/capstone027.png": "/static/media/capstone027.7cb4a365b3e2d603af13.png",
@@ -69,6 +71,7 @@
     "static/media/GoogleSans-BoldItalic.ttf": "/static/media/GoogleSans-BoldItalic.d282e9c31d0f894a7f06.ttf",
     "static/media/capstone043.png": "/static/media/capstone043.62416784fcee6397094d.png",
     "static/media/GoogleSans-Regular.ttf": "/static/media/GoogleSans-Regular.bec0591b6a291c3ca895.ttf",
+    "static/media/matching_cards2.png": "/static/media/matching_cards2.f777cc0058dcc7014bd4.png",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.c210719e60948b211a12.woff2",
     "static/media/GoogleSans-Medium.ttf": "/static/media/GoogleSans-Medium.963c3e555aaada9ef8a9.ttf",
     "static/media/GoogleSans-Bold.ttf": "/static/media/GoogleSans-Bold.d907e4bf3e32637a636e.ttf",
@@ -79,6 +82,7 @@
     "static/media/habitbuster_4.png": "/static/media/habitbuster_4.0c92a7208dc7d8c53921.png",
     "static/media/capstone012.png": "/static/media/capstone012.61eb85ccd65489a6d311.png",
     "static/media/meta.png": "/static/media/meta.729d5d7a91f1ef31882a.png",
+    "static/media/matching_cards1.png": "/static/media/matching_cards1.bbe6396e1b9a8daae9ca.png",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
     "static/media/capstone009.png": "/static/media/capstone009.7edc5c97fbe343db97be.png",
     "static/media/capstone018.png": "/static/media/capstone018.c42bc63071bf501a379d.png",
@@ -111,11 +115,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.a8b85092.css.map": "/static/css/main.a8b85092.css.map",
-    "main.b59789b4.js.map": "/static/js/main.b59789b4.js.map",
+    "main.e0d87f5f.js.map": "/static/js/main.e0d87f5f.js.map",
     "488.d384302e.chunk.js.map": "/static/js/488.d384302e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8b85092.css",
-    "static/js/main.b59789b4.js"
+    "static/js/main.e0d87f5f.js"
   ]
 }
