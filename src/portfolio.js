@@ -383,7 +383,7 @@ const certifications = {
       certificate_link:
         "https://www.coursera.org/account/accomplishments/specialization/certificate/CPN5DGFBMEQD",
       alt_name: "Meta",
-      color_code: "rgb(239 245 255)",
+      color_code: "#1877F2",
       projects:
         "https://github.com/man-vu?tab=repositories&q=course-&type=&language=&sort=",
     },
@@ -394,7 +394,7 @@ const certifications = {
       certificate_link:
         "https://www.coursera.org/account/accomplishments/certificate/4ZDVEUS8H6FJ",
       alt_name: "DeepLearning.AI",
-      color_code: "rgb(245 245 245)",
+      color_code: "#FF6B35",
       additional_info: {
         issue_date: {
           month: "September",
@@ -415,7 +415,7 @@ const certifications = {
       certificate_link:
         "https://www.coursera.org/account/accomplishments/certificate/AUSDDALCQX7P",
       alt_name: "Stanford University",
-      color_code: "rgb(245 245 245)",
+      color_code: "#8C1515",
       additional_info: {
         issue_date: {
           month: "September",
@@ -1024,25 +1024,17 @@ const projects = {
         },
       ],
       links: [
-        {
-          name: "Portfolio",
-          url: "https://manvu.ca/",
-          iconifyClass: "mdi:account",
-        },
-        {
-          name: "Prototype",
-          url: "https://my-matching-cards.netlify.app/",
-          iconifyClass: "mdi:web",
-        },
+
+
         {
           name: "Github",
           url: "https://github.com/man-vu/SEG3125-Assignment3-MatchingCards",
           iconifyClass: "ri:github-fill",
         },
         {
-          name: "Group Github",
-          url: "https://github.com/man-vu",
-          iconifyClass: "ri:github-fill",
+          name: "Live Demo",
+          url: "https://my-matching-cards.netlify.app/",
+          iconifyClass: "mdi:web",
         },
       ],
     },
@@ -1078,10 +1070,9 @@ const projects = {
         { name: "Figma", iconifyClass: "logos-figma" }
       ],
       links: [
-        { name: "Portfolio", url: "https://manvu.ca/", iconifyClass: "mdi:account" },
         { name: "Live Demo", url: "https://sparkling-profiterole-0149e0.netlify.app/", iconifyClass: "mdi:web" },
         { name: "Github", url: "https://github.com/man-vu/SEG3125-Assignment4", iconifyClass: "ri:github-fill" },
-        { name: "Group Github", url: "https://github.com/man-vu", iconifyClass: "ri:github-fill" }
+      
       ],
     },
     {
