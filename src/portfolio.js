@@ -243,7 +243,7 @@ const experience = {
           company_url: "http://abelsoft.com/",
           logo_path: "abelsoft.jpg",
           duration: "Jan 2020 - Present",
-          location: "Burlington, Ontario, Canada",
+          location: "Ottawa, Ontario, Canada",
           description: [
             "Developed mission-critical products with C#, SQL, WPF and WCF.",
             "Automated SQL deployments with PowerShell, cutting release time by 50%.",
