@@ -1,5 +1,14 @@
 # Shadcn-UI Template Usage Instructions
 
+## Features
+
+### Project Image Gallery
+- Click on any project image to open a full-screen gallery modal
+- Navigate through multiple project images using arrow keys or navigation buttons
+- View thumbnails at the bottom for quick navigation
+- Keyboard shortcuts: Arrow keys to navigate, Escape to close
+- Responsive design that works on all screen sizes
+
 ## technology stack
 
 This project is built with:

@@ -657,6 +657,7 @@ const projects = {
         color: "warning", // Can be: primary, success, warning, danger, info, dark
         icon: "🏆", // Optional emoji or icon
       },
+      briefDescription: "Core full-stack developer for a dental management system, building critical features and optimizing workflows.",
       description: `
 - Served as a **core full-stack developer** on the ABELDent team  
 - Designed and implemented **critical features** using **.NET**, **WPF**, and **SQL Server**  
@@ -724,6 +725,7 @@ const projects = {
         "https://www.youtube.com/embed/ViBoMEj1ldA?si=dOhBBYs5AGpOvOj9", // Replace with actual embed URL if different
       ],
       url: "https://devpost.com/software/bad-habit-buster",
+      briefDescription: "AI-powered web app to help users break bad habits, built for a hackathon using React and GPT-4o.",
       description: `
 - Built an **AI-powered full-stack web app** using **React**, **Node.js**, and **GPT-4o**  
 - Backend: **DynamoDB** to securely store user data  
@@ -825,6 +827,7 @@ const projects = {
       },
       name: "Learning English Web App",
       url: "http://bit.ly/3QiW9OW",
+      briefDescription: "E-learning platform for English learners with interactive lessons and adaptive quizzes.",
       description: `
 - Built a **full-featured e-learning platform** for non-native English speakers as my final capstone project.
 - Modeled after systems like **MyCanvas** and **Desire2Learn** to ensure familiarity and usability.
@@ -883,6 +886,7 @@ const projects = {
       },
       name: "Pho Delight Restaurant",
       url: "https://bit.ly/45AA3Mh",
+      briefDescription: "Showcase app for a restaurant, built with React and modern UI/UX for Meta's certification.",
       description: `
 - Developed a **restaurant showcase app** as the final project for Meta's Front-End Developer Certification.
 - Implemented a **responsive single-page interface** using **React**, with elegant animations and transitions.
@@ -938,6 +942,7 @@ const projects = {
       },
       name: "Dreamy Nails & Beauty Salon",
       url: "https://dreamy-nails.netlify.app",
+      briefDescription: "Appointment booking site for a beauty salon, with multi-step flow and modern UI/UX.",
       description: `
 - Developed a **full-featured appointment booking site** for a beauty & nail salon.
 - Built with **React**, following **modern UI/UX design principles** for a responsive and visually appealing experience.
@@ -993,13 +998,12 @@ const projects = {
       },
       name: "Matching Cards Memory Game",
       url: "https://my-matching-cards.netlify.app/",
+      briefDescription: "Responsive card-matching memory game with light/dark themes and accessible design.",
       description: `
 - Developed a **responsive card-matching memory game** for web, as part of University of Ottawa's CSI 3125 (Spring 2025).
 - Features **two personas**: Anna (light theme, desktop) & David (dark theme, mobile), reflecting inclusive and accessible design.
 - Designed with **modern UI/UX principles**: large, touch-friendly cards, quick feedback, clear results, and motivational end screens.
 - Built with **React** and deployed a **high-fidelity prototype** using Figma and Netlify.
-- Visual design adapts for both desktop and mobile, focusing on readability, ease of use, and fun for all ages.
-- Integrated accessibility best practices, with keyboard/touch support and high-contrast options.
 `,
       languages: [
         {
@@ -1056,11 +1060,12 @@ const projects = {
       },
       name: "E-commerce Website",
       url: "https://sparkling-profiterole-0149e0.netlify.app/",
+      briefDescription: "Modern e-commerce site for online courses, with filtering, checkout, and accessibility features.",
       description: `
-- Modern e-commerce site for online courses, built for University of Ottawa's CSI 3125 (Summer 2025).
-- Features instant filtering (category, difficulty, price, duration, rating), a clear checkout progress bar, and a friendly, accessible design.
-- Inspired by Udemy, Coursera, Codecademy, and Pluralsight. Built with React, with a bold purple/blue theme and mobile-first layout.
-- Accessibility, dark/light mode, and lively, supportive communication style throughout.
+- Modern **e-commerce site** for online courses, built for University of Ottawa's **CSI 3125** (Summer 2023).
+- Features: filtering, category, difficulty, price, duration, rating, a clear **checkout progress bar**, and a friendly, accessible design.
+- Inspired by **Udemy, Coursera, Codecademy, and Pluralsight**. Built with **React**, with a bold purple/blue theme and mobile layout.
+- **Accessibility**, dark/light mode, and lively, supportive communication style throughout.
 `,
       languages: [
         { name: "React", iconifyClass: "logos-react" },
