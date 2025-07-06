@@ -588,6 +588,54 @@ const contactPageData = {
     description:
       "You can contact me at the places mentioned below. I will try to get back to you as fast as I can. ",
   },
+  contactMethods: [
+    {
+      icon: "Mail",
+      title: "Email",
+      description: "Send me a message",
+      value: "manvminh@gmail.com",
+      href: "mailto:manvminh@gmail.com",
+      primary: true
+    },
+    {
+      icon: "Linkedin",
+      title: "LinkedIn",
+      description: "Connect professionally",
+      value: "linkedin.com/in/manvu",
+      href: "https://www.linkedin.com/in/manvu/",
+      primary: true
+    },
+    {
+      icon: "Github",
+      title: "GitHub",
+      description: "Check out my code",
+      value: "github.com/man-vu",
+      href: "https://github.com/man-vu",
+      primary: true
+    },
+    {
+      icon: "MapPin",
+      title: "Location",
+      description: "Based in",
+      value: "Ottawa, Ontario, Canada",
+      href: null,
+      primary: false
+    }
+  ],
+  socialLinks: [
+    {
+      icon: "Github",
+      title: "GitHub",
+      href: "https://github.com/man-vu",
+      color: "hover:text-gray-800 dark:hover:text-gray-200"
+    },
+    {
+      icon: "Linkedin",
+      title: "LinkedIn", 
+      href: "https://www.linkedin.com/in/manvu/",
+      color: "hover:text-blue-600 dark:hover:text-blue-400"
+    },
+  ],
   blogSection: {
     title: "Blogs",
     subtitle: "I also post occasional tech and IELTS tips on my Facebook page.",

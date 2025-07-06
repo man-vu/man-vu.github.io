@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Mail, Github, Linkedin, Facebook, FileText } from 'lucide-react';
+import { Menu, Mail, Github, Linkedin, Facebook, FileText, House, User, Brain, Briefcase, GraduationCap, Award, Code, Quote, MessageCircle } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { greeting, socialMediaLinks } from '../portfolio.js';
 
@@ -17,15 +17,15 @@ export default function Header() {
   };
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'education', label: 'Education' },
-    { id: 'certifications', label: 'Certifications' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'testimonials', label: 'Testimonials' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: 'Home', icon: House },
+    { id: 'about', label: 'About', icon: User },
+    { id: 'skills', label: 'Skills', icon: Brain },
+    { id: 'experience', label: 'Experience', icon: Briefcase },
+    { id: 'education', label: 'Education', icon: GraduationCap },
+    { id: 'certifications', label: 'Certifications', icon: Award },
+    { id: 'projects', label: 'Projects', icon: Code },
+    { id: 'testimonials', label: 'Testimonials', icon: Quote },
+    { id: 'contact', label: 'Contact', icon: MessageCircle },
   ];
 
   const socialIcons = [
@@ -91,9 +91,10 @@ export default function Header() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-left text-foreground hover:text-blue-600 transition-colors"
+                  className="flex items-center space-x-3 text-left text-foreground hover:text-blue-600 transition-colors"
                 >
-                  {item.label}
+                  <item.icon className="h-5 w-5" />
+                  <span>{item.label}</span>
                 </button>
               ))}
               <hr className="my-4 border-border" />

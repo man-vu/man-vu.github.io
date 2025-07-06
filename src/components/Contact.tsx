@@ -5,67 +5,31 @@ import { Mail, MapPin, Phone, Github, Linkedin, Facebook, FileText, MessageCircl
 import { contactPageData, socialMediaLinks, greeting } from '../portfolio.js';
 
 export default function Contact() {
-  const contactMethods = [
-    {
-      icon: Mail,
-      title: "Email",
-      description: "Send me a message",
-      value: socialMediaLinks.gmail,
-      href: `mailto:${socialMediaLinks.gmail}`,
-      primary: true
-    },
-    {
-      icon: Linkedin,
-      title: "LinkedIn",
-      description: "Connect professionally",
-      value: "linkedin.com/in/manvu",
-      href: socialMediaLinks.linkedin,
-      primary: true
-    },
-    {
-      icon: Github,
-      title: "GitHub",
-      description: "Check out my code",
-      value: "github.com/man-vu",
-      href: socialMediaLinks.github,
-      primary: true
-    },
-    {
-      icon: MapPin,
-      title: "Location",
-      description: "Based in",
-      value: "Ottawa, Ontario, Canada",
-      href: null,
-      primary: false
-    }
-  ];
+  // Icon mapping function
+  const getIconComponent = (iconName) => {
+    const iconMap = {
+      Mail,
+      MapPin,
+      Phone,
+      Github,
+      Linkedin,
+      Facebook,
+      FileText,
+      MessageCircle
+    };
+    return iconMap[iconName];
+  };
 
-  const socialLinks = [
-    {
-      icon: Github,
-      title: "GitHub",
-      href: socialMediaLinks.github,
-      color: "hover:text-gray-800 dark:hover:text-gray-200"
-    },
-    {
-      icon: Linkedin,
-      title: "LinkedIn", 
-      href: socialMediaLinks.linkedin,
-      color: "hover:text-blue-600 dark:hover:text-blue-400"
-    },
-    {
-      icon: Facebook,
-      title: "Facebook",
-      href: socialMediaLinks.facebook,
-      color: "hover:text-blue-500 dark:hover:text-blue-400"
-    },
-    {
-      icon: FileText,
-      title: "Resume",
-      href: greeting.resumeLink,
-      color: "hover:text-green-600 dark:hover:text-green-400"
-    }
-  ];
+  // Get contact methods and social links from portfolio.js
+  const contactMethods = contactPageData.contactMethods.map(method => ({
+    ...method,
+    icon: getIconComponent(method.icon)
+  }));
+
+  const socialLinks = contactPageData.socialLinks.map(social => ({
+    ...social,
+    icon: getIconComponent(social.icon)
+  }));
 
   return (
     <section id="contact" className="py-20 bg-background">
@@ -141,7 +105,7 @@ export default function Contact() {
           </Card>
 
           {/* Blog Section */}
-          <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border-blue-200 dark:border-blue-800">
+          {/* <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border-blue-200 dark:border-blue-800">
             <CardHeader className="text-center">
               <div className="mx-auto p-3 bg-blue-100 dark:bg-blue-900 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <MessageCircle className="w-6 h-6 text-blue-600 dark:text-blue-400" />
@@ -157,7 +121,7 @@ export default function Contact() {
                 </a>
               </Button>
             </CardContent>
-          </Card>
+          </Card> */}
 
           {/* Call to Action */}
           <div className="text-center mt-16 p-8 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-700 dark:to-indigo-700 rounded-xl text-white">
