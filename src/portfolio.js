@@ -999,25 +999,35 @@ const projects = {
       ],
     },
     {
-      id: "6",
-      images: ["comingsoon.jpg"],
+      id: "7",
+      images: [
+        "ecommerce_1.png",
+        "ecommerce_2.png",
+        "ecommerce_3.png",
+        "ecommerce_4.png",
+        "ecommerce_5.png",
+        "ecommerce_6.png"
+      ],
       videos: [],
       badge: {
         text: "Assignment 4",
-        color: "success",
-        icon: "💡",
+        color: "primary",
+        icon: "🛒",
       },
-      name: "E-commerce site",
-      url: "",
+      name: "E-commerce Website",
+      url: "https://sparkling-profiterole-0149e0.netlify.app/",
       description: `
-Assignment as part of SEG 3125 
+Modern e-commerce site for online courses. Features instant filtering (category, difficulty, price, duration, rating), a clear checkout progress bar, and a friendly, accessible design. Inspired by Udemy, Coursera, Codecademy, and Pluralsight. Built with React, with a bold purple/blue theme and mobile-first layout. [GitHub](https://github.com/man-vu/SEG3125-Assignment4)
 `,
-
-      languages: [],
-      links: [],
+      languages: ["React", "JSX", "CSS"],
+      links: [
+        { text: "Live Demo", url: "https://sparkling-profiterole-0149e0.netlify.app/" },
+        { text: "GitHub", url: "https://github.com/man-vu/SEG3125-Assignment4" },
+        { text: "Portfolio", url: "https://manvu.ca/" }
+      ],
     },
     {
-      id: "7",
+      id: "8",
       images: ["comingsoon.jpg"],
       videos: [],
       badge: {
