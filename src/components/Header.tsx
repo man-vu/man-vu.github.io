@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { Menu, Mail, Github, Linkedin, Facebook, FileText, House, User, Brain, Briefcase, GraduationCap, Award, Code, Quote, MessageCircle } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { greeting, socialMediaLinks } from '../portfolio.js';
@@ -86,6 +86,10 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent>
+            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+            <SheetDescription className="sr-only">
+              Access navigation links, social media profiles, and theme toggle
+            </SheetDescription>
             <nav className="flex flex-col space-y-4 mt-8">
               {navItems.map((item) => (
                 <button
