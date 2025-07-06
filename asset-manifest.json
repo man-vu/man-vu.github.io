@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a8b85092.css",
-    "main.js": "/static/js/main.e0d87f5f.js",
+    "main.js": "/static/js/main.395c5e50.js",
     "static/js/488.d384302e.chunk.js": "/static/js/488.d384302e.chunk.js",
     "static/media/phodelight_1.png": "/static/media/phodelight_1.477b546f55c076a62f7e.png",
     "static/media/dreamy_nails4.png": "/static/media/dreamy_nails4.6dddc3a36dd50ffbe582.png",
@@ -9,8 +9,12 @@
     "static/media/dreamy_nails1.png": "/static/media/dreamy_nails1.6e9e9f35d07cb51efa5e.png",
     "static/media/avatar.jpg": "/static/media/avatar.de41b67a4f3f29c820e1.jpg",
     "static/media/mainbackground.png": "/static/media/mainbackground.56626e462e53e83047d5.png",
+    "static/media/ecommerce_1.png": "/static/media/ecommerce_1.dc81c7d10d9d25f2e768.png",
+    "static/media/ecommerce_3.png": "/static/media/ecommerce_3.a77e21b4a23b8c05051a.png",
     "static/media/herobg.png": "/static/media/herobg.ad33add2430e34307c33.png",
+    "static/media/ecommerce_2.png": "/static/media/ecommerce_2.b3b992cbb7317712da3a.png",
     "static/media/dreamy_nails2.png": "/static/media/dreamy_nails2.9bf0030c1dce5afff7a9.png",
+    "static/media/ecommerce_4.png": "/static/media/ecommerce_4.ebede751290ffffabc07.png",
     "static/media/dreamy_nails3.png": "/static/media/dreamy_nails3.a728a0ff756f8e458e37.png",
     "static/media/capstone026.png": "/static/media/capstone026.26b2c3a1d63dbd490961.png",
     "static/media/capstone023.png": "/static/media/capstone023.d330ea9295f411480afc.png",
@@ -53,6 +57,7 @@
     "static/media/capstone039.png": "/static/media/capstone039.e0d702052227b06092dd.png",
     "static/media/capstone042.png": "/static/media/capstone042.1b32afaeacb1e26d913f.png",
     "static/media/capstone021.png": "/static/media/capstone021.42bd8c9446bb563ddc43.png",
+    "static/media/ecommerce_6.png": "/static/media/ecommerce_6.0b719c11d460d03fc8b7.png",
     "static/media/habitbuster_2.png": "/static/media/habitbuster_2.6ed4ce043e14ac122614.png",
     "static/media/capstone015.png": "/static/media/capstone015.ddbbb510bf876695f6bd.png",
     "static/media/capstone014.png": "/static/media/capstone014.000d3620fff8140d84ff.png",
@@ -61,6 +66,7 @@
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
     "static/media/capstone006.png": "/static/media/capstone006.960f5bcc9e1555ba1d3a.png",
     "static/media/capstone033.png": "/static/media/capstone033.63f3c004effa84db34b9.png",
+    "static/media/ecommerce_5.png": "/static/media/ecommerce_5.f2c293251b83003e3cff.png",
     "static/media/capstone008.png": "/static/media/capstone008.36f5726111c4089e9bcc.png",
     "static/media/capstone013.png": "/static/media/capstone013.a55c854b9d3f5edba9b2.png",
     "static/media/capstone010.png": "/static/media/capstone010.32a7b3a9df26d4b6d806.png",
@@ -115,11 +121,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.a8b85092.css.map": "/static/css/main.a8b85092.css.map",
-    "main.e0d87f5f.js.map": "/static/js/main.e0d87f5f.js.map",
+    "main.395c5e50.js.map": "/static/js/main.395c5e50.js.map",
     "488.d384302e.chunk.js.map": "/static/js/488.d384302e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8b85092.css",
-    "static/js/main.e0d87f5f.js"
+    "static/js/main.395c5e50.js"
   ]
 }
