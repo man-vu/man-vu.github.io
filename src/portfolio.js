@@ -1017,13 +1017,23 @@ const projects = {
       name: "E-commerce Website",
       url: "https://sparkling-profiterole-0149e0.netlify.app/",
       description: `
-Modern e-commerce site for online courses. Features instant filtering (category, difficulty, price, duration, rating), a clear checkout progress bar, and a friendly, accessible design. Inspired by Udemy, Coursera, Codecademy, and Pluralsight. Built with React, with a bold purple/blue theme and mobile-first layout. [GitHub](https://github.com/man-vu/SEG3125-Assignment4)
+- Modern e-commerce site for online courses, built for University of Ottawa's CSI 3125 (Summer 2025).
+- Features instant filtering (category, difficulty, price, duration, rating), a clear checkout progress bar, and a friendly, accessible design.
+- Inspired by Udemy, Coursera, Codecademy, and Pluralsight. Built with React, with a bold purple/blue theme and mobile-first layout.
+- Accessibility, dark/light mode, and lively, supportive communication style throughout.
 `,
-      languages: ["React", "JSX", "CSS"],
+      languages: [
+        { name: "React", iconifyClass: "logos-react" },
+        { name: "HTML", iconifyClass: "logos-html-5" },
+        { name: "CSS", iconifyClass: "logos-css-3" },
+        { name: "JavaScript", iconifyClass: "logos-javascript" },
+        { name: "Figma", iconifyClass: "logos-figma" }
+      ],
       links: [
-        { text: "Live Demo", url: "https://sparkling-profiterole-0149e0.netlify.app/" },
-        { text: "GitHub", url: "https://github.com/man-vu/SEG3125-Assignment4" },
-        { text: "Portfolio", url: "https://manvu.ca/" }
+        { name: "Portfolio", url: "https://manvu.ca/", iconifyClass: "mdi:account" },
+        { name: "Live Demo", url: "https://sparkling-profiterole-0149e0.netlify.app/", iconifyClass: "mdi:web" },
+        { name: "Github", url: "https://github.com/man-vu/SEG3125-Assignment4", iconifyClass: "ri:github-fill" },
+        { name: "Group Github", url: "https://github.com/man-vu", iconifyClass: "ri:github-fill" }
       ],
     },
     {
