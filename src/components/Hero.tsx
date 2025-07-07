@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Mail, Download, Github, Linkedin, MapPin, Calendar } from 'lucide-react';
 import { greeting, socialMediaLinks } from '../portfolio.js';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -63,10 +64,10 @@ export default function Hero() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white transition-colors">
-                  <a href={greeting.resumeLink} target="_blank" rel="noopener noreferrer">
+                  <Link to="/resume">
                     <Download className="w-5 h-5 mr-2" />
                     Download Resume
-                  </a>
+                  </Link>
                 </Button>
               </div>
 
