@@ -20,31 +20,75 @@ export const resumeData = {
   },
   experience: [
     {
-      title: "Full-Stack Engineer",
+      title: "Mid-Senior Software Developer - Firefighting Team",
       company: "ABELSoft Inc. (Dental SaaS)",
       location: "Remote, Canada",
-      date: "Sept 2021 – Present",
+      date: "Jan 2024 – Present",
       bullets: [
-        "Migrated and refactored major ABELDent modules: financials (reporting), scheduler/appointments, charting/periodontal, and clinical notes (developed a custom utility to resolve concurrent note conflicts).",
-        "Transitioned core backend logic from OData/legacy C++ to C# with Azure-hosted APIs and data contracts, improving maintainability and performance.",
-        "On-call DevOps: Monitored production health post-release, managed Azure/AppInsights alerts, and executed failovers/restarts as needed (HIPAA-compliant logging).",
-        "Authored and maintained internal Dev Wiki documentation (Azure DevOps) for workflow, troubleshooting, design patterns, and system architecture. Participated in and led code reviews to ensure code quality, consistency, and maintainability.",
-        "Automated customer migrations (LS to CS) with PowerShell scripts, including SQL version compatibility fixes and cloud/local data preservation utilities.",
-        "Provided technical support and guidance to other teams and implementers consuming shared tools and components."
+        "Driving successful product releases by collaborating with a cross-functional 30-member team across development, support, and marketing departments.",
+        "Implementing database optimizations, non-blocking APIs, semaphores, and caching, reducing ABELDent's module load times from 8.5 to 2.1 seconds (75% improvement), boosting customer retention by 24%.",
+        "Automating workflows to address patient's note records within 1 month, improving team productivity by 40%, surpassing initial objectives by 15%.",
+        "Contributing at least 3 developer manuals per month to Dev Wiki to provide guidance to junior associates.",
+        "Spearheaded an automated data sync tool using PowerShell, Python and MS SQL with topological sorting algorithms to address Azure Data Sync failures, resolving at least 10 CRM tickets per month and saving 3.5 hours per week on manual searches."
       ]
     },
     {
-      title: "Junior Software Developer",
+      title: "Software Developer - Firefighting Team",
+      company: "ABELSoft Inc.",
+      location: "Remote, Canada",
+      date: "Sept 2021 – Dec 2023",
+      bullets: [
+        "Provided biweekly on-call support, including monitoring, restarts and failovers for Azure Web Apps outside business hours, resolving at least 2 critical production bugs per week.",
+        "Troubleshot urgent issues reported by QA and AppInsights alerts and created emergency fixes within 2 hours.",
+        "Migrated and refactored major ABELDent modules: financials (reporting), scheduler/appointments, charting/periodontal, and clinical notes (developed a custom utility to resolve concurrent note conflicts, saving 8 hours/month).",
+        "Transitioned core backend logic from OData/legacy C++ to C# with Azure-hosted APIs and data contracts, improving maintainability and performance.",
+        "Authored and maintained internal Dev Wiki documentation (Azure DevOps) for workflow, troubleshooting, design patterns, and system architecture."
+      ]
+    },
+    {
+      title: "Co-op Junior Software Developer - Feature Team",
       company: "ABELSoft Inc.",
       location: "Remote, Canada",
       date: "Jan 2020 – Aug 2021",
       bullets: [
-        "Contributed to the design, normalization, and performance optimization of complex SQL database schemas for high-availability reporting and analytics.",
-        "Remediated 1,000+ unit/integration tests to reduce deployment bugs by 25%."
+        "Developed an innovative utility, resolving at least 20 tickets daily, compared to 1 when performed manually (1900% improvement).",
+        "Collaborated with senior developers to architect robust MS SQL database schemas and object-oriented designs, resulting in a 35% reduction in query response time and supporting a 50% increase in user base.",
+        "Led a team of 3 co-op developers to resolve over 1,000 failing unit and integration tests on the service layer within 1 week, significantly improving code quality and reducing deployment bugs by 25%.",
+        "Contributed to the design, normalization, and performance optimization of complex SQL database schemas for high-availability reporting and analytics."
       ]
     }
   ],
   projects: [
+    {
+      name: "ABELDent Enterprise Application",
+      link: "",
+      stack: ["C", "C++", "C#", "WPF", "WCF", "MS SQL", ".NET", "Azure"],
+      year: "2020 - Present",
+      bullets: [
+        "Developed and fine-tuned a full-stack enterprise application for dental clinics using C#, conducting extensive profiling and debugging to enhance user experience and operational efficiency by 30%.",
+        "Transitioning a monolithic codebase to a microservice-based architecture and migrating C/C++ legacy code to C# code, leading to more reliable systems, reducing customer calls by 14%.",
+        "Utilizing Test-Driven Development (TDD) with unit testing using Moq, integration testing and acceptance testing to ensure software quality, consistently maintaining over 90% code coverage."
+      ]
+    },
+    {
+      name: "Clinical Notes Utility",
+      link: "",
+      stack: ["C#", "WinForm", ".NET", "MS SQL"],
+      year: "2020",
+      bullets: [
+        "Accelerated processes of resolving doctor's note conflicts due to simultaneous entries from different workstations, reducing team effort by 8 hours/month, exceeding initial targets by 2 hours."
+      ]
+    },
+    {
+      name: "Automated Data Sync Tool",
+      link: "",
+      stack: ["PowerShell", "Python", "MS SQL"],
+      year: "2024",
+      bullets: [
+        "Spearheaded a productivity tool that automatically synced cloud and local databases using topological sorting algorithms to address Azure Data Sync failures, resolving at least 10 CRM tickets per month.",
+        "Reduced overall team effort, saving over 3.5 hours per week on manual searches for missing records."
+      ]
+    },
     {
       name: "Nail Salon Appointment Platform",
       link: "https://dreamy-nails.netlify.app",
