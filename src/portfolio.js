@@ -9,8 +9,7 @@ const greeting = {
   full_name: "Man Vu",
   subTitle:
     "Full-Time Software Developer @ ABELSoft | 4th Year CS Student @ uOttawa (Full-Time) | Cloud Computing & AI Enthusiast",
-  resumeLink:
-    "https://drive.google.com/file/d/1m0RFzfctAzep-DGSNWgtu2FTRhDcTBEl/view?usp=sharing",
+  resumeLink: "/assets/resumes/Man_Resume.pdf",
   mail: "mailto:manvminh@gmail.com",
 };
 
