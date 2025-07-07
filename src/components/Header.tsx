@@ -1,20 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { Menu, Mail, Github, Linkedin, Facebook, FileText, House, User, Brain, Briefcase, GraduationCap, Award, Code, Quote, MessageCircle } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { greeting, socialMediaLinks } from '../portfolio.js';
+import { motion } from 'framer-motion';
+import avatarImg from '@/assets/images/avatar.jpg';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setActiveSection(id);
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionOffsets = navItems.map((item) => {
+        const el = document.getElementById(item.id);
+        if (!el) return { id: item.id, offset: Infinity };
+        const rect = el.getBoundingClientRect();
+        return { id: item.id, offset: Math.abs(rect.top - 80) }; // 80px header height
+      });
+      const closest = sectionOffsets.reduce((prev, curr) => (curr.offset < prev.offset ? curr : prev), sectionOffsets[0]);
+      setActiveSection(closest.id);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { id: 'home', label: 'Home', icon: House },
@@ -40,11 +59,20 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold">
-            M
-          </div>
-          <span className="font-bold text-lg text-foreground">{greeting.full_name}</span>
-          <span className="text-sm text-muted-foreground hidden sm:inline">{greeting.logo_title}</span>
+          <button
+            className="flex items-center space-x-2 focus:outline-none"
+            aria-label="Refresh page and go to top"
+            onClick={() => window.location.reload()}
+            style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
+          >
+            <img
+              src={avatarImg}
+              alt="Man Vu avatar"
+              className="w-8 h-8 rounded-full object-cover border-2 border-blue-600"
+            />
+            <span className="font-bold text-lg text-foreground">{greeting.full_name}</span>
+            <span className="text-sm text-muted-foreground hidden sm:inline">{greeting.logo_title}</span>
+          </button>
         </div>
 
         {/* Desktop Navigation */}

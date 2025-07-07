@@ -12,7 +12,7 @@ export default function Projects() {
     images: string[];
   } | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [compactMode, setCompactMode] = useState(false);
+  const [compactMode, setCompactMode] = useState(true);
 
   const openImageModal = (projectName: string, images: string[]) => {
     setSelectedProject({ name: projectName, images });
