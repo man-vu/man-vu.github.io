@@ -93,22 +93,21 @@ export default function Resume() {
                     <div className="bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-800 p-4 shadow-sm">
                       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-3">
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{exp.title}</h3>
+                          <h4 className="text-xl font-bold text-gray-900 dark:text-white">{exp.title}</h4>
                           <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{exp.company}</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">{exp.location}</p>
                         </div>
                         <div className="mt-2 lg:mt-0 text-right">
-                          <Badge variant="secondary" className="mb-1 text-xs">{exp.date}</Badge>
+                          <Badge variant="outline" className="mb-1 text-xs">{exp.date}</Badge>
                         </div>
                       </div>
-                      <ul className="space-y-1.5">
-                        {exp.bullets.map((highlight, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-base text-gray-700 dark:text-gray-300">
-                            <div className="w-1 h-1 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                            <span>{highlight}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {exp.bullets && exp.bullets.length > 0 && (
+                        <ul className="list-disc ml-5 space-y-1 text-gray-700 dark:text-gray-300">
+                          {exp.bullets.map((highlight, idx) => (
+                            <li key={idx}>{highlight}</li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -203,18 +202,21 @@ export default function Resume() {
                     <div className="bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-800 p-4 shadow-sm">
                       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-3">
                         <div>
-                          <h4 className="text-xl font-bold text-gray-900 dark:text-white">{edu.degree}</h4>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
                           <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">{edu.location}</p>
                         </div>
                         <div className="mt-2 lg:mt-0 text-right">
-                          <Badge variant="outline" className="mb-1 text-xs">{edu.date}</Badge>
+                          <Badge variant="secondary" className="mb-1 text-xs">{edu.date}</Badge>
                         </div>
                       </div>
                       {edu.details && edu.details.length > 0 && (
-                        <ul className="list-disc ml-5 space-y-1 text-gray-700 dark:text-gray-300">
+                        <ul className="space-y-1.5">
                           {edu.details.map((detail: string, idx: number) => (
-                            <li key={idx}>{detail}</li>
+                            <li key={idx} className="flex items-start gap-2 text-base text-gray-700 dark:text-gray-300">
+                              <div className="w-1 h-1 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                              <span>{detail}</span>
+                            </li>
                           ))}
                         </ul>
                       )}

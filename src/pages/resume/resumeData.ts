@@ -68,7 +68,11 @@ export const resumeData = {
       details: [
         "Admitted with 57 transfer credits and on track to graduate in just over a year.",
         "Studying full-time while working full-time as a Software Developer at ABELSoft.",
-        "Focusing on AI, operating systems and software design with plans for graduate studies."
+        "Focusing on AI, operating systems and software design with plans for graduate studies.",
+        "Consistently achieved excellent grades across core computer science courses.",
+        "Recognized for strong academic performance while balancing full-time work and studies.",
+        "Demonstrated high proficiency in advanced topics such as databases, programming paradigms, and software engineering.",
+        "Maintained a record of academic excellence in a rigorous, fast-tracked program."
       ]
     },
     {
