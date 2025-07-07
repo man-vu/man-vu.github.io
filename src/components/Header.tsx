@@ -106,51 +106,51 @@ export default function Header() {
           <ThemeToggle />
         </div>
 
-        {/* Mobile Menu */}
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="sm" className="lg:hidden">
-              <Menu className="h-5 w-5" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent>
-            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-            <SheetDescription className="sr-only">
-              Access navigation links, social media profiles, and theme toggle
-            </SheetDescription>
-            <nav className="flex flex-col space-y-4 mt-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="flex items-center space-x-3 text-left text-foreground hover:text-blue-600 transition-colors"
-                >
-                  <item.icon className="h-5 w-5" />
-                  <span>{item.label}</span>
-                </button>
-              ))}
-              <hr className="my-4 border-border" />
-              <div className="flex flex-wrap gap-2">
-                {socialIcons.map((social) => (
-                  <Button
-                    key={social.label}
-                    variant="outline"
-                    size="sm"
-                    asChild
+        {/* Mobile Theme Toggle and Menu */}
+        <div className="flex items-center space-x-2 lg:hidden">
+          <ThemeToggle />
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="sm">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <SheetDescription className="sr-only">
+                Access navigation links and social media profiles
+              </SheetDescription>
+              <nav className="flex flex-col space-y-4 mt-8">
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className="flex items-center space-x-3 text-left text-foreground hover:text-blue-600 transition-colors"
                   >
-                    <a href={social.href} target="_blank" rel="noopener noreferrer">
-                      <social.icon className="h-4 w-4 mr-2" />
-                      {social.label}
-                    </a>
-                  </Button>
+                    <item.icon className="h-5 w-5" />
+                    <span>{item.label}</span>
+                  </button>
                 ))}
-              </div>
-              <div className="pt-4">
-                <ThemeToggle />
-              </div>
-            </nav>
-          </SheetContent>
-        </Sheet>
+                <hr className="my-4 border-border" />
+                <div className="flex flex-wrap gap-2">
+                  {socialIcons.map((social) => (
+                    <Button
+                      key={social.label}
+                      variant="outline"
+                      size="sm"
+                      asChild
+                    >
+                      <a href={social.href} target="_blank" rel="noopener noreferrer">
+                        <social.icon className="h-4 w-4 mr-2" />
+                        {social.label}
+                      </a>
+                    </Button>
+                  ))}
+                </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
