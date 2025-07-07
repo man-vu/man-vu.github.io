@@ -5,6 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { Mail, Phone, Github, Linkedin, MapPin, ExternalLink, Calendar, GraduationCap, Award, Code, Cloud, Database, Wrench } from 'lucide-react';
 import { resumeData } from './resumeData';
 import { socialMediaLinks, skills as portfolioSkills, experience as portfolioExperience, degrees as portfolioDegrees, certifications as portfolioCerts, projects as portfolioProjects } from '@/portfolio';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export default function Resume() {
   // Use resumeData for most sections
@@ -20,7 +21,7 @@ export default function Resume() {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2">{contact.name}</h1>
               <p className="text-xl text-blue-600 dark:text-blue-400 font-medium">Full-Stack Engineer</p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 text-sm text-gray-600 dark:text-gray-300">
+            <div className="flex flex-col sm:flex-row gap-4 text-sm text-gray-600 dark:text-gray-300 items-end">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
                 <span>{contact.location}</span>
@@ -46,6 +47,7 @@ export default function Resume() {
                     GitHub
                   </a>
                 </Button>
+                <ThemeToggle />
               </div>
             </div>
           </div>
@@ -181,33 +183,41 @@ export default function Resume() {
           </CardContent>
         </Card>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Education */}
-          <Card>
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-8">
+          {/* Education Timeline */}
+          <Card className="lg:col-span-7">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-2xl md:text-3xl font-bold">
                 <GraduationCap className="w-5 h-5" />
-                Education & Certifications
+                Education
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-6">
+              <div className="relative">
+                {/* Timeline line */}
+                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-900"></div>
                 {education.map((edu, index) => (
-                  <div key={index}>
-                    <h4 className="font-semibold text-xl text-gray-900 dark:text-white">{edu.degree}</h4>
-                    <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{edu.location}</p>
-                    <Badge variant="outline" className="mt-2 text-xs">{edu.date || ''}</Badge>
-                    {index < education.length - 1 && <Separator className="mt-4" />}
-                  </div>
-                ))}
-                <Separator />
-                {certifications.map((cert, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <Award className="w-4 h-4 text-blue-500" />
-                    <div>
-                      <h4 className="font-semibold text-base text-gray-900 dark:text-white">{cert.name}</h4>
-                      <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">{cert.issuer}</p>
+                  <div key={index} className="relative pl-12 pb-8 last:pb-0">
+                    {/* Timeline dot */}
+                    <div className="absolute left-2 w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-white dark:border-slate-900 shadow-md"></div>
+                    <div className="bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-800 p-4 shadow-sm">
+                      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-3">
+                        <div>
+                          <h4 className="text-xl font-bold text-gray-900 dark:text-white">{edu.degree}</h4>
+                          <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">{edu.location}</p>
+                        </div>
+                        <div className="mt-2 lg:mt-0 text-right">
+                          <Badge variant="outline" className="mb-1 text-xs">{edu.date}</Badge>
+                        </div>
+                      </div>
+                      {edu.details && edu.details.length > 0 && (
+                        <ul className="list-disc ml-5 space-y-1 text-gray-700 dark:text-gray-300">
+                          {edu.details.map((detail: string, idx: number) => (
+                            <li key={idx}>{detail}</li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -215,20 +225,45 @@ export default function Resume() {
             </CardContent>
           </Card>
 
-          {/* Interests */}
-          <Card>
+          {/* Certifications List */}
+          <Card className="lg:col-span-3">
             <CardHeader>
-              <CardTitle className="text-2xl md:text-3xl font-bold">Interests</CardTitle>
+              <CardTitle className="flex items-center gap-2 text-2xl md:text-3xl font-bold">
+                <Award className="w-5 h-5" />
+                Certifications
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {interests.map((interest: string) => (
-                  <Badge key={interest} variant="secondary" className="dark:bg-slate-800 dark:text-blue-200 text-base">{interest}</Badge>
+              <ul className="space-y-4">
+                {certifications.map((cert, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <Award className="w-5 h-5 text-blue-500 mt-1" />
+                    <div>
+                      <span className="font-semibold text-base text-gray-900 dark:text-white">
+                        {cert.name}
+                      </span>
+                      <div className="text-sm text-blue-600 dark:text-blue-400">{cert.issuer}</div>
+                    </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </CardContent>
           </Card>
         </div>
+
+        {/* Interests */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl md:text-3xl font-bold">Interests</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-wrap gap-2">
+              {interests.map((interest: string) => (
+                <Badge key={interest} variant="secondary" className="dark:bg-slate-800 dark:text-blue-200 text-base">{interest}</Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </main>
 
       {/* Footer */}

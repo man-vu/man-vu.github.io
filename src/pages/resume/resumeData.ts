@@ -64,20 +64,66 @@ export const resumeData = {
       degree: "Honours B.Sc. in Computer Science",
       school: "University of Ottawa",
       location: "Ottawa, ON",
-      date: "Expected Dec 2025"
+      date: "Sep 2024 - Dec 2025 (Expected)",
+      details: [
+        "Admitted with 57 transfer credits and on track to graduate in just over a year.",
+        "Studying full-time while working full-time as a Software Developer at ABELSoft.",
+        "Focusing on AI, operating systems and software design with plans for graduate studies."
+      ]
     },
     {
       degree: "Advanced Diploma in Software Development, Honours Graduate",
       school: "Mohawk College",
       location: "Hamilton, ON",
-      date: "2021"
-    }
+      date: "Jan 2019 - Aug 2021",
+      details: [
+        "Graduated early from a three-year program with a 90% GPA.",
+        "Proficient in AWS, .NET Core, SQL databases and modern web frameworks.",
+        "Completed three co-op terms and led a project recognized with a college grant."
+      ]
+    },
   ],
   certifications: [
     {
-      name: "Azure Developer Associate (AZ-204)",
-      issuer: "Microsoft"
-    }
+      name: "Google Advanced Data Analytics",
+      issuer: "Google",
+    },
+    {
+      name: "Google Data Analytics",
+      issuer: "Google",
+    },
+    {
+      name: "Microsoft Azure Data Scientist Associate (DP-100)",
+      issuer: "Microsoft",
+    },
+    {
+      name: "Microsoft Azure Developer Associate (AZ-204)",
+      issuer: "Microsoft",
+    },
+    {
+      name: "Algorithmic Toolbox",
+      issuer: "Coursera",
+    },
+    {
+      name: "Meta Front-End Developer Specialization",
+      issuer: "Meta",
+    },
+    {
+      name: "Neural Networks and Deep Learning",
+      issuer: "DeepLearning.AI",
+    },
+    {
+      name: "Supervised Machine Learning: Regression and Classification",
+      issuer: "Stanford University",
+    },
+    {
+      name: "The Complete Junior to Senior Web Developer Roadmap (2021)",
+      issuer: "Udemy",
+    },
+    {
+      name: "Machine Learning & Data Science",
+      issuer: "Udemy",
+    },
   ],
   interests: [
     "Investing", "options trading", "finance", "chess", "badminton", "esports"
