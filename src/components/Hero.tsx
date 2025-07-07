@@ -2,9 +2,12 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Mail, Download, Github, Linkedin, MapPin, Calendar } from 'lucide-react';
 import { greeting, socialMediaLinks } from '../portfolio.js';
-import { Link } from 'react-router-dom';
 
-export default function Hero() {
+interface HeroProps {
+  onShowResume?: () => void;
+}
+
+export default function Hero({ onShowResume }: HeroProps) {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-950 dark:via-blue-950/50 dark:to-indigo-950/50 pt-20">
       <div className="container mx-auto px-4 py-16">
@@ -63,11 +66,14 @@ export default function Hero() {
                     Get In Touch
                   </a>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white transition-colors">
-                  <Link to="/resume">
-                    <Download className="w-5 h-5 mr-2" />
-                    Download Resume
-                  </Link>
+                <Button 
+                  onClick={onShowResume}
+                  variant="outline" 
+                  size="lg" 
+                  className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white transition-colors"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Resume
                 </Button>
               </div>
 

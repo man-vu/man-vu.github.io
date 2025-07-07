@@ -6,15 +6,17 @@ import { Mail, Phone, Github, Linkedin, MapPin, ExternalLink, Calendar, Graduati
 import { resumeData } from './resumeData';
 import { socialMediaLinks, skills as portfolioSkills, experience as portfolioExperience, degrees as portfolioDegrees, certifications as portfolioCerts, projects as portfolioProjects } from '@/portfolio';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, easeIn, easeOut } from 'framer-motion';
 import { useState } from 'react';
 
-export default function Resume() {
+interface ResumeProps {
+  onBack?: () => void;
+}
+
+export default function Resume({ onBack }: ResumeProps) {
   // Use resumeData for most sections
   const { contact, summary, technicalSkills, experience, projects, education, certifications, interests } = resumeData;
   const [exiting, setExiting] = useState(false);
-  const navigate = useNavigate();
 
   // Animation variants
   const pageVariants = {
@@ -27,7 +29,11 @@ export default function Resume() {
   const handleBack = (e: React.MouseEvent) => {
     e.preventDefault();
     setExiting(true);
-    setTimeout(() => navigate('/'), 400); // match exit duration
+    setTimeout(() => {
+      if (onBack) {
+        onBack();
+      }
+    }, 400); // match exit duration
   };
 
   return (
