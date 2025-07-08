@@ -61,37 +61,53 @@ export default function Resume({ onBack }: ResumeProps) {
           <header className="bg-white dark:bg-slate-900 shadow-sm border-b dark:border-slate-800">
             <div className="container mx-auto px-4 py-8">
               <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2">{contact.name}</h1>
-                  <p className="text-xl text-blue-600 dark:text-blue-400 font-medium">Full-Stack Engineer</p>
+                <div className="w-full">
+                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 text-center lg:text-left">{contact.name}</h1>
+                  <p className="text-xl text-blue-600 dark:text-blue-400 font-medium text-center lg:text-left">Full-Stack Engineer</p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4 text-sm text-gray-600 dark:text-gray-300 items-end">
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>{contact.location}</span>
+                <div className="w-full flex flex-col lg:flex-row gap-6 text-sm text-gray-600 dark:text-gray-300 items-center lg:items-end justify-center lg:justify-end">
+                  {/* Contact Info */}
+                  <div className="flex flex-col sm:flex-row lg:flex-row gap-4 lg:gap-6 items-center w-full lg:w-auto">
+                    <div className="flex-1 min-w-[140px] flex items-center gap-2 px-3 py-2 bg-gray-50 dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
+                      <MapPin className="w-4 h-4 text-blue-500" />
+                      <span className="font-medium truncate">{contact.location}</span>
+                    </div>
+                    <div className="flex-1 min-w-[140px] flex items-center gap-2 px-3 py-2 bg-gray-50 dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
+                      <Phone className="w-4 h-4 text-green-500" />
+                      <span className="font-medium truncate">{contact.phone}</span>
+                    </div>
+                    <div className="flex-1 min-w-[200px] flex items-center gap-2 px-3 py-2 bg-gray-50 dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
+                      <Mail className="w-4 h-4 text-purple-500" />
+                      <span className="font-medium truncate">{contact.email}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    <span>{contact.phone}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Mail className="w-4 h-4" />
-                    <span>{contact.email}</span>
-                  </div>
-                  <div className="flex gap-3">
-                    <Button variant="outline" size="sm" asChild>
+                  {/* Social Links & Theme Toggle */}
+                  <div className="flex items-center gap-3 mt-4 lg:mt-0">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="bg-white dark:bg-slate-800 border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-all duration-200 shadow-sm hover:shadow-md" 
+                      asChild
+                    >
                       <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">
-                        <Linkedin className="w-4 h-4 mr-1" />
+                        <Linkedin className="w-4 h-4 mr-2 text-blue-600 dark:text-blue-400" />
                         LinkedIn
                       </a>
                     </Button>
-                    <Button variant="outline" size="sm" asChild>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="bg-white dark:bg-slate-800 border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md" 
+                      asChild
+                    >
                       <a href={contact.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-1" />
+                        <Github className="w-4 h-4 mr-2 text-gray-700 dark:text-gray-300" />
                         GitHub
                       </a>
                     </Button>
-                    <ThemeToggle />
+                    <div className="ml-2">
+                      <ThemeToggle />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -135,15 +151,13 @@ export default function Resume({ onBack }: ResumeProps) {
                         {/* Timeline dot */}
                         <div className="absolute left-2 w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-white dark:border-slate-900 shadow-md"></div>
                         <div className="bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-800 p-4 shadow-sm">
-                          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-3">
-                            <div>
-                              <h4 className="text-xl font-bold text-gray-900 dark:text-white">{exp.title}</h4>
-                              <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{exp.company}</p>
-                              <p className="text-sm text-gray-500 dark:text-gray-400">{exp.location}</p>
-                            </div>
-                            <div className="mt-2 lg:mt-0 text-right">
-                              <Badge variant="outline" className="mb-1 text-xs">{exp.date}</Badge>
-                            </div>
+                          <div className="mb-3">
+                            <Badge variant="outline" className="mb-2 text-xs">{exp.date}</Badge>
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-bold text-gray-900 dark:text-white">{exp.title}</h4>
+                            <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{exp.company}</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">{exp.location}</p>
                           </div>
                           {exp.bullets && exp.bullets.length > 0 && (
                             <ul className="list-disc ml-5 space-y-1 text-gray-700 dark:text-gray-300">
@@ -188,43 +202,47 @@ export default function Resume({ onBack }: ResumeProps) {
             </div>
 
             {/* Key Projects */}
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-2xl md:text-3xl font-bold">
-                  <Code className="w-5 h-5" />
-                  Key Projects
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-6">
+                <Code className="w-5 h-5" />
+                <h2 className="text-2xl md:text-3xl font-bold">Key Projects</h2>
+              </div>
+              <div className="flex flex-col gap-6">
                 {projects.map((project, index) => (
-                  <div key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-lg p-6 border border-blue-100 dark:border-blue-900">
-                    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.name}</h3>
-                        <div className="flex items-center gap-3 mb-3">
-                          <Badge className="bg-blue-500 dark:bg-blue-400 text-xs">{project.stack ? project.stack.join(', ') : ''}</Badge>
-                          <Badge variant="outline" className="text-xs">{project.year}</Badge>
+                  <Card key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-100 dark:border-blue-900">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                        {project.name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
+                        <div>
+                          <div className="flex items-center gap-3 mb-3">
+                            <Badge className="bg-blue-500 dark:bg-blue-400 text-xs">{project.stack ? project.stack.join(', ') : ''}</Badge>
+                            <Badge variant="outline" className="text-xs">{project.year}</Badge>
+                          </div>
                         </div>
+                        <Button variant="outline" size="sm" asChild>
+                          <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4 mr-1" />
+                            Live Demo
+                          </a>
+                        </Button>
                       </div>
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-1" />
-                          Live Demo
-                        </a>
-                      </Button>
-                    </div>
-                    <ul className="space-y-2">
-                      {project.bullets.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-base text-gray-700 dark:text-gray-300">
-                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                      <ul className="space-y-2">
+                        {project.bullets.map((highlight, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-base text-gray-700 dark:text-gray-300">
+                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
                 ))}
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-8">
               {/* Education Timeline */}
@@ -244,15 +262,13 @@ export default function Resume({ onBack }: ResumeProps) {
                         {/* Timeline dot */}
                         <div className="absolute left-2 w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-white dark:border-slate-900 shadow-md"></div>
                         <div className="bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-800 p-4 shadow-sm">
-                          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-3">
-                            <div>
-                              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
-                              <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
-                              <p className="text-sm text-gray-500 dark:text-gray-400">{edu.location}</p>
-                            </div>
-                            <div className="mt-2 lg:mt-0 text-right">
-                              <Badge variant="secondary" className="mb-1 text-xs">{edu.date}</Badge>
-                            </div>
+                          <div className="mb-3">
+                            <Badge variant="secondary" className="mb-2 text-xs">{edu.date}</Badge>
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
+                            <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">{edu.location}</p>
                           </div>
                           {edu.details && edu.details.length > 0 && (
                             <ul className="space-y-1.5">
