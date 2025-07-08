@@ -1,50 +1,54 @@
-import React from 'react';
+import { Badge } from '@/components/ui/badge';
+import { ReactNode } from 'react';
 
-export interface TimelineItem {
+interface TimelineItemProps {
   date: string;
-  institution: string; // school or company
   title: string;
-  subtitle?: string;
-  bullets: string[];
+  subtitle: string;
+  location: string;
+  details?: string[];
+  badgeVariant?: "outline" | "secondary";
 }
 
 interface TimelineProps {
-  items: TimelineItem[];
+  items: TimelineItemProps[];
+  badgeVariant?: "outline" | "secondary";
 }
 
-const Timeline: React.FC<TimelineProps> = ({ items }) => {
+export function TimelineItem({ date, title, subtitle, location, details, badgeVariant = "outline" }: TimelineItemProps) {
   return (
-    <div className="relative">
-      <div className="flex flex-col gap-12">
-        {items.map((item, idx) => (
-          <div key={idx} className="grid grid-cols-[220px_32px_1fr] items-center relative min-h-[80px]">
-            {/* Left column: Date and institution */}
-            <div className="text-right pr-6">
-              <div className="text-gray-400 text-sm font-medium leading-tight">{item.date}</div>
-              <div className="text-gray-200 text-base font-semibold mt-1">{item.institution}</div>
-            </div>
-            {/* Timeline line and dot, now just right of left column */}
-            <div className="flex flex-col items-center relative h-full">
-              {/* Top half of line (if not first item) */}
-              <div className={`flex-1 w-px bg-blue-700 dark:bg-blue-400 z-0 ${idx === 0 ? 'invisible' : ''}`} />
-              {/* Dot */}
-              <span className="w-3 h-3 bg-blue-500 dark:bg-blue-400 rounded-full border-2 border-gray-900 z-10" style={{ margin: '8px 0' }} />
-              {/* Bottom half of line (if not last item) */}
-              <div className={`flex-1 w-px bg-blue-700 dark:bg-blue-400 z-0 ${idx === items.length - 1 ? 'invisible' : ''}`} />
-            </div>
-            {/* Right column: Details */}
-            <div className="pl-6">
-              <div className="font-bold text-lg text-blue-100 mb-1 leading-tight">{item.title}</div>
-              {item.subtitle && <div className="text-gray-300 mb-1 font-semibold">{item.subtitle}</div>}
-              <ul className="list-disc pl-5 text-gray-200 space-y-1">
-                {item.bullets.map((b, i) => <li key={i}>{b}</li>)}
-              </ul>
-            </div>
-          </div>
-        ))}
+    <div className="relative pl-12 pb-8 last:pb-0">
+      {/* Timeline dot */}
+      <div className="absolute left-2 w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-white dark:border-slate-900 shadow-md"></div>
+      <div className="bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-800 p-4 shadow-sm">
+        <div className="mb-3">
+          <Badge variant={badgeVariant} className="mb-2 text-xs">{date}</Badge>
+        </div>
+        <div>
+          <h4 className="text-xl font-bold text-gray-900 dark:text-white">{title}</h4>
+          <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{subtitle}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">{location}</p>
+        </div>
+        {details && details.length > 0 && (
+          <ul className="list-disc ml-5 space-y-1 text-gray-700 dark:text-gray-300">
+            {details.map((detail, idx) => (
+              <li key={idx}>{detail}</li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
-};
+}
 
-export default Timeline; 
+export function Timeline({ items, badgeVariant = "outline" }: TimelineProps) {
+  return (
+    <div className="relative">
+      {/* Timeline line */}
+      <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-900"></div>
+      {items.map((item, index) => (
+        <TimelineItem key={index} {...item} badgeVariant={badgeVariant} />
+      ))}
+    </div>
+  );
+} 

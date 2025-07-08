@@ -6,6 +6,7 @@ import { Mail, Phone, Github, Linkedin, MapPin, ExternalLink, Calendar, Graduati
 import { resumeData } from './resumeData';
 import { socialMediaLinks, skills as portfolioSkills, experience as portfolioExperience, degrees as portfolioDegrees, certifications as portfolioCerts, projects as portfolioProjects } from '@/portfolio';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { Timeline } from '@/components/Timeline';
 import { motion, AnimatePresence, easeIn, easeOut } from 'framer-motion';
 import { useState } from 'react';
 
@@ -143,33 +144,16 @@ export default function Resume({ onBack }: ResumeProps) {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="relative">
-                    {/* Timeline line */}
-                    <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-900"></div>
-                    {experience.map((exp, index) => (
-                      <div key={index} className="relative pl-12 pb-8 last:pb-0">
-                        {/* Timeline dot */}
-                        <div className="absolute left-2 w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-white dark:border-slate-900 shadow-md"></div>
-                        <div className="bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-800 p-4 shadow-sm">
-                          <div className="mb-3">
-                            <Badge variant="outline" className="mb-2 text-xs">{exp.date}</Badge>
-                          </div>
-                          <div>
-                            <h4 className="text-xl font-bold text-gray-900 dark:text-white">{exp.title}</h4>
-                            <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{exp.company}</p>
-                            <p className="text-sm text-gray-500 dark:text-gray-400">{exp.location}</p>
-                          </div>
-                          {exp.bullets && exp.bullets.length > 0 && (
-                            <ul className="list-disc ml-5 space-y-1 text-gray-700 dark:text-gray-300">
-                              {exp.bullets.map((highlight, idx) => (
-                                <li key={idx}>{highlight}</li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <Timeline 
+                    items={experience.map(exp => ({
+                      date: exp.date,
+                      title: exp.title,
+                      subtitle: exp.company,
+                      location: exp.location,
+                      details: exp.bullets
+                    }))}
+                    badgeVariant="outline"
+                  />
                 </CardContent>
               </Card>
 
@@ -211,6 +195,9 @@ export default function Resume({ onBack }: ResumeProps) {
                 {projects.map((project, index) => (
                   <Card key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-100 dark:border-blue-900">
                     <CardHeader>
+                      <div className="mb-3">
+                        <Badge variant="outline" className="mb-2 text-xs">{project.year}</Badge>
+                      </div>
                       <CardTitle className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white mb-2">
                         {project.name}
                       </CardTitle>
@@ -220,7 +207,6 @@ export default function Resume({ onBack }: ResumeProps) {
                         <div>
                           <div className="flex items-center gap-3 mb-3">
                             <Badge className="bg-blue-500 dark:bg-blue-400 text-xs">{project.stack ? project.stack.join(', ') : ''}</Badge>
-                            <Badge variant="outline" className="text-xs">{project.year}</Badge>
                           </div>
                         </div>
                         <Button variant="outline" size="sm" asChild>
@@ -254,36 +240,16 @@ export default function Resume({ onBack }: ResumeProps) {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="relative">
-                    {/* Timeline line */}
-                    <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-900"></div>
-                    {education.map((edu, index) => (
-                      <div key={index} className="relative pl-12 pb-8 last:pb-0">
-                        {/* Timeline dot */}
-                        <div className="absolute left-2 w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-white dark:border-slate-900 shadow-md"></div>
-                        <div className="bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-800 p-4 shadow-sm">
-                          <div className="mb-3">
-                            <Badge variant="secondary" className="mb-2 text-xs">{edu.date}</Badge>
-                          </div>
-                          <div>
-                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{edu.degree}</h3>
-                            <p className="text-base text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
-                            <p className="text-sm text-gray-500 dark:text-gray-400">{edu.location}</p>
-                          </div>
-                          {edu.details && edu.details.length > 0 && (
-                            <ul className="space-y-1.5">
-                              {edu.details.map((detail: string, idx: number) => (
-                                <li key={idx} className="flex items-start gap-2 text-base text-gray-700 dark:text-gray-300">
-                                  <div className="w-1 h-1 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                                  <span>{detail}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <Timeline 
+                    items={education.map(edu => ({
+                      date: edu.date,
+                      title: edu.degree,
+                      subtitle: edu.school,
+                      location: edu.location,
+                      details: edu.details
+                    }))}
+                    badgeVariant="secondary"
+                  />
                 </CardContent>
               </Card>
 
