@@ -1081,22 +1081,46 @@ const projects = {
     },
     {
       id: "8",
-      images: ["comingsoon.jpg"],
+      images: ["analytics_1.png"],
       videos: [],
       badge: {
         text: "Assignment 5",
         color: "success",
         icon: "💡",
       },
-      name: "Analytics site",
-      url: "",
+      name: "Canadian University Analytics Dashboard",
+      url: "https://sparkling-profiterole-0149e0.netlify.app/",
+      briefDescription: "Interactive dashboard visualizing Canadian university student enrollment data with bilingual support and modern UX/UI.",
       description: `
-Assignment as part of SEG 3125 
-`,
-
-      languages: [],
-      links: [],
-    },
+- Visualizes enrollment data by university, province, and student type (full-time, part-time, undergrad, grad)
+- Interactive **bar and line charts**
+- **Filter** by province and top universities
+- **Language toggle** (EN/FR) updates UI text and chart labels
+- Clean, card-based layout with accessible colors and tooltips
+- Responsive and accessible (ARIA labels, keyboard navigation)
+- Built with **React** for SEG 3125 (demo figures)
+      `,
+      languages: ["JavaScript", "HTML", "CSS", "React"],
+      links: [
+        {
+          name: "Live Dashboard",
+          url: "https://sparkling-profiterole-0149e0.netlify.app/"
+        },
+        {
+          name: "Portfolio",
+          url: "https://manvu.ca"
+        },
+        {
+          name: "GitHub Repository",
+          url: "https://github.com/man-vu/SEG3125-Assignment4"
+        },
+        {
+          name: "Group GitHub",
+          url: "https://github.com/man-vu"
+        }
+      ]
+    }
+    
   ],
 };
 
