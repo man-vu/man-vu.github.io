@@ -1089,7 +1089,7 @@ const projects = {
         icon: "💡",
       },
       name: "Canadian University Analytics Dashboard",
-      url: "https://sparkling-profiterole-0149e0.netlify.app/",
+      url: "https://canada-university-enrollment.netlify.app/",
       briefDescription: "Interactive dashboard visualizing Canadian university student enrollment data with bilingual support and modern UX/UI.",
       description: `
 - Visualizes enrollment data by university, province, and student type (full-time, part-time, undergrad, grad)
@@ -1104,20 +1104,12 @@ const projects = {
       links: [
         {
           name: "Live Dashboard",
-          url: "https://sparkling-profiterole-0149e0.netlify.app/"
-        },
-        {
-          name: "Portfolio",
-          url: "https://manvu.ca"
+          url: "https://canada-university-enrollment.netlify.app/"
         },
         {
           name: "GitHub Repository",
-          url: "https://github.com/man-vu/SEG3125-Assignment4"
+          url: "https://github.com/man-vu/SEG3125-Assignment5-university-dashboard"
         },
-        {
-          name: "Group GitHub",
-          url: "https://github.com/man-vu"
-        }
       ]
     }
     
