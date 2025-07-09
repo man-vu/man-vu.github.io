@@ -6,6 +6,9 @@ import Fade from "@mui/material/Fade";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import CodeIcon from "@mui/icons-material/Code";
+import CloudIcon from "@mui/icons-material/Cloud";
+import ScienceIcon from "@mui/icons-material/Science";
 
 function TabPanel({ children, value, index }) {
   return (
@@ -28,8 +31,10 @@ function SkillSection(props) {
     setTabIndex(newValue);
   };
 
+  const tabIcons = [<CodeIcon />, <CloudIcon />, <ScienceIcon />];
+
   return (
-    <div className="skills-tabs">
+    <Box className="skills-tabs">
       <Tabs
         value={tabIndex}
         onChange={handleChange}
@@ -43,6 +48,8 @@ function SkillSection(props) {
           <Tab
             key={index}
             label={skill.title}
+            icon={tabIcons[index]}
+            iconPosition="start"
             sx={{ color: theme.text }}
           />
         ))}
@@ -67,7 +74,7 @@ function SkillSection(props) {
           </div>
         </TabPanel>
       ))}
-    </div>
+    </Box>
   );
 }
 
