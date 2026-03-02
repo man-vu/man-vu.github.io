@@ -10,6 +10,7 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Resume from '@/pages/resume/Resume';
+import BackgroundElements from '@/components/BackgroundElements';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -32,41 +33,46 @@ export default function Portfolio() {
   };
 
   return (
-    <AnimatePresence mode="wait">
-      {showResume ? (
-        <motion.div
-          key="resume"
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={pageVariants}
-        >
-          <Resume onBack={handleBackToPortfolio} />
-        </motion.div>
-      ) : (
-        <motion.div
-          key="portfolio"
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={pageVariants}
-          className="min-h-screen"
-        >
-          <Header />
-          <main>
-            <Hero onShowResume={handleShowResume} />
-            <About />
-            <Skills />
-            <Experience />
-            <Education />
-            <Certifications />
-            <Projects />
-            <Testimonials />
-            <Contact />
-          </main>
-          <Footer />
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <>
+      <div className="animated-gradient-bg" />
+      <div className="fixed inset-0 bg-grid-pattern pointer-events-none z-[-1]" />
+      <BackgroundElements />
+      <AnimatePresence mode="wait">
+        {showResume ? (
+          <motion.div
+            key="resume"
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={pageVariants}
+          >
+            <Resume onBack={handleBackToPortfolio} />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="portfolio"
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={pageVariants}
+            className="min-h-screen relative overflow-hidden"
+          >
+            <Header />
+            <main className="relative z-10">
+              <Hero onShowResume={handleShowResume} />
+              <About />
+              <Skills />
+              <Experience />
+              <Education />
+              <Certifications />
+              <Projects />
+              <Testimonials />
+              <Contact />
+            </main>
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

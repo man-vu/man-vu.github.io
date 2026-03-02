@@ -8,7 +8,7 @@ const greeting = {
   nickname: "",
   full_name: "Man Vu",
   subTitle:
-    "Full-Time Software Developer @ ABELSoft | 4th Year CS Student @ uOttawa (Full-Time) | Cloud Computing & AI Enthusiast",
+    "Software Developer @ ABELSoft | CS Student @ uOttawa | AI & Cloud Enthusiast",
   resumeLink: "/assets/resumes/Man_Resume.pdf",
   mail: "mailto:manvminh@gmail.com",
 };
@@ -230,7 +230,7 @@ const skills = {
 const experience = {
   title: "Professional Experience",
   description:
-    "Full-time Software Developer with 5+ years of experience building scalable applications, automating infrastructure, and leveraging AI tools for efficient problem-solving.",
+    "Software Developer with 5+ years building scalable applications and automating infrastructure.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -244,10 +244,9 @@ const experience = {
           duration: "Jan 2020 - Present",
           location: "Ottawa, Ontario, Canada",
           description: [
-            "Developed mission-critical products with C#, SQL, WPF and WCF.",
-            "Automated SQL deployments with PowerShell, cutting release time by 50%.",
-            "Used GitHub Copilot and ChatGPT to accelerate development and debugging.",
-            "Maintained Azure DevOps pipelines and resolved high-priority production issues.",
+            "Engineered mission-critical applications using C#, SQL, and WPF.",
+            "Automated deployments via PowerShell, reducing release time by 50%.",
+            "Maintained automated CI/CD pipelines in Azure DevOps.",
           ],
           color: "#7F00FF",
         },
@@ -568,14 +567,14 @@ const certifications = {
 const projectsHeader = {
   title: "Featured Projects",
   description:
-    "I utilize a diverse array of cutting-edge technological tools in my projects. I'm particularly proficient in developing Vue.js and React applications, crafting Node.js backends, and scripting with Python. Here are a few of my notable projects.",
+    "A showcase of my recent work across full-stack development and AI integration.",
   avatar_image_path: "projects_image.svg",
 };
 
 const testimonialsHeader = {
   title: "Colleague Testimonials",
   description:
-    "Throughout my career, I've had the privilege to work alongside amazing colleagues from various roles—developers, team leads, QAs, and more. Here's what some of them have to say about our time working together.",
+    "Feedback from team leads and colleagues I've had the privilege to work alongside.",
   avatar_image_path: "testimonials_image.svg",
 };
 

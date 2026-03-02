@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Mail, MapPin, Phone, Github, Linkedin, Facebook, FileText, MessageCircle } from 'lucide-react';
 import { contactPageData, socialMediaLinks, greeting } from '../portfolio.js';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   // Icon mapping function
@@ -31,12 +32,31 @@ export default function Contact() {
     icon: getIconComponent(social.icon)
   }));
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 300, damping: 24 } }
+  };
+
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 relative">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
             <Badge variant="secondary" className="mb-4">Get In Touch</Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Let's <span className="text-blue-600 dark:text-blue-400">Connect</span>
@@ -44,65 +64,80 @@ export default function Contact() {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {contactPageData.contactSection.description}
             </p>
-          </div>
+          </motion.div>
 
           {/* Contact Methods */}
-          <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid md:grid-cols-2 gap-6 mb-16"
+          >
             {contactMethods.map((method, index) => (
-              <Card key={index} className={`group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border ${method.primary ? 'border-blue-200 dark:border-blue-800' : ''}`}>
-                <CardHeader className="pb-4">
-                  <div className="flex items-center space-x-4">
-                    <div className={`p-3 rounded-lg ${method.primary ? 'bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900' : 'bg-muted'} group-hover:scale-110 transition-transform`}>
-                      <method.icon className={`w-6 h-6 ${method.primary ? 'text-blue-600 dark:text-blue-400' : 'text-muted-foreground'}`} />
+              <motion.div key={index} variants={itemVariants}>
+                <Card className={`h-full glass-panel group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-none ${method.primary ? 'ring-1 ring-blue-500/50' : ''}`}>
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center space-x-4">
+                      <div className={`p-3 rounded-lg ${method.primary ? 'bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900' : 'bg-muted'} group-hover:scale-110 transition-transform`}>
+                        <method.icon className={`w-6 h-6 ${method.primary ? 'text-blue-600 dark:text-blue-400' : 'text-muted-foreground'}`} />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg font-bold text-foreground">{method.title}</CardTitle>
+                        <p className="text-sm text-muted-foreground">{method.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <CardTitle className="text-lg font-bold text-foreground">{method.title}</CardTitle>
-                      <p className="text-sm text-muted-foreground">{method.description}</p>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  {method.href ? (
-                    <Button variant="link" className="p-0 h-auto text-left justify-start" asChild>
-                      <a href={method.href} target="_blank" rel="noopener noreferrer">
-                        <span className="text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                          {method.value}
-                        </span>
-                      </a>
-                    </Button>
-                  ) : (
-                    <span className="text-foreground">{method.value}</span>
-                  )}
-                </CardContent>
-              </Card>
+                  </CardHeader>
+                  <CardContent>
+                    {method.href ? (
+                      <Button variant="link" className="p-0 h-auto text-left justify-start" asChild>
+                        <a href={method.href} target="_blank" rel="noopener noreferrer">
+                          <span className="text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                            {method.value}
+                          </span>
+                        </a>
+                      </Button>
+                    ) : (
+                      <span className="text-foreground">{method.value}</span>
+                    )}
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Social Links */}
-          <Card className="mb-16 border-border">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl font-bold text-foreground">Follow Me Online</CardTitle>
-              <p className="text-muted-foreground">Stay connected on social media and professional networks</p>
-            </CardHeader>
-            <CardContent>
-              <div className="flex justify-center space-x-4">
-                {socialLinks.map((social, index) => (
-                  <Button
-                    key={index}
-                    variant="outline"
-                    size="lg"
-                    asChild
-                    className={`group border-border ${social.color} transition-colors`}
-                  >
-                    <a href={social.href} target="_blank" rel="noopener noreferrer">
-                      <social.icon className="w-5 h-5 mr-2" />
-                      {social.title}
-                    </a>
-                  </Button>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Card className="mb-16 glass-panel rounded-[2rem] border-none">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl font-bold text-foreground">Follow Me Online</CardTitle>
+                <p className="text-muted-foreground">Stay connected on social media and professional networks</p>
+              </CardHeader>
+              <CardContent>
+                <div className="flex justify-center space-x-4">
+                  {socialLinks.map((social, index) => (
+                    <Button
+                      key={index}
+                      variant="outline"
+                      size="lg"
+                      asChild
+                      className={`group border-border ${social.color} transition-colors`}
+                    >
+                      <a href={social.href} target="_blank" rel="noopener noreferrer">
+                        <social.icon className="w-5 h-5 mr-2" />
+                        {social.title}
+                      </a>
+                    </Button>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
 
           {/* Blog Section */}
           {/* <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border-blue-200 dark:border-blue-800">
@@ -124,10 +159,16 @@ export default function Contact() {
           </Card> */}
 
           {/* Call to Action */}
-          <div className="text-center mt-16 p-8 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-700 dark:to-indigo-700 rounded-xl text-white">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mt-16 p-8 bg-gradient-to-r from-blue-600/90 to-indigo-600/90 dark:from-blue-700/90 dark:to-indigo-700/90 backdrop-blur-xl rounded-[2rem] text-white shadow-2xl border border-white/20"
+          >
             <h3 className="text-2xl font-bold mb-4">Ready to Work Together?</h3>
             <p className="text-blue-100 dark:text-blue-200 mb-6 max-w-2xl mx-auto">
-              I'm always interested in discussing new opportunities, collaborating on exciting projects, 
+              I'm always interested in discussing new opportunities, collaborating on exciting projects,
               or just having a conversation about technology and software development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -144,7 +185,7 @@ export default function Contact() {
                 </a>
               </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
