@@ -1099,15 +1099,22 @@ const projects = {
 - Responsive and accessible (ARIA labels, keyboard navigation)
 - Built with **React** for SEG 3125 (demo figures)
       `,
-      languages: ["JavaScript", "HTML", "CSS", "React"],
+      languages: [
+        { name: "React", iconifyClass: "logos-react" },
+        { name: "HTML", iconifyClass: "logos-html-5" },
+        { name: "CSS", iconifyClass: "logos-css-3" },
+        { name: "JavaScript", iconifyClass: "logos-javascript" }
+      ],
       links: [
         {
           name: "Live Dashboard",
-          url: "https://canada-university-enrollment.netlify.app/"
+          url: "https://canada-university-enrollment.netlify.app/",
+          iconifyClass: "mdi:web"
         },
         {
           name: "GitHub Repository",
-          url: "https://github.com/man-vu/SEG3125-Assignment5-university-dashboard"
+          url: "https://github.com/man-vu/SEG3125-Assignment5-university-dashboard",
+          iconifyClass: "ri:github-fill"
         },
       ]
     }
