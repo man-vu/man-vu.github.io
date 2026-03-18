@@ -27,25 +27,11 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "Scalable .NET and web apps",
-        "Automated deployments and legacy cleanup",
-        "Performance fixes and reliable tests",
+        "Scalable .NET desktop and web applications with microservices architecture",
+        "Automated deployments, legacy refactoring, and performance optimization",
+        "RESTful APIs, web services, and reliable test coverage",
       ],
       softwareSkills: [
-        {
-          skillName: "C",
-          fontAwesomeClassname: "simple-icons:c",
-          style: {
-            color: "#A8B9CC",
-          },
-        },
-        {
-          skillName: "C++",
-          fontAwesomeClassname: "simple-icons:cplusplus",
-          style: {
-            color: "#00599C",
-          },
-        },
         {
           skillName: "C#",
           fontAwesomeClassname: "simple-icons:csharp",
@@ -61,17 +47,17 @@ const skills = {
           },
         },
         {
-          skillName: "SQL Server",
-          fontAwesomeClassname: "simple-icons:microsoftsqlserver",
-          style: {
-            color: "#CC2927",
-          },
-        },
-        {
           skillName: "JavaScript",
           fontAwesomeClassname: "simple-icons:javascript",
           style: {
             color: "#F7DF1E",
+          },
+        },
+        {
+          skillName: "TypeScript",
+          fontAwesomeClassname: "simple-icons:typescript",
+          style: {
+            color: "#3178C6",
           },
         },
         {
@@ -103,10 +89,24 @@ const skills = {
           },
         },
         {
-          skillName: "Visual Studio",
-          fontAwesomeClassname: "simple-icons:visualstudio",
+          skillName: "SQL Server",
+          fontAwesomeClassname: "simple-icons:microsoftsqlserver",
           style: {
-            color: "#5C2D91",
+            color: "#CC2927",
+          },
+        },
+        {
+          skillName: "C",
+          fontAwesomeClassname: "simple-icons:c",
+          style: {
+            color: "#A8B9CC",
+          },
+        },
+        {
+          skillName: "C++",
+          fontAwesomeClassname: "simple-icons:cplusplus",
+          style: {
+            color: "#00599C",
           },
         },
         {
@@ -122,9 +122,9 @@ const skills = {
       title: "Cloud Infrastructure & DevOps",
       fileName: "CloudInfraImg",
       skills: [
-        "Azure services via DevOps pipelines",
-        "Server monitoring to reduce downtime",
-        "Automated checks and documented deploys",
+        "Azure cloud services and DevOps CI/CD pipelines",
+        "Server monitoring, infrastructure automation, and reduced downtime",
+        "Microservices deployment, containerization, and documented release processes",
       ],
       softwareSkills: [
         {
@@ -162,15 +162,22 @@ const skills = {
             color: "#5391FE",
           },
         },
+        {
+          skillName: "Visual Studio",
+          fontAwesomeClassname: "simple-icons:visualstudio",
+          style: {
+            color: "#5C2D91",
+          },
+        },
       ],
     },
     {
       title: "Data Science & Machine Learning",
       fileName: "DataScienceImg",
       skills: [
-        "Analyze data with Python and SQL",
-        "Build regression and classification models",
-        "Google and Stanford analytics certificates",
+        "Data analysis and visualization with Python, Pandas, and SQL",
+        "Regression, classification, and deep learning models",
+        "Google, Stanford, and Microsoft analytics certifications",
       ],
       softwareSkills: [
         {
@@ -237,13 +244,14 @@ const experience = {
       title: "",
       experiences: [
         {
-          title: "Software Developer",
+          title: "Mid-Senior Software Developer",
           company: "ABELSoft Inc.",
           company_url: "http://abelsoft.com/",
           logo_path: "abelsoft.jpg",
           duration: "Jan 2020 - Present",
           location: "Ottawa, Ontario, Canada",
           description: [
+            "Progressed from Junior to Mid-Senior Software Developer over 5+ years.",
             "Engineered mission-critical applications using C#, SQL, and WPF.",
             "Automated deployments via PowerShell, reducing release time by 50%.",
             "Maintained automated CI/CD pipelines in Azure DevOps.",
@@ -258,8 +266,9 @@ const experience = {
           duration: "May 2019 - Aug 2019",
           location: "Mississauga, Ontario, Canada",
           description: [
-            "Built native iOS apps integrating RESTful APIs for real-time events.",
-            "Collaborated with cross-functional teams to deliver intuitive mobile experiences.",
+            "Designed and built native iOS applications for the company's event management platform.",
+            "Integrated RESTful APIs for real-time event data and user interactions.",
+            "Collaborated with cross-functional teams to define, design, and ship new product features.",
           ],
           color: "#7F00FF",
         },
@@ -290,6 +299,50 @@ const degrees = {
         honors: "Honours Graduate",
         transcripts: "Show Transcripts",
       },
+    },
+    {
+      title: "Bachelor of Technology (BTech)",
+      subtitle: "McMaster University",
+      logo_path: "mcmaster_logo.png",
+      alt_name: "McMaster",
+      duration: "",
+      descriptions: [
+        "Completed a Bachelor of Technology degree with a focus on software systems.",
+      ],
+      website_link: "https://www.mcmaster.ca/",
+    },
+    {
+      title: "Advanced Diploma",
+      subtitle: "Conestoga College",
+      logo_path: "conestoga_logo.png",
+      alt_name: "Conestoga",
+      duration: "",
+      descriptions: [
+        "Earned an advanced diploma in a technology-focused program.",
+      ],
+      website_link: "https://www.conestogac.on.ca/",
+    },
+    {
+      title: "English Certification Program",
+      subtitle: "University of Guelph",
+      logo_path: "guelph_logo.png",
+      alt_name: "Guelph",
+      duration: "",
+      descriptions: [
+        "Completed an English certification program to strengthen academic and professional communication.",
+      ],
+      website_link: "https://www.uoguelph.ca/",
+    },
+    {
+      title: "Bachelor of Science",
+      subtitle: "Bach Khoa University (HCMUT)",
+      logo_path: "bachkhoa_logo.png",
+      alt_name: "Bach Khoa",
+      duration: "",
+      descriptions: [
+        "Completed foundational studies in science and engineering at one of Vietnam's top technical universities.",
+      ],
+      website_link: "https://www.hcmut.edu.vn/",
     },
   ],
   inProgressDegrees: [
