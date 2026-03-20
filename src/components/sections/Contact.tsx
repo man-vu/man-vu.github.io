@@ -1,97 +1,133 @@
-import { motion } from "framer-motion";
 import { contactPageData } from "../../portfolio";
 import { getImageUrl } from "../../utils/getImageUrl";
-import { Mail, Linkedin, Github, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
+import { Mail, Linkedin, Github, MapPin, ExternalLink } from "lucide-react";
+
+const iconMap: Record<string, React.ReactNode> = {
+  Mail: <Mail className="w-5 h-5" />,
+  Linkedin: <Linkedin className="w-5 h-5" />,
+  Github: <Github className="w-5 h-5" />,
+  MapPin: <MapPin className="w-5 h-5" />,
+};
+
+function getIcon(name: string) {
+  return iconMap[name] || <ExternalLink className="w-5 h-5" />;
+}
 
 const Contact = () => {
-    return (
-        <section id="contact" className="py-20 relative z-10 overflow-hidden">
-            <div className="container mx-auto px-6 max-w-5xl">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-4xl md:text-5xl font-agustina font-bold text-primary dark:text-white mb-4">
-                        {contactPageData.contactSection.title}
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-                        {contactPageData.contactSection.description}
-                    </p>
-                    <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-600 mx-auto rounded-full" />
-                </motion.div>
+  const { contactSection, contactMethods } = contactPageData;
 
-                <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
-                    {/* Image / Avatar Side */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                        whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, type: "spring" }}
-                        className="w-full max-w-sm relative"
-                    >
-                        <div className="aspect-square rounded-[3rem] p-3 glass-panel overflow-hidden relative group">
-                            <img
-                                src={getImageUrl(contactPageData.contactSection.profile_image_path)}
-                                alt="Contact me"
-                                className="w-full h-full object-cover rounded-[2rem] group-hover:scale-105 transition-transform duration-500"
-                            />
-                            <div className="absolute inset-0 shadow-[inset_0_0_50px_rgba(20,184,166,0.3)] rounded-[3rem] pointer-events-none" />
-                        </div>
-                    </motion.div>
+  return (
+    <section id="contact" className="py-24 px-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
+            Get In Touch
+          </h2>
+          <div className="w-12 h-1 bg-cyan-500 mx-auto mb-4 rounded-full" />
+        </motion.div>
 
-                    {/* Contact Methods */}
-                    <div className="w-full max-w-md space-y-4">
-                        {contactPageData.contactMethods.map((method, index) => {
-                            const icons: Record<string, any> = {
-                                Mail: <Mail />,
-                                Linkedin: <Linkedin />,
-                                Github: <Github />,
-                                MapPin: <MapPin />
-                            };
-
-                            const IconCmp = icons[method.icon];
-
-                            return (
-                                <motion.a
-                                    key={method.title}
-                                    href={method.href || "#"}
-                                    target={method.href ? "_blank" : undefined}
-                                    rel={method.href ? "noopener noreferrer" : undefined}
-                                    initial={{ opacity: 0, x: 50 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    className={`flex items-center gap-6 p-4 rounded-2xl transition-all duration-300 ${method.primary
-                                            ? "glass-panel hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(20,184,166,0.2)]"
-                                            : "bg-transparent border border-transparent hover:bg-secondary/50 cursor-default"
-                                        }`}
-                                >
-                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-white ${method.title === 'Email' ? 'bg-[#ea4335]' :
-                                            method.title === 'LinkedIn' ? 'bg-[#0077b5]' :
-                                                method.title === 'GitHub' ? 'bg-zinc-800' :
-                                                    'bg-teal-500'
-                                        }`}>
-                                        {IconCmp}
-                                    </div>
-                                    <div>
-                                        <h4 className="text-lg font-sans-bold text-primary dark:text-white">
-                                            {method.title}
-                                        </h4>
-                                        <p className="text-sm font-medium text-muted-foreground mt-0.5">
-                                            {method.value}
-                                        </p>
-                                    </div>
-                                </motion.a>
-                            );
-                        })}
-                    </div>
-                </div>
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          {/* Left: Profile Image + Description */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="flex flex-col items-center md:items-start gap-6"
+          >
+            <div className="relative">
+              <img
+                src={getImageUrl(contactSection.profile_image_path)}
+                alt="Man Vu"
+                className="w-64 h-64 object-cover rounded-2xl border border-white/10"
+                loading="lazy"
+              />
             </div>
-        </section>
-    );
+            <p className="text-muted-foreground leading-relaxed text-center md:text-left">
+              {contactSection.description}
+            </p>
+          </motion.div>
+
+          {/* Right: Contact Method Cards */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="flex flex-col gap-4"
+          >
+            {contactMethods.map((method, index) => {
+              const content = (
+                <div
+                  className={`glass-card p-5 flex items-center gap-4 transition-colors ${
+                    method.href
+                      ? "hover:border-blue-500/30 cursor-pointer"
+                      : ""
+                  }`}
+                >
+                  <div
+                    className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center ${
+                      method.primary
+                        ? "bg-blue-500/15 text-blue-400"
+                        : "bg-white/5 text-muted-foreground"
+                    }`}
+                  >
+                    {getIcon(method.icon)}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs text-muted-foreground">
+                      {method.title}
+                    </p>
+                    <p className="text-sm font-medium text-foreground truncate">
+                      {method.value}
+                    </p>
+                  </div>
+                  {method.href && (
+                    <ExternalLink className="w-4 h-4 text-muted-foreground/50 flex-shrink-0" />
+                  )}
+                </div>
+              );
+
+              return method.href ? (
+                <motion.a
+                  key={method.title}
+                  href={method.href}
+                  target={method.href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.08 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  aria-label={`${method.title}: ${method.value}`}
+                >
+                  {content}
+                </motion.a>
+              ) : (
+                <motion.div
+                  key={method.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.08 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                >
+                  {content}
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Contact;

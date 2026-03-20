@@ -12,6 +12,7 @@
     "deploy:clean": "npm run build && rm -rf .git && cp -r dist/* . && git init && git add . && git commit -m 'Deploy' && git branch -M main && git remote add origin https://github.com/man-vu/man-vu.github.io.git && git push -u origin main --force"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^1.4.0",
     "@hookform/resolvers": "^3.9.0",
     "@iconify/react": "^6.0.2",
     "@radix-ui/react-accordion": "^1.2.0",

@@ -1,22 +1,10 @@
-# CLAUDE.md - AI Assistant Guide for man-vu.github.io
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-Personal portfolio website for **Man Vu** — a Software Developer. The site showcases professional experience, projects, skills, education, certifications, and testimonials. Hosted on GitHub Pages at **manvu.ca**.
-
-## Tech Stack
-
-- **Framework**: React 18 + TypeScript
-- **Build Tool**: Vite 5 (with SWC compiler)
-- **Styling**: Tailwind CSS 3 with CSS variables (HSL-based theming)
-- **UI Components**: shadcn/ui (Radix primitives, base color: slate)
-- **Animation**: Framer Motion
-- **Icons**: Lucide React + Iconify (`@iconify/react`)
-- **Routing**: React Router v6
-- **State/Data**: TanStack React Query
-- **Forms**: React Hook Form + Zod validation
-- **Theme**: next-themes (class-based dark mode)
-- **Package Manager**: pnpm 8.10.0
+Personal portfolio website for **Man Vu** — a Software Developer. Hosted on GitHub Pages at **manvu.ca**. Single-page app showcasing experience, projects, skills, education, certifications, and testimonials.
 
 ## Commands
 
@@ -26,103 +14,55 @@ pnpm run dev          # Start dev server (localhost:5173)
 pnpm run build        # Production build to dist/
 pnpm run lint         # ESLint (quiet mode, src/ only)
 pnpm run preview      # Preview production build
-pnpm run deploy       # Build + copy dist to root + commit + push
+pnpm run deploy       # Build + copy dist to root + commit + push (uses npm internally)
 ```
 
-## Project Structure
+No test framework is configured. There are no unit or integration tests.
 
-```
-src/
-├── App.tsx                    # Root component with React Router setup
-├── main.tsx                   # Entry point
-├── index.css                  # Global styles + Tailwind directives + CSS variables
-├── portfolio.js               # ALL portfolio data (skills, experience, projects, etc.)
-├── assets/
-│   ├── fonts/                 # Custom fonts (Agustina, etc.)
-│   └── images/                # Avatar, project screenshots, cert logos
-├── components/
-│   ├── common/                # Reusable: Navbar, BackgroundElements
-│   ├── sections/              # Page sections: Hero, Skills, Experience, Education,
-│   │                          #   Certifications, Projects, Testimonials, Contact, Footer
-│   └── ui/                    # shadcn/ui components (auto-generated, do not edit manually)
-├── pages/
-│   ├── Index.tsx              # Home page (composes all sections)
-│   ├── NotFound.tsx           # 404 page
-│   └── resume/Resume.tsx      # PDF resume viewer
-├── lib/
-│   └── utils.ts               # cn() utility (clsx + tailwind-merge)
-├── hooks/                     # Custom React hooks
-└── utils/
-    └── getImageUrl.ts         # Vite-compatible image URL helper using import.meta.url
-```
+## Tech Stack
 
-### Other directories
+React 18 + TypeScript, Vite 5 (SWC), Tailwind CSS 3 (HSL CSS variables), shadcn/ui (Radix), Framer Motion, Lucide React + Iconify, React Router v6, TanStack React Query, React Hook Form + Zod, next-themes (class-based dark mode). Package manager: pnpm 8.10.0.
 
-- `public/` — Static assets (favicons, manifest, robots.txt)
-- `assets/resumes/` — PDF resume file
-- `crs-tool/` — Standalone CRS Score Visualizer sub-project (plain HTML/JS)
-
-## Key Architecture Decisions
+## Architecture
 
 ### Data Layer
 
-**All portfolio content lives in `src/portfolio.js`**. This is the single source of truth for:
-- `greeting` — name, title, subtitle, resume link
-- `socialMediaLinks` — GitHub, LinkedIn, email, Facebook
-- `skills` — grouped into categories with Iconify icon classes
-- `experience` — work history with descriptions
-- `degrees` — completed and in-progress education
-- `certifications` — professional certifications array
-- `projects` — project showcase with images, videos, badges, tech stacks
-- `testimonials` — colleague recommendations
-- `contactPageData` — contact methods and social links
+**All portfolio content lives in `src/portfolio.js`** — the single source of truth. Exports: `greeting`, `socialMediaLinks`, `skills`, `experience`, `degrees`, `certifications`, `projects`, `testimonials`, `contactPageData`. To update portfolio content, edit this file only.
 
-When updating portfolio content, edit `portfolio.js` — components read from it directly.
+### Routing (App.tsx)
+
+Three routes: `/` (Index — composes all sections), `/resume` (PDF viewer), `*` (404). Wrapped in QueryClientProvider → ThemeProvider → BrowserRouter.
+
+### Page Composition (Index.tsx)
+
+Index renders sections in order: Hero → Skills → Experience → Education → Certifications → Projects → Testimonials → Contact → Footer. Each section is self-contained with an `id` for anchor navigation.
 
 ### Component Patterns
 
-- **Framer Motion everywhere**: All sections use `motion.div` with `whileInView` scroll triggers
-- **Viewport config**: `viewport={{ once: true, margin: "-100px" }}` is the standard pattern
-- **Glass panels**: Use the `glass-panel` CSS class for glassmorphism effects
+- **Framer Motion**: All sections use `motion.div` with `whileInView` scroll triggers and `viewport={{ once: true, margin: "-100px" }}`
+- **Glass panels**: `glass-panel` CSS class for glassmorphism effects
 - **Gradient text**: `bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600`
-- **Section layout**: Each section component is self-contained with `id` for anchor navigation
+- **Icons**: Lucide React for UI icons; Iconify (`@iconify/react`) with `simple-icons:*` and `logos:*` prefixes for tech/skill icons. The `fontAwesomeClassname` key in portfolio.js is legacy naming — values are actually Iconify icon IDs.
+- **Images**: Loaded via `getImageUrl()` in `src/utils/getImageUrl.ts` (uses Vite's `import.meta.url`)
 
-### Styling Conventions
+### Styling
 
-- Tailwind utility classes for all styling (no separate CSS files per component)
-- Dark mode via `dark:` variant (class-based toggling via next-themes)
-- HSL CSS variables defined in `index.css` for theming consistency
-- Responsive breakpoints: `md:` (tablet), `lg:` (desktop)
-- Container max-width: 1400px, centered with 2rem padding
+- Tailwind utilities only (no per-component CSS files)
+- Dark mode via `dark:` variant (class-based, next-themes)
+- HSL CSS variables in `src/index.css`
+- Responsive: `md:` (tablet), `lg:` (desktop), container max-width 1400px
 
-### Icon System
+### Other Directories
 
-- **Lucide React** for UI icons (Navbar, social links, buttons)
-- **Iconify** (`@iconify/react`) for technology/skill icons using `simple-icons:*` and `logos:*` prefixes
-- Skills use `fontAwesomeClassname` key (legacy naming) but actually reference Iconify icon IDs
-
-### Image Handling
-
-Images are loaded via `getImageUrl()` utility which uses Vite's `import.meta.url` for proper asset resolution. Project and certification logos are stored in `src/assets/images/`.
-
-## Naming Conventions
-
-- **Components**: PascalCase files and exports (`Hero.tsx`, `Skills.tsx`)
-- **Utilities**: camelCase (`getImageUrl.ts`)
-- **Data objects**: camelCase in `portfolio.js`
-- **CSS classes**: Tailwind utilities, custom classes in kebab-case
-- **Directories**: lowercase (`components/`, `sections/`, `common/`)
-
-## Deployment
-
-- **Hosting**: GitHub Pages at manvu.ca (CNAME configured)
-- **Build output**: `dist/` directory, then copied to repo root
-- **No CI/CD**: Manual deployment via `pnpm run deploy`
-- **`.nojekyll`** file disables Jekyll processing on GitHub Pages
+- `crs-tool/` — Pre-built standalone CRS Score Visualizer (Vite build output, not part of main app build)
+- `public/` — Static assets (favicons, manifest, robots.txt, CNAME)
+- `assets/resumes/` — PDF resume file
 
 ## Important Notes
 
-- TypeScript strict mode is **disabled** for app code (`tsconfig.app.json`)
-- The `src/components/ui/` directory contains shadcn/ui components — add new ones via `npx shadcn-ui@latest add <component>`, don't edit existing ones manually
-- Path alias `@` maps to `./src` (configured in both `vite.config.ts` and `tsconfig.json`)
-- The project uses ESM (`"type": "module"` in package.json)
+- TypeScript strict mode is **disabled** (`tsconfig.app.json`)
+- `src/components/ui/` contains shadcn/ui components — add via `npx shadcn-ui@latest add <component>`, don't edit manually
+- Path alias `@` → `./src` (configured in `vite.config.ts` and `tsconfig.json`)
+- ESM project (`"type": "module"`)
+- The deploy script (`pnpm run deploy`) copies `dist/*` to repo root, commits, and pushes — it modifies the working tree outside `dist/`
+- `.nojekyll` disables Jekyll processing on GitHub Pages

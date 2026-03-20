@@ -1,4 +1,4 @@
-//Home Page
+// Home Page
 const greeting = {
   title: "Mid-Senior Software Developer",
   title2: "Man Vu",
@@ -8,7 +8,7 @@ const greeting = {
   nickname: "",
   full_name: "Man Vu",
   subTitle:
-    "Software Developer @ ABELSoft | CS Student @ uOttawa | AI & Cloud Enthusiast",
+    "Software Developer @ ABELSoft | 496 PRs | 6+ Years | CS Student @ uOttawa | AI & Cloud Enthusiast",
   resumeLink: "/assets/resumes/Man_Resume.pdf",
   mail: "mailto:manvminh@gmail.com",
 };
@@ -27,94 +27,70 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "Scalable .NET desktop and web applications with microservices architecture",
-        "Automated deployments, legacy refactoring, and performance optimization",
-        "RESTful APIs, web services, and reliable test coverage",
+        "Scalable .NET desktop and web applications with WPF and service-oriented architecture",
+        "496 merged PRs, 30,387 lines added, 1,618 files changed over 6+ years at ABELSoft",
+        "RESTful APIs, legacy C modernization, performance optimization, and reliable test coverage",
       ],
       softwareSkills: [
         {
           skillName: "C#",
           fontAwesomeClassname: "simple-icons:csharp",
-          style: {
-            color: "#9A6D38",
-          },
+          style: { color: "#9A6D38" },
         },
         {
           skillName: ".NET",
           fontAwesomeClassname: "simple-icons:dotnet",
-          style: {
-            color: "#512BD4",
-          },
+          style: { color: "#512BD4" },
         },
         {
           skillName: "JavaScript",
           fontAwesomeClassname: "simple-icons:javascript",
-          style: {
-            color: "#F7DF1E",
-          },
+          style: { color: "#F7DF1E" },
         },
         {
           skillName: "TypeScript",
           fontAwesomeClassname: "simple-icons:typescript",
-          style: {
-            color: "#3178C6",
-          },
+          style: { color: "#3178C6" },
         },
         {
           skillName: "React",
           fontAwesomeClassname: "simple-icons:react",
-          style: {
-            color: "#61DAFB",
-          },
+          style: { color: "#61DAFB" },
         },
         {
           skillName: "Vue.js",
           fontAwesomeClassname: "simple-icons:vuedotjs",
-          style: {
-            color: "#41B883",
-          },
+          style: { color: "#41B883" },
         },
         {
           skillName: "Angular",
           fontAwesomeClassname: "simple-icons:angular",
-          style: {
-            color: "#DD0031",
-          },
+          style: { color: "#DD0031" },
         },
         {
           skillName: "Node.js",
           fontAwesomeClassname: "simple-icons:nodedotjs",
-          style: {
-            color: "#339933",
-          },
+          style: { color: "#339933" },
         },
         {
           skillName: "SQL Server",
           fontAwesomeClassname: "simple-icons:microsoftsqlserver",
-          style: {
-            color: "#CC2927",
-          },
+          style: { color: "#CC2927" },
         },
         {
           skillName: "C",
           fontAwesomeClassname: "simple-icons:c",
-          style: {
-            color: "#A8B9CC",
-          },
+          style: { color: "#A8B9CC" },
         },
         {
           skillName: "C++",
           fontAwesomeClassname: "simple-icons:cplusplus",
-          style: {
-            color: "#00599C",
-          },
+          style: { color: "#00599C" },
         },
         {
           skillName: "jQuery",
           fontAwesomeClassname: "simple-icons:jquery",
-          style: {
-            color: "#0769AD",
-          },
+          style: { color: "#0769AD" },
         },
       ],
     },
@@ -122,52 +98,40 @@ const skills = {
       title: "Cloud Infrastructure & DevOps",
       fileName: "CloudInfraImg",
       skills: [
-        "Azure cloud services and DevOps CI/CD pipelines",
-        "Server monitoring, infrastructure automation, and reduced downtime",
-        "Microservices deployment, containerization, and documented release processes",
+        "Azure cloud services, Application Insights, Functions, Logic Apps, and Service Bus",
+        "CI/CD pipelines in Azure DevOps, deployment tracking, and package lifecycle management",
+        "Automated error logging, data synchronization, and infrastructure automation",
       ],
       softwareSkills: [
         {
           skillName: "Azure",
           fontAwesomeClassname: "simple-icons:microsoftazure",
-          style: {
-            color: "#008AD7",
-          },
+          style: { color: "#008AD7" },
         },
         {
           skillName: "Azure DevOps",
           fontAwesomeClassname: "simple-icons:azuredevops",
-          style: {
-            color: "#0078D7",
-          },
+          style: { color: "#0078D7" },
         },
         {
           skillName: "Git",
           fontAwesomeClassname: "simple-icons:git",
-          style: {
-            color: "#F05032",
-          },
+          style: { color: "#F05032" },
         },
         {
           skillName: "CI/CD",
           fontAwesomeClassname: "simple-icons:circleci",
-          style: {
-            color: "#343434",
-          },
+          style: { color: "#343434" },
         },
         {
           skillName: "PowerShell",
           fontAwesomeClassname: "simple-icons:powershell",
-          style: {
-            color: "#5391FE",
-          },
+          style: { color: "#5391FE" },
         },
         {
           skillName: "Visual Studio",
           fontAwesomeClassname: "simple-icons:visualstudio",
-          style: {
-            color: "#5C2D91",
-          },
+          style: { color: "#5C2D91" },
         },
       ],
     },
@@ -183,51 +147,37 @@ const skills = {
         {
           skillName: "Python",
           fontAwesomeClassname: "simple-icons:python",
-          style: {
-            color: "#3776AB",
-          },
+          style: { color: "#3776AB" },
         },
         {
           skillName: "Pandas",
           fontAwesomeClassname: "simple-icons:pandas",
-          style: {
-            color: "#150458",
-          },
+          style: { color: "#150458" },
         },
         {
           skillName: "NumPy",
           fontAwesomeClassname: "simple-icons:numpy",
-          style: {
-            color: "#013243",
-          },
+          style: { color: "#013243" },
         },
         {
           skillName: "TensorFlow",
           fontAwesomeClassname: "simple-icons:tensorflow",
-          style: {
-            color: "#FF6F00",
-          },
+          style: { color: "#FF6F00" },
         },
         {
           skillName: "Keras",
           fontAwesomeClassname: "simple-icons:keras",
-          style: {
-            color: "#D00000",
-          },
+          style: { color: "#D00000" },
         },
         {
           skillName: "Jupyter",
           fontAwesomeClassname: "simple-icons:jupyter",
-          style: {
-            color: "#F37626",
-          },
+          style: { color: "#F37626" },
         },
         {
           skillName: "scikit-learn",
           fontAwesomeClassname: "simple-icons:scikitlearn",
-          style: {
-            color: "#F7931E",
-          },
+          style: { color: "#F7931E" },
         },
       ],
     },
@@ -237,7 +187,7 @@ const skills = {
 const experience = {
   title: "Professional Experience",
   description:
-    "Software Developer with 5+ years building scalable applications and automating infrastructure.",
+    "Software Developer with 6+ years delivering measurable impact across financial systems, clinical workflows, and cloud architecture at a leading dental practice management company.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -251,12 +201,106 @@ const experience = {
           duration: "Jan 2020 - Present",
           location: "Ottawa, Ontario, Canada",
           description: [
-            "Progressed from Junior to Mid-Senior Software Developer over 5+ years.",
-            "Engineered mission-critical applications using C#, SQL, and WPF.",
-            "Automated deployments via PowerShell, reducing release time by 50%.",
-            "Maintained automated CI/CD pipelines in Azure DevOps.",
+            "Promoted from Junior to Mid-Senior Developer over 6+ years, becoming a trusted owner of mission-critical systems across the full stack.",
+            "Prevented revenue loss across hundreds of dental practices by architecting atomic financial transactions that eliminated partial billing failures.",
+            "Reduced customer-impacting incidents through 62+ proactive data integrity hotfixes and automated cleanup scripts.",
+            "Expanded the product's market reach by building imaging integrations for new hardware vendors and modernizing to cloud-based delivery.",
+            "Dramatically reduced mean time to resolution by implementing automated error logging across all critical paths.",
+            "Contributed to the launch of a new AI-powered clinical note-taking product, helping automate documentation for dental practitioners.",
           ],
           color: "#7F00FF",
+          contributionAreas: [
+            {
+              area: "Financial & Billing System",
+              prCount: 97,
+              impact: "Prevented revenue loss and eliminated partial billing failures",
+              highlights: [
+                "Eliminated partial charge plan update failures affecting 14+ patient accounts",
+                "Prevented stranded payments and orphaned billing records across customer databases",
+                "Reduced load times for accounts receivable views through query optimization",
+              ],
+            },
+            {
+              area: "Data Integrity & Hotfixes",
+              prCount: 62,
+              impact: "Maintained data integrity across hundreds of customer databases",
+              highlights: [
+                "Reduced customer-impacting incidents through proactive data cleanup automation",
+                "Enabled safe decommissioning and recommissioning of cloud environments",
+                "Built reusable scripts for common data problems, reducing fix turnaround time",
+              ],
+            },
+            {
+              area: "Imaging Platform Integration",
+              prCount: 44,
+              impact: "Expanded market compatibility with new hardware vendors",
+              highlights: [
+                "Enabled support for new imaging hardware, expanding the product's market reach",
+                "Modernized imaging from on-premise to cloud-based delivery architecture",
+                "Improved reliability by fixing patient matching edge cases in imaging workflows",
+              ],
+            },
+            {
+              area: "Patient Management",
+              prCount: 35,
+              impact: "Improved front-desk workflow efficiency and data accuracy",
+              highlights: [
+                "Reduced patient data merge errors, preventing duplicates in practice databases",
+                "Improved front-desk workflow efficiency with better contact management",
+                "Eliminated data loss scenarios during household reassignment operations",
+              ],
+            },
+            {
+              area: "Charting & Clinical Workflows",
+              prCount: 34,
+              impact: "Recovered lost revenue and improved clinical data accuracy",
+              highlights: [
+                "Enabled practices to properly bill edge-case procedures, recovering lost revenue",
+                "Improved clinical data accuracy through better deletion safeguards",
+                "Eliminated a major source of support calls by resolving treatment data issues",
+              ],
+            },
+            {
+              area: "Scheduler & Appointments",
+              prCount: 29,
+              impact: "Improved scheduling accuracy and front-desk staff productivity",
+              highlights: [
+                "Fixed scheduling boundary bugs that caused appointment count inaccuracies",
+                "Enabled practices to customize scheduler granularity without data loss",
+                "Enhanced appointment reports with multi-phone support for better patient reach",
+              ],
+            },
+            {
+              area: "Cloud Services & Architecture",
+              prCount: 26,
+              impact: "Ensured system stability across client-server version mismatches",
+              highlights: [
+                "Maintained service compatibility across dozens of version releases",
+                "Enabled secure database connections on modern SQL Server versions",
+                "Improved system stability through graceful error handling and separation of concerns",
+              ],
+            },
+            {
+              area: "Database & Infrastructure",
+              prCount: 26,
+              impact: "Prevented calculation errors and improved query performance",
+              highlights: [
+                "Prevented arithmetic overflow errors in financial calculations via schema migration",
+                "Improved query performance through strategic indexing on critical tables",
+                "Enabled reliable new customer onboarding with maintained deployment scripts",
+              ],
+            },
+            {
+              area: "Logging & Observability",
+              prCount: 12,
+              impact: "Dramatically reduced mean time to resolution for production issues",
+              highlights: [
+                "Enabled root cause analysis for previously unresolvable data corruption issues",
+                "Reduced support ticket resolution time with comprehensive diagnostic logging",
+                "Built intelligent log filtering to reduce alert noise and focus on real issues",
+              ],
+            },
+          ],
         },
         {
           title: "iOS Engineer",
@@ -277,8 +321,76 @@ const experience = {
   ],
 };
 
+// ABELSoft contribution stats for dedicated display
+const abelsoftStats = {
+  totalPRs: 496,
+  totalFilesChanged: 1618,
+  totalLinesAdded: 30387,
+  totalLinesRemoved: 15547,
+  tenure: "6+ years",
+  startDate: "Jan 2020",
+  statsImage: "abelsoft_stats.jpg",
+  topAreas: [
+    { name: "Financial/Billing", prs: 97 },
+    { name: "Data Integrity & Hotfixes", prs: 62 },
+    { name: "Imaging Integration", prs: 44 },
+    { name: "Patient Management", prs: 35 },
+    { name: "Charting/Clinical", prs: 34 },
+    { name: "Scheduler/Appointments", prs: 29 },
+    { name: "Cloud Services", prs: 26 },
+    { name: "Database/Infrastructure", prs: 26 },
+    { name: "Logging & Observability", prs: 12 },
+    { name: "UI/UX Improvements", prs: 11 },
+    { name: "Reporting", prs: 6 },
+    { name: "Security & Permissions", prs: 4 },
+  ],
+  technicalSkills: [
+    { category: "Languages", technologies: "C#, C (legacy), SQL, PowerShell, XAML" },
+    { category: "Frameworks", technologies: ".NET / WPF, Entity Framework" },
+    { category: "Database", technologies: "SQL Server, T-SQL, Schema Migrations" },
+    { category: "Cloud", technologies: "Azure Application Insights, Azure DevOps" },
+    { category: "Architecture", technologies: "Service-Oriented Architecture, Client-Server" },
+    { category: "Tools", technologies: "NuGet, Git, Azure DevOps Pipelines" },
+    { category: "Domain", technologies: "Dental Practice Management, Healthcare, Medical Imaging" },
+  ],
+  recentPRs: [
+    { date: "2026-03-18", title: "Enhanced appointment report with multi-phone support" },
+    { date: "2026-03-16", title: "Fixed object reference error in imaging capture" },
+    { date: "2026-03-12", title: "Fixed race condition in clinical charting view" },
+    { date: "2026-03-11", title: "Fixed arithmetic overflow in insurance calculations" },
+    { date: "2026-02-24", title: "Reduced false positives in payment audit logging" },
+    { date: "2026-02-24", title: "Enhanced transaction logging for better auditing" },
+    { date: "2026-01-28", title: "Fixed threading issue in financial module UI" },
+    { date: "2026-01-20", title: "Added diagnostic logging for date-related investigations" },
+  ],
+};
+
 const degrees = {
   completedDegrees: [
+    {
+      title: "Bachelor of Science - BS, Computer Science",
+      subtitle: "University of Ottawa",
+      logo_path: "uottawa_logo.png",
+      alt_name: "uOttawa",
+      duration: "Sep 2024 - Mar 2026",
+      descriptions: [
+        "Degree conferred March 11th, 2026. Graduated Magna Cum Laude with a CGPA of 8.27.",
+        "Completed while working full-time as a Software Developer at ABELSoft.",
+        "AI & ML: Mastered neural networks and heuristic search, providing the foundation for work in Agentic AI and RAG.",
+        "Cybersecurity & OS: Explored cryptography, threat modeling, and secure system design alongside process management and memory allocation.",
+        "Networking: Gained expertise in network protocols, data communication architectures, and the OSI model.",
+        "Algorithms & Automata: Specialized in complexity analysis, advanced data structures, and the mathematical foundations of computation.",
+      ],
+      website_link:
+        "https://www.uottawa.ca/faculty-engineering/undergraduate-studies/programs/computer-science/course-sequence",
+      transcript_link:
+        "https://drive.google.com/file/d/1n1kD24rhGTHgzcgqkkmp2_cWWa4LdJL2/view?usp=sharing",
+      additional_info: {
+        gpa: "8.27 CGPA",
+        honors: "Magna Cum Laude",
+        transcripts: "Show Transcripts",
+      },
+    },
     {
       title: "Advanced Diploma in Software Development",
       subtitle: "Mohawk College",
@@ -345,28 +457,59 @@ const degrees = {
       website_link: "https://www.hcmut.edu.vn/",
     },
   ],
-  inProgressDegrees: [
-    {
-      title: "Honours B.Sc. in Computer Science",
-      subtitle: "University of Ottawa",
-      logo_path: "uottawa_logo.png",
-      alt_name: "uOttawa",
-      duration: "Sep 2024 - Dec 2025 (Expected)",
-      descriptions: [
-        "Admitted with 57 transfer credits and on track to graduate in just over a year.",
-        "Studying full-time while working full-time as a Software Developer at ABELSoft.",
-        "Focusing on AI, operating systems and software design with plans for graduate studies.",
-      ],
-      website_link:
-        "https://www.uottawa.ca/faculty-engineering/undergraduate-studies/programs/computer-science/course-sequence",
-      transcript_link:
-        "https://drive.google.com/file/d/1n1kD24rhGTHgzcgqkkmp2_cWWa4LdJL2/view?usp=sharing",
-    },
-  ],
+  inProgressDegrees: [],
 };
 
 const certifications = {
   certifications: [
+    {
+      title: "Google AI",
+      subtitle: "Google",
+      logo_path: "google_logo.png",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/certificate/74473DIYYE1T",
+      alt_name: "Google",
+      color_code: "#F4B400",
+      issued: "Mar 2026",
+      credential_id: "74473DIYYE1T",
+      skills: ["Artificial Intelligence"],
+    },
+    {
+      title: "AI Infrastructure and Operations Fundamentals",
+      subtitle: "NVIDIA",
+      logo_path: "nvidia_logo.png",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/certificate/BBED518004M6",
+      alt_name: "NVIDIA",
+      color_code: "#76B900",
+      issued: "Mar 2026",
+      credential_id: "BBED518004M6",
+      skills: ["AI Infrastructure", "MLOps"],
+    },
+    {
+      title: "Building AI Agents and Agentic Workflows",
+      subtitle: "IBM",
+      logo_path: "ibm_logo.png",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/certificate/2SQA4WDP4PGZ",
+      alt_name: "IBM",
+      color_code: "#0530AD",
+      issued: "Mar 2026",
+      credential_id: "2SQA4WDP4PGZ",
+      skills: ["AI Agents", "Agentic Workflows"],
+    },
+    {
+      title: "IBM RAG and Agentic AI",
+      subtitle: "IBM",
+      logo_path: "ibm_logo.png",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/certificate/V2EV8GHBV8XV",
+      alt_name: "IBM",
+      color_code: "#0530AD",
+      issued: "Mar 2026",
+      credential_id: "V2EV8GHBV8XV",
+      skills: ["RAG", "Agentic AI"],
+    },
     {
       title: "Google Advanced Data Analytics",
       subtitle: "Google",
@@ -378,18 +521,6 @@ const certifications = {
       issued: "Jul 2024",
       credential_id: "UUHUVJ3X2ZWD",
       skills: ["Data Science", "Data Analytics"],
-    },
-    {
-      title: "Google Data Analytics",
-      subtitle: "Google",
-      logo_path: "google_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/KSPBFUZ2DWZS",
-      alt_name: "Google",
-      color_code: "#F4B400",
-      issued: "Jul 2024",
-      credential_id: "KSPBFUZ2DWZS",
-      skills: ["Data Analytics"],
     },
     {
       title: "Microsoft Azure Data Scientist Associate (DP-100)",
@@ -416,18 +547,6 @@ const certifications = {
       skills: ["Cloud Computing"],
     },
     {
-      title: "Algorithmic Toolbox",
-      subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/6BRBJQYWG4XE",
-      alt_name: "Coursera",
-      color_code: "#2A73CC",
-      issued: "Sep 2023",
-      credential_id: "6BRBJQYWG4XE",
-      skills: ["Algorithm Design", "Algorithms"],
-    },
-    {
       title: "Meta Front-End Developer Specialization",
       subtitle: "Meta",
       logo_path: "meta.png",
@@ -435,8 +554,9 @@ const certifications = {
         "https://www.coursera.org/account/accomplishments/specialization/certificate/CPN5DGFBMEQD",
       alt_name: "Meta",
       color_code: "#1877F2",
-      projects:
-        "https://github.com/man-vu?tab=repositories&q=course-&type=&language=&sort=",
+      issued: "Sep 2023",
+      credential_id: "CPN5DGFBMEQD",
+      skills: ["JavaScript", "UI/UX", "React.js"],
     },
     {
       title: "Neural Networks and Deep Learning",
@@ -446,172 +566,21 @@ const certifications = {
         "https://www.coursera.org/account/accomplishments/certificate/4ZDVEUS8H6FJ",
       alt_name: "DeepLearning.AI",
       color_code: "#FF6B35",
-      additional_info: {
-        issue_date: {
-          month: "September",
-          year: 2023,
-        },
-        expiration_date: {
-          month: "Month",
-          year: "Year",
-        },
-        credential_id: "4ZDVEUS8H6FJ",
-        skills: ["Machine Learning", "Deep Learning", "Data Science"],
-      },
+      issued: "Sep 2023",
+      credential_id: "4ZDVEUS8H6FJ",
+      skills: ["Machine Learning", "Deep Learning", "Data Science"],
     },
     {
-      title: "Supervised Machine Learning: Regression and Classification",
+      title: "Supervised Machine Learning",
       subtitle: "Stanford University",
       logo_path: "stanforduniversity.png",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/certificate/AUSDDALCQX7P",
       alt_name: "Stanford University",
       color_code: "#8C1515",
-      additional_info: {
-        issue_date: {
-          month: "September",
-          year: 2023,
-        },
-        expiration_date: {
-          month: "Month",
-          year: "Year",
-        },
-        credential_id: "AUSDDALCQX7P",
-        skills: ["Machine Learning"],
-      },
-    },
-    {
-      title: "The Complete Junior to Senior Web Developer Roadmap (2021)",
-      subtitle: "Udemy",
-      description:
-        "A comprehensive guide to mastering skills required to move from a junior to senior web developer.",
-      logo_path: "udemy.png",
-      certificate_link:
-        "https://www.udemy.com/certificate/UC-73553207-52c3-4dba-b6ef-a3a01abee3b9/",
-      alt_name: "Udemy",
-      color_code: "#B045EF",
-      issued: "Sep 2021",
-      credential_id: "UC-73553207-52c3-4dba-b6ef-a3a01abee3b9",
-      skills: [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Databases",
-        "Security",
-        "Performance Optimization",
-        "Continuous Integration",
-      ],
-    },
-    {
-      title: "Machine Learning & Data Science",
-      subtitle: "Udemy",
-      description:
-        "An in-depth course on machine learning, data science, and the techniques and tools used in the field.",
-      logo_path: "udemy.png",
-      certificate_link:
-        "https://www.udemy.com/certificate/UC-24365787-8e5d-41da-8928-2618dff216c8/",
-      alt_name: "Udemy",
-      color_code: "#B045EF",
-      issued: "Aug 2021",
-      credential_id: "UC-24365787-8e5d-41da-8928-2618dff216c8",
-      skills: [
-        "Machine Learning",
-        "Data Science",
-        "Python",
-        "Algorithms",
-        "Neural Networks",
-        "Tensorflow",
-        "Keras",
-        "Data Visualization",
-      ],
-    },
-    {
-      title: "AZ-204: Developing Solutions for Microsoft Azure",
-      subtitle: "Udemy",
-      logo_path: "udemy.png",
-      certificate_link:
-        "https://www.udemy.com/certificate/UC-2b636227-68ef-432f-a267-7f76f5bace1e/",
-      alt_name: "Microsoft Azure",
-      color_code: "#B045EF",
-    },
-    {
-      title: "IELTS Academic 8.0/9.0 Overall",
-      subtitle:
-        "British Council IELTS (International English Language Testing System)",
-      logo_path: "IELTS.png",
-      certificate_link:
-        "https://drive.google.com/file/d/1Bqf1JGyr9EALsihpczphjK98TRy7GRLe/view?usp=drive_link",
-      alt_name: "IELTS Academic",
-      color_code: "#D83135",
-    },
-    {
-      title: "IELTS General Training 8.5/9.0 Overall",
-      subtitle:
-        "British Council IELTS (International English Language Testing System)",
-      description:
-        "Designed for those migrating to English speaking countries for secondary education, work or training programs.",
-      logo_path: "IELTS.png",
-      certificate_link:
-        "https://drive.google.com/file/d/1s8VK1NnnDRpQR9sDo5FRY9EXU3ZBDVGx/view?usp=drive_link",
-      alt_name: "IELTS",
-      color_code: "#D83135",
-      issued: "Apr 2023",
-      expires: "Apr 2025",
-      credential_id: "23VN500280VUM028G",
-      skills: [
-        "Workplace Communication",
-        "English",
-        "Linguistics",
-        "Listening",
-        "Reading",
-        "Writing",
-        "Speaking",
-      ],
-    },
-    {
-      title:
-        "Microsoft Project 2019 and Project Online Desktop Essential Training",
-      subtitle: "LinkedIn",
-      description:
-        "Training for mastering the essentials of Microsoft Project 2019 and Project Online Desktop.",
-      logo_path: "linkedin.png",
-      certificate_link:
-        "https://www.linkedin.com/learning/certificates/946c694d4c320a237af60399b919ebeac6fc230d9107df773c506bc7e31ddbda?trk=backfilled_certificate",
-      alt_name: "LinkedIn",
-      color_code: "#5366AF",
-      issued: "Sep 2020",
-      skills: [
-        "Project Management",
-        "MS Project",
-        "Task Scheduling",
-        "Resource Allocation",
-        "Reporting",
-        "Project Tracking",
-      ],
-    },
-    {
-      title: "Full Stack Developer Certification",
-      subtitle: "freeCodeCamp",
-      description:
-        "Certification for mastering both frontend and backend development, covering all stages of web development.",
-      logo_path: "freecodecamp.png",
-      certificate_link:
-        "https://www.freecodecamp.org/certification/manvu/full-stack",
-      alt_name: "freeCodeCamp",
-      color_code: "#0C9D5899",
-      issued: "Dec 2018",
-      skills: [
-        "Web Development",
-        "JavaScript",
-        "Node.js",
-        "Express.js",
-        "React",
-        "MongoDB",
-        "RESTful APIs",
-        "Databases",
-        "Frontend",
-        "Backend",
-      ],
+      issued: "Sep 2023",
+      credential_id: "AUSDDALCQX7P",
+      skills: ["Machine Learning"],
     },
   ],
 };
@@ -646,7 +615,7 @@ const contactPageData = {
       description: "Send me a message",
       value: "manvminh@gmail.com",
       href: "mailto:manvminh@gmail.com",
-      primary: true
+      primary: true,
     },
     {
       icon: "Linkedin",
@@ -654,7 +623,7 @@ const contactPageData = {
       description: "Connect professionally",
       value: "linkedin.com/in/manvu",
       href: "https://www.linkedin.com/in/manvu/",
-      primary: true
+      primary: true,
     },
     {
       icon: "Github",
@@ -662,7 +631,7 @@ const contactPageData = {
       description: "Check out my code",
       value: "github.com/man-vu",
       href: "https://github.com/man-vu",
-      primary: true
+      primary: true,
     },
     {
       icon: "MapPin",
@@ -670,21 +639,21 @@ const contactPageData = {
       description: "Based in",
       value: "Ottawa, Ontario, Canada",
       href: null,
-      primary: false
-    }
+      primary: false,
+    },
   ],
   socialLinks: [
     {
       icon: "Github",
       title: "GitHub",
       href: "https://github.com/man-vu",
-      color: "hover:text-gray-800 dark:hover:text-gray-200"
+      color: "hover:text-gray-800 dark:hover:text-gray-200",
     },
     {
       icon: "Linkedin",
-      title: "LinkedIn", 
+      title: "LinkedIn",
       href: "https://www.linkedin.com/in/manvu/",
-      color: "hover:text-blue-600 dark:hover:text-blue-400"
+      color: "hover:text-blue-600 dark:hover:text-blue-400",
     },
   ],
   blogSection: {
@@ -699,112 +668,68 @@ const projects = {
   data: [
     {
       id: "0",
-      images: ["abeldent_1.webp", "abeldent_2.png", "abeldent_3.png"],
+      images: ["projects/abeldent_1.webp", "projects/abeldent_2.png", "projects/abeldent_3.png"],
       videos: ["https://www.youtube.com/embed/La6VCdKR-Co?si=FA8wnEPRXlq-GUYK"],
       name: "ABELDent Practice Management System",
       url: "https://www.abeldent.com/",
       badge: {
         text: "Professional Project",
-        color: "warning", // Can be: primary, success, warning, danger, info, dark
-        icon: "🏆", // Optional emoji or icon
+        color: "warning",
+        icon: "🏆",
       },
-      briefDescription: "Core full-stack developer for a dental management system, building critical features and optimizing workflows.",
+      briefDescription:
+        "Core full-stack developer for a leading dental management system. Prevented revenue loss, reduced incidents, and expanded market reach over 6+ years.",
       description: `
-- Served as a **core full-stack developer** on the ABELDent team  
-- Designed and implemented **critical features** using **.NET**, **WPF**, and **SQL Server**  
-- Automated **clinical workflows** and optimized **database performance**  
-- Maintained **production infrastructure** and enhanced **scalability and usability**  
-- Led the **refactoring** of legacy modules and integrated **modern technologies**  
+- **Prevented revenue loss** across hundreds of dental practices by architecting atomic financial transactions (97 PRs)
+- **Reduced customer-impacting incidents** through 62+ proactive data integrity hotfixes and automated cleanup scripts
+- **Expanded market reach** by building imaging integrations for new hardware vendors and modernizing to cloud delivery (44 PRs)
+- **Dramatically reduced incident resolution time** by implementing automated error logging across all critical paths
+- **Improved front-desk productivity** with better patient management, scheduling tools, and clinical workflow enhancements
+- **Contributed to new product launch** — an AI-powered clinical note-taking tool that automates documentation for practitioners
+- **Maintained system stability** across dozens of releases through service architecture improvements and CI/CD pipelines
+- Technologies: **C#, .NET, WPF, SQL Server, Azure, PowerShell, Entity Framework**
 `,
-
       languages: [
-        {
-          name: "C#",
-          iconifyClass: "logos:c-sharp",
-        },
-        {
-          name: ".NET",
-          iconifyClass: "logos:dotnet",
-        },
-        {
-          name: "SQL Server",
-          iconifyClass: "simple-icons:microsoftsqlserver",
-          color: "#CC2927",
-        },
-        {
-          name: "PowerShell",
-          iconifyClass: "simple-icons:powershell",
-          color: "#5391FE",
-        },
-        {
-          name: "Azure",
-          iconifyClass: "logos:microsoft-azure",
-        },
-        {
-          name: "WPF",
-          iconifyClass: "logos:wpf",
-        },
+        { name: "C#", iconifyClass: "logos:c-sharp" },
+        { name: ".NET", iconifyClass: "logos:dotnet" },
+        { name: "SQL Server", iconifyClass: "simple-icons:microsoftsqlserver", color: "#CC2927" },
+        { name: "PowerShell", iconifyClass: "simple-icons:powershell", color: "#5391FE" },
+        { name: "Azure", iconifyClass: "logos:microsoft-azure" },
+        { name: "WPF", iconifyClass: "logos:wpf" },
       ],
       links: [
-        {
-          name: "Official Website",
-          url: "https://www.abeldent.com/",
-          iconifyClass: "mdi:web",
-        },
-        {
-          name: "Company GitHub (internal)",
-          url: "#",
-          iconifyClass: "ri:lock-2-fill",
-        },
+        { name: "Official Website", url: "https://www.abeldent.com/", iconifyClass: "mdi:web" },
+        { name: "Company GitHub (internal)", url: "#", iconifyClass: "ri:lock-2-fill" },
       ],
     },
     {
       id: "1",
       name: "Bad Habit Buster",
-      badge: {
-        text: "Hackathon Project",
-        color: "success",
-        icon: "💡",
-      },
+      badge: { text: "Hackathon Project", color: "success", icon: "💡" },
       images: [
-        "habitbuster_1.png",
-        "habitbuster_2.png",
-        "habitbuster_3.png",
-        "habitbuster_4.png",
+        "projects/habitbuster_1.png",
+        "projects/habitbuster_2.png",
+        "projects/habitbuster_3.png",
+        "projects/habitbuster_4.png",
       ],
       videos: [
-        "https://www.youtube.com/embed/ViBoMEj1ldA?si=dOhBBYs5AGpOvOj9", // Replace with actual embed URL if different
+        "https://www.youtube.com/embed/ViBoMEj1ldA?si=dOhBBYs5AGpOvOj9",
       ],
       url: "https://devpost.com/software/bad-habit-buster",
-      briefDescription: "AI-powered web app to help users break bad habits, built for a hackathon using React and GPT-4o.",
+      briefDescription:
+        "AI-powered web app to help users break bad habits, built for a hackathon using React and GPT-4o.",
       description: `
-- Built an **AI-powered full-stack web app** using **React**, **Node.js**, and **GPT-4o**  
-- Backend: **DynamoDB** to securely store user data  
-- Frontend: Designed in **Figma** with **Material UI** for a responsive, polished UI  
-- Users reflect daily and receive **AI-adapted plans** tailored to their personality, motivation, and progress  
+- Built an **AI-powered full-stack web app** using **React**, **Node.js**, and **GPT-4o**
+- Backend: **DynamoDB** to securely store user data
+- Frontend: Designed in **Figma** with **Material UI** for a responsive, polished UI
+- Users reflect daily and receive **AI-adapted plans** tailored to their personality, motivation, and progress
 `,
-
       languages: [
-        {
-          name: "React",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "Node.js",
-          iconifyClass: "logos-nodejs",
-        },
-        {
-          name: "AWS DynamoDB",
-          iconifyClass: "logos:aws-dynamodb",
-        },
-        {
-          name: "Material UI",
-          iconifyClass: "logos:material-ui",
-        },
-        {
-          name: "OpenAI API",
-          iconifyClass: "logos:openai-icon",
-        },
+        { name: "React", iconifyClass: "logos-react" },
+        { name: "Node.js", iconifyClass: "logos-nodejs" },
+        { name: "AWS DynamoDB", iconifyClass: "logos:aws-dynamodb" },
+        { name: "Material UI", iconifyClass: "logos:material-ui" },
+        { name: "OpenAI API", iconifyClass: "logos:openai-icon" },
       ],
       links: [
         {
@@ -822,63 +747,25 @@ const projects = {
     {
       id: "2",
       images: [
-        "capstone003.png",
-        "capstone004.png",
-        "capstone005.png",
-        "capstone006.png",
-        "capstone007.png",
-        "capstone008.png",
-        "capstone009.png",
-        "capstone010.png",
-        "capstone011.png",
-        "capstone012.png",
-        "capstone013.png",
-        "capstone014.png",
-        "capstone015.png",
-        "capstone016.png",
-        "capstone017.png",
-        "capstone018.png",
-        "capstone019.png",
-        "capstone020.png",
-        "capstone021.png",
-        "capstone022.png",
-        "capstone023.png",
-        "capstone024.png",
-        "capstone025.png",
-        "capstone026.png",
-        "capstone027.png",
-        "capstone028.png",
-        "capstone029.png",
-        "capstone030.png",
-        "capstone031.png",
-        "capstone032.png",
-        "capstone033.png",
-        "capstone034.png",
-        "capstone035.png",
-        "capstone036.png",
-        "capstone037.png",
-        "capstone038.png",
-        "capstone039.png",
-        "capstone040.png",
-        "capstone041.png",
-        "capstone042.png",
-        "capstone043.png",
-        "capstone044.png",
-        "capstone045.png",
-        "capstone046.png",
-        "capstone047.png",
-        "capstone048.png",
+        "projects/capstone003.png", "projects/capstone004.png", "projects/capstone005.png", "projects/capstone006.png",
+        "projects/capstone007.png", "projects/capstone008.png", "projects/capstone009.png", "projects/capstone010.png",
+        "projects/capstone011.png", "projects/capstone012.png", "projects/capstone013.png", "projects/capstone014.png",
+        "projects/capstone015.png", "projects/capstone016.png", "projects/capstone017.png", "projects/capstone018.png",
+        "projects/capstone019.png", "projects/capstone020.png", "projects/capstone021.png", "projects/capstone022.png",
+        "projects/capstone023.png", "projects/capstone024.png", "projects/capstone025.png", "projects/capstone026.png",
+        "projects/capstone027.png", "projects/capstone028.png", "projects/capstone029.png", "projects/capstone030.png",
+        "projects/capstone031.png", "projects/capstone032.png", "projects/capstone033.png", "projects/capstone034.png",
+        "projects/capstone035.png", "projects/capstone036.png", "projects/capstone037.png", "projects/capstone038.png",
+        "projects/capstone039.png", "projects/capstone040.png", "projects/capstone041.png", "projects/capstone042.png",
+        "projects/capstone043.png", "projects/capstone044.png", "projects/capstone045.png", "projects/capstone046.png",
+        "projects/capstone047.png", "projects/capstone048.png",
       ],
-
       videos: [],
-      badge: {
-        text: "Capstone Project",
-        color: "danger",
-        icon: "🎓",
-      },
+      badge: { text: "Capstone Project", color: "danger", icon: "🎓" },
       name: "Learning English Web App",
       url: "http://bit.ly/3QiW9OW",
-      briefDescription: "E-learning platform for English learners with interactive lessons and adaptive quizzes.",
+      briefDescription:
+        "E-learning platform for English learners with interactive lessons and adaptive quizzes.",
       description: `
 - Built a **full-featured e-learning platform** for non-native English speakers as my final capstone project.
 - Modeled after systems like **MyCanvas** and **Desire2Learn** to ensure familiarity and usability.
@@ -888,30 +775,12 @@ const projects = {
 - Features include **admin management**, **student dashboards**, and **certificate generation** on course completion.
 `,
       languages: [
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "Bootstrap",
-          iconifyClass: "logos-bootstrap",
-        },
-        {
-          name: "Vue",
-          iconifyClass: "logos-vue",
-        },
-        {
-          name: "Node.js",
-          iconifyClass: "logos-nodejs",
-        },
-        {
-          name: "MySQL",
-          iconifyClass: "logos-mysql",
-        },
-        {
-          name: "Microsoft Azure",
-          iconifyClass: "logos-microsoft-azure",
-        },
+        { name: "JavaScript", iconifyClass: "logos-javascript" },
+        { name: "Bootstrap", iconifyClass: "logos-bootstrap" },
+        { name: "Vue", iconifyClass: "logos-vue" },
+        { name: "Node.js", iconifyClass: "logos-nodejs" },
+        { name: "MySQL", iconifyClass: "logos-mysql" },
+        { name: "Microsoft Azure", iconifyClass: "logos-microsoft-azure" },
       ],
       links: [
         {
@@ -919,25 +788,18 @@ const projects = {
           url: "https://github.com/man-vu/mohawk-capstone-study-english",
           iconifyClass: "ri:github-fill",
         },
-        {
-          name: "Live Demo",
-          url: "http://bit.ly/3QiW9OW",
-          iconifyClass: "mdi:web",
-        },
+        { name: "Live Demo", url: "http://bit.ly/3QiW9OW", iconifyClass: "mdi:web" },
       ],
     },
     {
       id: "3",
-      images: ["phodelight_1.png", "phodelight_2.png"],
+      images: ["projects/phodelight_1.png", "projects/phodelight_2.png"],
       videos: [],
-      badge: {
-        text: "Course Project",
-        color: "success",
-        icon: "💡",
-      },
+      badge: { text: "Course Project", color: "success", icon: "💡" },
       name: "Pho Delight Restaurant",
       url: "https://bit.ly/45AA3Mh",
-      briefDescription: "Showcase app for a restaurant, built with React and modern UI/UX for Meta's certification.",
+      briefDescription:
+        "Showcase app for a restaurant, built with React and modern UI/UX for Meta's certification.",
       description: `
 - Developed a **restaurant showcase app** as the final project for Meta's Front-End Developer Certification.
 - Implemented a **responsive single-page interface** using **React**, with elegant animations and transitions.
@@ -945,24 +807,11 @@ const projects = {
 - Applied **semantic HTML**, **CSS Grid/Flexbox**, and **custom styling** for aesthetic layout and responsive design.
 - Focused on accessibility and performance optimization for a professional portfolio-ready outcome.
 `,
-
       languages: [
-        {
-          name: "React",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "HTML",
-          iconifyClass: "logos-html-5",
-        },
-        {
-          name: "CSS",
-          iconifyClass: "logos-css-3",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
+        { name: "React", iconifyClass: "logos-react" },
+        { name: "HTML", iconifyClass: "logos-html-5" },
+        { name: "CSS", iconifyClass: "logos-css-3" },
+        { name: "JavaScript", iconifyClass: "logos-javascript" },
       ],
       links: [
         {
@@ -970,30 +819,23 @@ const projects = {
           url: "https://github.com/vuminhman/course-8th-meta-front-end-capstone",
           iconifyClass: "ri:github-fill",
         },
-        {
-          name: "Live Demo",
-          url: "https://bit.ly/45AA3Mh",
-          iconifyClass: "mdi:web",
-        },
+        { name: "Live Demo", url: "https://bit.ly/45AA3Mh", iconifyClass: "mdi:web" },
       ],
     },
     {
       id: "4",
       images: [
-        "dreamy_nails1.png",
-        "dreamy_nails2.png",
-        "dreamy_nails3.png",
-        "dreamy_nails4.png",
-      ], // Add your real image filenames here
+        "projects/dreamy_nails1.png",
+        "projects/dreamy_nails2.png",
+        "projects/dreamy_nails3.png",
+        "projects/dreamy_nails4.png",
+      ],
       videos: [],
-      badge: {
-        text: "Assignment 2",
-        color: "success",
-        icon: "💅", // Changed to nail polish for nail salon
-      },
+      badge: { text: "Assignment 2", color: "success", icon: "💅" },
       name: "Dreamy Nails & Beauty Salon",
       url: "https://dreamy-nails.netlify.app",
-      briefDescription: "Appointment booking site for a beauty salon, with multi-step flow and modern UI/UX.",
+      briefDescription:
+        "Appointment booking site for a beauty salon, with multi-step flow and modern UI/UX.",
       description: `
 - Developed a **full-featured appointment booking site** for a beauty & nail salon.
 - Built with **React**, following **modern UI/UX design principles** for a responsive and visually appealing experience.
@@ -1003,22 +845,10 @@ const projects = {
 - Project for University of Ottawa's SEG 3125 (Spring 2025).
 `,
       languages: [
-        {
-          name: "React",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "HTML",
-          iconifyClass: "logos-html-5",
-        },
-        {
-          name: "CSS",
-          iconifyClass: "logos-css-3",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
+        { name: "React", iconifyClass: "logos-react" },
+        { name: "HTML", iconifyClass: "logos-html-5" },
+        { name: "CSS", iconifyClass: "logos-css-3" },
+        { name: "JavaScript", iconifyClass: "logos-javascript" },
       ],
       links: [
         {
@@ -1036,20 +866,17 @@ const projects = {
     {
       id: "6",
       images: [
-        "matching_cards1.png", // Replace with real filenames or Figma exports
-        "matching_cards2.png",
-        "matching_cards3.png",
-        "matching_cards4.png",
+        "projects/matching_cards1.png",
+        "projects/matching_cards2.png",
+        "projects/matching_cards3.png",
+        "projects/matching_cards4.png",
       ],
       videos: [],
-      badge: {
-        text: "Assignment 3",
-        color: "info",
-        icon: "🃏", // Playing card emoji for memory game
-      },
+      badge: { text: "Assignment 3", color: "info", icon: "🃏" },
       name: "Matching Cards Memory Game",
       url: "https://my-matching-cards.netlify.app/",
-      briefDescription: "Responsive card-matching memory game with light/dark themes and accessible design.",
+      briefDescription:
+        "Responsive card-matching memory game with light/dark themes and accessible design.",
       description: `
 - Developed a **responsive card-matching memory game** for web, as part of University of Ottawa's CSI 3125 (Spring 2025).
 - Features **two personas**: Anna (light theme, desktop) & David (dark theme, mobile), reflecting inclusive and accessible design.
@@ -1057,30 +884,13 @@ const projects = {
 - Built with **React** and deployed a **high-fidelity prototype** using Figma and Netlify.
 `,
       languages: [
-        {
-          name: "React",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "HTML",
-          iconifyClass: "logos-html-5",
-        },
-        {
-          name: "CSS",
-          iconifyClass: "logos-css-3",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "Figma",
-          iconifyClass: "logos-figma",
-        },
+        { name: "React", iconifyClass: "logos-react" },
+        { name: "HTML", iconifyClass: "logos-html-5" },
+        { name: "CSS", iconifyClass: "logos-css-3" },
+        { name: "JavaScript", iconifyClass: "logos-javascript" },
+        { name: "Figma", iconifyClass: "logos-figma" },
       ],
       links: [
-
-
         {
           name: "Github",
           url: "https://github.com/man-vu/SEG3125-Assignment3-MatchingCards",
@@ -1096,22 +906,19 @@ const projects = {
     {
       id: "7",
       images: [
-        "ecommerce_1.png",
-        "ecommerce_2.png",
-        "ecommerce_3.png",
-        "ecommerce_4.png",
-        "ecommerce_5.png",
-        "ecommerce_6.png"
+        "projects/ecommerce_1.png",
+        "projects/ecommerce_2.png",
+        "projects/ecommerce_3.png",
+        "projects/ecommerce_4.png",
+        "projects/ecommerce_5.png",
+        "projects/ecommerce_6.png",
       ],
       videos: [],
-      badge: {
-        text: "Assignment 4",
-        color: "primary",
-        icon: "🛒",
-      },
+      badge: { text: "Assignment 4", color: "primary", icon: "🛒" },
       name: "E-commerce Website",
       url: "https://sparkling-profiterole-0149e0.netlify.app/",
-      briefDescription: "Modern e-commerce site for online courses, with filtering, checkout, and accessibility features.",
+      briefDescription:
+        "Modern e-commerce site for online courses, with filtering, checkout, and accessibility features.",
       description: `
 - Modern **e-commerce site** for online courses, built for University of Ottawa's **CSI 3125** (Summer 2023).
 - Features: filtering, category, difficulty, price, duration, rating, a clear **checkout progress bar**, and a friendly, accessible design.
@@ -1123,26 +930,30 @@ const projects = {
         { name: "HTML", iconifyClass: "logos-html-5" },
         { name: "CSS", iconifyClass: "logos-css-3" },
         { name: "JavaScript", iconifyClass: "logos-javascript" },
-        { name: "Figma", iconifyClass: "logos-figma" }
+        { name: "Figma", iconifyClass: "logos-figma" },
       ],
       links: [
-        { name: "Live Demo", url: "https://sparkling-profiterole-0149e0.netlify.app/", iconifyClass: "mdi:web" },
-        { name: "Github", url: "https://github.com/man-vu/SEG3125-Assignment4", iconifyClass: "ri:github-fill" },
-      
+        {
+          name: "Live Demo",
+          url: "https://sparkling-profiterole-0149e0.netlify.app/",
+          iconifyClass: "mdi:web",
+        },
+        {
+          name: "Github",
+          url: "https://github.com/man-vu/SEG3125-Assignment4",
+          iconifyClass: "ri:github-fill",
+        },
       ],
     },
     {
       id: "8",
-      images: ["analytics_1.png"],
+      images: ["projects/analytics_1.png"],
       videos: [],
-      badge: {
-        text: "Assignment 5",
-        color: "success",
-        icon: "💡",
-      },
+      badge: { text: "Assignment 5", color: "success", icon: "💡" },
       name: "Canadian University Analytics Dashboard",
       url: "https://canada-university-enrollment.netlify.app/",
-      briefDescription: "Interactive dashboard visualizing Canadian university student enrollment data with bilingual support and modern UX/UI.",
+      briefDescription:
+        "Interactive dashboard visualizing Canadian university student enrollment data with bilingual support and modern UX/UI.",
       description: `
 - Visualizes enrollment data by university, province, and student type (full-time, part-time, undergrad, grad)
 - Interactive **bar and line charts**
@@ -1151,27 +962,26 @@ const projects = {
 - Clean, card-based layout with accessible colors and tooltips
 - Responsive and accessible (ARIA labels, keyboard navigation)
 - Built with **React** for SEG 3125 (demo figures)
-      `,
+`,
       languages: [
         { name: "React", iconifyClass: "logos-react" },
         { name: "HTML", iconifyClass: "logos-html-5" },
         { name: "CSS", iconifyClass: "logos-css-3" },
-        { name: "JavaScript", iconifyClass: "logos-javascript" }
+        { name: "JavaScript", iconifyClass: "logos-javascript" },
       ],
       links: [
         {
           name: "Live Dashboard",
           url: "https://canada-university-enrollment.netlify.app/",
-          iconifyClass: "mdi:web"
+          iconifyClass: "mdi:web",
         },
         {
           name: "GitHub Repository",
           url: "https://github.com/man-vu/SEG3125-Assignment5-university-dashboard",
-          iconifyClass: "ri:github-fill"
+          iconifyClass: "ri:github-fill",
         },
-      ]
-    }
-    
+      ],
+    },
   ],
 };
 
@@ -1179,52 +989,45 @@ const testimonials = {
   data: [
     {
       name: "Dallas Matone",
-      profilePicture:
-        "https://media.licdn.com/dms/image/C4E03AQGux8dzatxBDQ/profile-displayphoto-shrink_100_100/0/1562515105072?e=1700092800&v=beta&t=4o1MDPXxKzuToBBk0ouKDxBXYwpaCOFOjv4yBzfxYpE",
+      profilePicture: "",
       connection: "1st degree connection",
       position:
         "LiveOps Engineer Team Lead Manager @ LiveOps / Former Team Lead Software Developer @ ABELSoft",
       date: "September 3, 2021",
-      companyLogo:
-        "https://media.licdn.com/dms/image/C4E0BAQE-YjP3OAE4CA/company-logo_200_200/0/1629987692277?e=1702512000&v=beta&t=5tUddRiL_wjOCybUHYlNG7hl3ybWwguJo5581-DALEw",
+      companyLogo: "",
       relationship: "Dallas managed Man directly",
       testimonial:
         "Man Vu joined my team around 8 months ago. Overall, it was a pleasure to work with him.\n\n Even though Man is just a co-op student, his ability to create solutions to complex problems was amazing. Man saved our team countless hours by creating standalone utilities carrying out tedious tasks.\n\n Man was also one of the only co-ops that had good experience with legacy and C++ development, which was impressive.\n\n Overall, Man was an incredibly valuable addition to our team due to his exceptional technical skills.",
     },
     {
       name: "Brett Hoes",
-      profilePicture:
-        "https://media.licdn.com/dms/image/C4E03AQFRimnqpSg5Jw/profile-displayphoto-shrink_800_800/0/1623452886040?e=1700092800&v=beta&t=YE9tMVv2d8bqqXnOFJ3E0RoH7mbc2nk2CGj7OKBCbpw",
+      profilePicture: "",
       connection: "1st degree connection",
       position: "Team Lead Software Developer @ ABELSoft Inc.",
       date: "August 14, 2023",
-      companyLogo:
-        "https://media.licdn.com/dms/image/C560BAQFd6vZ426WhTA/company-logo_200_200/0/1558707039783?e=1702512000&v=beta&t=sEQzxHCijp9AMHPcWZoM62EbkWmjrIWI0CTneXCpU4Y",
+      companyLogo: "",
       relationship: "Brett managed Man directly",
       testimonial:
         "Before we were coworkers, Man and I were students together at Mohawk College. Even then, he was already known in our year for breaking multiple class records with code that he wrote in our infamously difficult data structures and algorithms course.\n\n Over the past 3 years, he has approached his work with the same creative problem solving skills that made him a stellar student. Man regularly contributes pieces of work that streamline labor-intensive manual processes.\n\n I've lost track of how many new things he has taught me, and I'm thankful to have spent so much of my development career with him thus far.\n\n In a sentence, Man is a naturally gifted developer who relentlessly pursues new information both inside and outside of his work.",
     },
     {
       name: "Andrew Cheung",
-      profilePicture:
-        "https://media.licdn.com/dms/image/C4E03AQEuikLbccIXEg/profile-displayphoto-shrink_800_800/0/1603205460771?e=1700092800&v=beta&t=l5P_J2TQnh5gNBC_YXrI0khqNZ-_R0THs4TZ9FXEwHc",
+      profilePicture: "",
       connection: "1st degree connection",
       position: "Quality Assurance Analyst @ ABELSoft Inc.",
       date: "August 19, 2023",
-      companyLogo:
-        "https://media.licdn.com/dms/image/C560BAQFd6vZ426WhTA/company-logo_200_200/0/1558707039783?e=1702512000&v=beta&t=sEQzxHCijp9AMHPcWZoM62EbkWmjrIWI0CTneXCpU4Y",
+      companyLogo: "",
       relationship: "Andrew worked with Man on the same team",
       testimonial:
         "As a quality assurance analyst, I've had the pleasure of working closely with Man for over a year and I can attest that Man consistently delivers robust code and high quality results that exceeds expectations.\n\n Beyond his technical expertise, Man responds well to feedback and has excellent teamwork and communication skills.\n\n I am confident that Man will a make an invaluable addition to any software development team for his adaptability, collaborative ability, and problem solving skills.",
     },
     {
       name: "Adrian Paluch",
-      profilePicture: "URL_TO_ADRIAN_PALUCH_PROFILE_PICTURE",
+      profilePicture: "",
       connection: "1st degree connection",
       position: "Software Developer @ ABELSoft Inc.",
       date: "October 22, 2023",
-      companyLogo:
-        "https://media.licdn.com/dms/image/C560BAQFd6vZ426WhTA/company-logo_200_200/0/1558707039783?e=1702512000&v=beta&t=sEQzxHCijp9AMHPcWZoM62EbkWmjrIWI0CTneXCpU4Y",
+      companyLogo: "",
       relationship: "Adrian worked with Man on the same team",
       testimonial:
         "Over my time working with Man Vu at ABELSoft, I've been continually impressed by his work ethic and ability to come up with effective solutions for difficult problems. Man is always looking for ways to improve or automate existing processes which is much appreciated by all his coworkers.\n\nMan is a valuable member for any team, he is always ready to help others and approaches challenges with a positive attitude. He has an excellent drive for continually improving and expanding his knowledge of software development.\n\nOverall, it has been fantastic to work alongside him. With Man's enormous passion for software development, I am excited to see what more he will accomplish in the future.",
@@ -1244,4 +1047,5 @@ export {
   contactPageData,
   projects,
   testimonials,
+  abelsoftStats,
 };

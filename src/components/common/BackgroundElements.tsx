@@ -1,46 +1,30 @@
-import { motion } from "framer-motion";
-
 const BackgroundElements = () => {
-    return (
-        <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-5]">
-            <motion.div
-                animate={{
-                    x: ["0%", "5%", "-5%", "0%"],
-                    y: ["0%", "-5%", "5%", "0%"],
-                    scale: [1, 1.2, 0.8, 1]
-                }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute top-[-10vh] left-[-10vw] w-[60vw] h-[60vw] bg-blue-500/40 dark:bg-blue-600/40 rounded-full blur-[10vw]"
-            />
-            <motion.div
-                animate={{
-                    x: ["0%", "-5%", "5%", "0%"],
-                    y: ["0%", "5%", "-5%", "0%"],
-                    scale: [1, 0.8, 1.2, 1]
-                }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute bottom-[-10vh] right-[-10vw] w-[50vw] h-[50vw] bg-indigo-500/40 dark:bg-purple-600/40 rounded-full blur-[10vw]"
-            />
-            <motion.div
-                animate={{
-                    x: ["0%", "8%", "-4%", "0%"],
-                    y: ["0%", "4%", "-8%", "0%"],
-                    scale: [1, 1.3, 0.9, 1]
-                }}
-                transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-                className="absolute top-[20vh] left-[20vw] w-[60vw] h-[60vw] bg-fuchsia-500/40 dark:bg-pink-600/30 rounded-full blur-[12vw]"
-            />
-            <motion.div
-                animate={{
-                    x: ["0%", "-4%", "8%", "0%"],
-                    y: ["0%", "-8%", "4%", "0%"],
-                    scale: [1, 1.2, 0.8, 1]
-                }}
-                transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
-                className="absolute bottom-[10vh] left-[30vw] w-[50vw] h-[50vw] bg-emerald-500/30 dark:bg-teal-600/30 rounded-full blur-[12vw]"
-            />
-        </div>
-    );
+  return (
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-5]">
+      {/* Subtle grid pattern */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundSize: "64px 64px",
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px)",
+        }}
+      />
+
+      {/* Single subtle gradient orb - top right */}
+      <div
+        className="absolute -top-[20vh] -right-[10vw] w-[60vw] h-[60vw] rounded-full"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(59,130,246,0.06) 0%, rgba(6,182,212,0.03) 40%, transparent 70%)",
+          filter: "blur(80px)",
+        }}
+      />
+
+      {/* Grain / noise overlay */}
+      <div className="grain-overlay" />
+    </div>
+  );
 };
 
 export default BackgroundElements;
