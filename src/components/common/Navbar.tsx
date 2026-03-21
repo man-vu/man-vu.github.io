@@ -19,7 +19,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,14 +55,14 @@ const Navbar = () => {
   }, []);
 
   const toggleTheme = useCallback(() => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  }, [theme, setTheme]);
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  }, [resolvedTheme, setTheme]);
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "py-3 glass-panel border-b border-white/[0.06]"
+          ? "py-3 glass-panel border-b border-border"
           : "py-5 bg-transparent"
       }`}
     >
@@ -71,7 +71,7 @@ const Navbar = () => {
           {/* Logo */}
           <a
             href="#home"
-            className="font-mono text-sm tracking-tight text-white/80 hover:text-white transition-colors duration-200"
+            className="font-mono text-sm tracking-tight text-foreground/80 hover:text-foreground transition-colors duration-200"
           >
             <span className="text-blue-400">&lt;</span>
             <span className="font-agustina text-base">
@@ -95,8 +95,8 @@ const Navbar = () => {
                   href={item.href}
                   className={`relative px-3 py-2 text-[13px] font-medium transition-colors duration-200 ${
                     isActive
-                      ? "text-white"
-                      : "text-white/40 hover:text-white/70"
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground/70"
                   }`}
                 >
                   {item.name}
@@ -121,16 +121,16 @@ const Navbar = () => {
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg text-white/40 hover:text-white/70 hover:bg-white/[0.04] transition-all duration-200"
+              className="p-2 rounded-lg text-muted-foreground hover:text-foreground/70 hover:bg-muted/50 transition-all duration-200"
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+              {resolvedTheme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
             </button>
 
             {/* Mobile hamburger */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-white/60 hover:text-white hover:bg-white/[0.04] transition-all duration-200"
+              className="lg:hidden p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all duration-200"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
             >
@@ -152,7 +152,7 @@ const Navbar = () => {
             role="navigation"
             aria-label="Mobile navigation"
           >
-            <div className="glass-panel mx-4 mt-3 rounded-xl border border-white/[0.06] p-2">
+            <div className="glass-panel mx-4 mt-3 rounded-xl border border-border p-2">
               {navItems.map((item, index) => {
                 const isActive =
                   activeSection === item.href.replace("#", "");
@@ -170,8 +170,8 @@ const Navbar = () => {
                     }}
                     className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors duration-150 ${
                       isActive
-                        ? "text-white bg-white/[0.05]"
-                        : "text-white/40 hover:text-white/70 hover:bg-white/[0.03]"
+                        ? "text-foreground bg-muted/50"
+                        : "text-muted-foreground hover:text-foreground/70 hover:bg-muted/30"
                     }`}
                   >
                     {item.name}

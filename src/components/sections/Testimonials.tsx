@@ -43,7 +43,7 @@ const Testimonials = () => {
               className="glass-card p-6 relative overflow-hidden"
             >
               {/* Decorative Quote Icon */}
-              <Quote className="absolute top-4 right-4 w-12 h-12 text-white/[0.04]" />
+              <Quote className="absolute top-4 right-4 w-12 h-12 text-foreground/[0.04]" />
 
               {/* Testimonial Text */}
               <div className="mb-6 relative z-10">
@@ -62,12 +62,12 @@ const Testimonials = () => {
               </div>
 
               {/* Author Info */}
-              <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+              <div className="flex items-center gap-3 pt-4 border-t border-border">
                 {isValidImageUrl(item.profilePicture) ? (
                   <img
                     src={item.profilePicture}
                     alt={item.name}
-                    className="w-10 h-10 rounded-full object-cover ring-2 ring-white/10"
+                    className="w-10 h-10 rounded-full object-cover ring-2 ring-border"
                     loading="lazy"
                   />
                 ) : (

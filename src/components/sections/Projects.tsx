@@ -119,7 +119,7 @@ const Projects = () => {
                 </div>
 
                 {/* Links */}
-                <div className="flex items-center gap-3 pt-2 border-t border-white/5">
+                <div className="flex items-center gap-3 pt-2 border-t border-border">
                   {project.links.map((link) => (
                     <a
                       key={link.name}

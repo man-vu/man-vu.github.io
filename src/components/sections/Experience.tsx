@@ -38,7 +38,7 @@ const Experience = () => {
             {experience.title}
           </h2>
           <div className="w-12 h-1 bg-cyan-500 rounded-full mb-6" />
-          <p className="text-slate-400 max-w-2xl text-lg">
+          <p className="text-muted-foreground max-w-2xl text-lg">
             {experience.description}
           </p>
         </motion.div>
@@ -85,13 +85,13 @@ const Experience = () => {
               <div className="text-2xl md:text-3xl font-bold font-mono text-amber-500">
                 {stat.value}
               </div>
-              <div className="text-xs text-slate-400 mt-1">{stat.label}</div>
+              <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Timeline */}
-        <div className="relative pl-8 border-l-2 border-white/10 space-y-12">
+        <div className="relative pl-8 border-l-2 border-border space-y-12">
           {experience.sections[0].experiences.map((exp, index) => {
             const isAbelsoft = exp.company === "ABELSoft Inc.";
 
@@ -105,7 +105,7 @@ const Experience = () => {
                 className="relative"
               >
                 {/* Timeline dot */}
-                <div className="absolute -left-[calc(2rem+5px)] top-6 w-3 h-3 rounded-full bg-cyan-500 border-2 border-slate-900 shadow-[0_0_8px_rgba(6,182,212,0.5)]" />
+                <div className="absolute -left-[calc(2rem+5px)] top-6 w-3 h-3 rounded-full bg-cyan-500 border-2 border-background shadow-[0_0_8px_rgba(6,182,212,0.5)]" />
 
                 {/* Job Card */}
                 <div className="glass-card rounded-2xl p-8 border-l-2 border-cyan-500">
@@ -121,7 +121,7 @@ const Experience = () => {
                       </div>
                     )}
                     <div>
-                      <h3 className="text-xl font-semibold text-white">
+                      <h3 className="text-xl font-semibold text-foreground">
                         {exp.title}
                       </h3>
                       <a
@@ -137,7 +137,7 @@ const Experience = () => {
                   </div>
 
                   {/* Duration + Location */}
-                  <div className="flex flex-wrap gap-4 mb-5 text-sm text-slate-400">
+                  <div className="flex flex-wrap gap-4 mb-5 text-sm text-muted-foreground">
                     <div className="flex items-center gap-1.5">
                       <Calendar size={14} className="text-cyan-500" />
                       <span>{exp.duration}</span>
@@ -153,7 +153,7 @@ const Experience = () => {
                     {exp.description.map((sentence, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-slate-400"
+                        className="flex items-start gap-3 text-muted-foreground"
                       >
                         <div className="mt-2 shrink-0">
                           <div className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
@@ -201,11 +201,11 @@ const Experience = () => {
                                   initial={{ opacity: 0, y: 10 }}
                                   animate={{ opacity: 1, y: 0 }}
                                   transition={{ delay: areaIdx * 0.05 }}
-                                  className="p-4 rounded-xl bg-white/5 border border-white/5"
+                                  className="p-4 rounded-xl bg-muted/50 border border-border"
                                 >
                                   {/* Area Name + PR Badge */}
                                   <div className="flex items-center justify-between mb-1.5">
-                                    <span className="text-sm font-semibold text-white">
+                                    <span className="text-sm font-semibold text-foreground">
                                       {area.area}
                                     </span>
                                     <span className="text-xs font-mono font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded-full">
@@ -221,7 +221,7 @@ const Experience = () => {
                                   )}
 
                                   {/* Progress Bar */}
-                                  <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden mb-3">
+                                  <div className="w-full h-1.5 bg-muted rounded-full overflow-hidden mb-3">
                                     <motion.div
                                       initial={{ width: 0 }}
                                       animate={{
@@ -240,7 +240,7 @@ const Experience = () => {
                                     {area.highlights.map((h, hi) => (
                                       <li
                                         key={hi}
-                                        className="text-xs text-slate-500 flex gap-1.5"
+                                        className="text-xs text-muted-foreground flex gap-1.5"
                                       >
                                         <span className="text-cyan-600 mt-0.5 shrink-0">
                                           -
@@ -288,12 +288,12 @@ const Experience = () => {
                                   initial={{ opacity: 0, x: -10 }}
                                   animate={{ opacity: 1, x: 0 }}
                                   transition={{ delay: prIdx * 0.05 }}
-                                  className="flex items-start gap-4 p-3 rounded-lg bg-white/5 border border-white/5"
+                                  className="flex items-start gap-4 p-3 rounded-lg bg-muted/50 border border-border"
                                 >
-                                  <span className="text-xs font-mono text-slate-500 shrink-0 mt-0.5">
+                                  <span className="text-xs font-mono text-muted-foreground/70 shrink-0 mt-0.5">
                                     {pr.date}
                                   </span>
-                                  <span className="text-sm text-slate-400">
+                                  <span className="text-sm text-muted-foreground">
                                     {pr.title}
                                   </span>
                                 </motion.div>

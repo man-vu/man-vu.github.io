@@ -79,7 +79,7 @@ const Hero = () => {
                     {stat.label}
                   </span>
                   {i < stats.length - 1 && (
-                    <span className="ml-6 text-white/10 select-none">|</span>
+                    <span className="ml-6 text-muted-foreground/20 select-none">|</span>
                   )}
                 </div>
               ))}
@@ -97,7 +97,7 @@ const Hero = () => {
                   target={label === "Email" ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-muted-foreground hover:text-white hover:border-white/25 transition-colors duration-200"
+                  className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/25 transition-colors duration-200"
                 >
                   <Icon size={18} />
                 </a>
@@ -126,7 +126,7 @@ const Hero = () => {
               {/* Glow behind avatar */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 via-transparent to-indigo-500/20 blur-2xl" />
 
-              <div className="relative w-full h-full rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
+              <div className="relative w-full h-full rounded-2xl border border-border overflow-hidden shadow-2xl">
                 <img
                   src={getImageUrl("avatar.jpg")}
                   alt={greeting.full_name}

@@ -38,14 +38,14 @@ const EducationCard = ({
         <div className="flex-1 min-w-0">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
             <div>
-              <h3 className="text-xl font-bold text-white leading-tight">
+              <h3 className="text-xl font-bold text-foreground leading-tight">
                 {degree.title}
               </h3>
               <p className="text-blue-400 font-medium mt-1">{degree.subtitle}</p>
             </div>
 
             {degree.duration && (
-              <span className="inline-flex items-center gap-1.5 text-sm text-slate-400 whitespace-nowrap shrink-0">
+              <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground whitespace-nowrap shrink-0">
                 <Calendar size={14} className="text-cyan-500" />
                 {degree.duration}
               </span>
@@ -58,7 +58,7 @@ const EducationCard = ({
               {degree.descriptions.map((desc: string, i: number) => (
                 <li
                   key={i}
-                  className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed"
+                  className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed"
                 >
                   <span
                     className={`mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full ${
@@ -73,7 +73,7 @@ const EducationCard = ({
 
           {/* GPA Badge & Honors */}
           {degree.additional_info && (
-            <div className="flex flex-wrap gap-3 mt-5 pt-4 border-t border-white/5">
+            <div className="flex flex-wrap gap-3 mt-5 pt-4 border-t border-border">
               {degree.additional_info.gpa && (
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold">
                   <Award size={13} />
@@ -153,7 +153,7 @@ const Education = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500" />
                 </span>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-foreground">
                   Currently Pursuing
                 </h3>
               </motion.div>
@@ -182,7 +182,7 @@ const Education = () => {
                 className="flex items-center gap-3 mb-6"
               >
                 <GraduationCap size={20} className="text-blue-400" />
-                <h3 className="text-xl font-semibold text-white">Completed</h3>
+                <h3 className="text-xl font-semibold text-foreground">Completed</h3>
               </motion.div>
 
               <div className="space-y-6">

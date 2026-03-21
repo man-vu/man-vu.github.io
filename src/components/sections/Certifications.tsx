@@ -58,13 +58,13 @@ const Certifications = () => {
                 )}
 
                 <div className="min-w-0">
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2">
+                  <h3 className="text-sm font-semibold text-foreground leading-snug line-clamp-2">
                     {cert.title}
                   </h3>
-                  <p className="text-xs text-slate-400 mt-0.5">
+                  <p className="text-xs text-muted-foreground mt-0.5">
                     {cert.subtitle}
                     {cert.issued && (
-                      <span className="text-slate-500"> -- {cert.issued}</span>
+                      <span className="text-muted-foreground/70"> -- {cert.issued}</span>
                     )}
                   </p>
                 </div>
@@ -76,13 +76,13 @@ const Certifications = () => {
                   {cert.skills.slice(0, 3).map((skill: string) => (
                     <span
                       key={skill}
-                      className="text-[10px] font-medium uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/5 text-slate-400 border border-white/10"
+                      className="text-[10px] font-medium uppercase tracking-wider px-2 py-0.5 rounded-full bg-muted/50 text-muted-foreground border border-border"
                     >
                       {skill}
                     </span>
                   ))}
                   {cert.skills.length > 3 && (
-                    <span className="text-[10px] font-medium text-slate-500 px-1 py-0.5">
+                    <span className="text-[10px] font-medium text-muted-foreground/70 px-1 py-0.5">
                       +{cert.skills.length - 3} more
                     </span>
                   )}
@@ -90,10 +90,10 @@ const Certifications = () => {
               )}
 
               {/* Footer: Link + Credential ID */}
-              <div className="mt-auto pt-3 border-t border-white/5 flex items-center justify-between gap-2">
+              <div className="mt-auto pt-3 border-t border-border flex items-center justify-between gap-2">
                 {cert.credential_id && (
                   <span
-                    className="text-[10px] text-slate-500 font-mono truncate max-w-[120px]"
+                    className="text-[10px] text-muted-foreground/70 font-mono truncate max-w-[120px]"
                     title={cert.credential_id}
                   >
                     {cert.credential_id}

@@ -32,7 +32,7 @@ const Skills = () => {
               className="glass-card p-8 rounded-2xl"
             >
               {/* Group Title */}
-              <h3 className="text-xl font-semibold text-white mb-6">
+              <h3 className="text-xl font-semibold text-foreground mb-6">
                 {skillGroup.title}
               </h3>
 
@@ -45,14 +45,14 @@ const Skills = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: i * 0.03 }}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-cyan-500/40 hover:bg-white/10 transition-all"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted/50 border border-border hover:border-cyan-500/40 hover:bg-muted transition-all"
                   >
                     <Icon
                       icon={software.fontAwesomeClassname}
                       style={software.style}
                       className="w-5 h-5"
                     />
-                    <span className="text-sm text-slate-300">
+                    <span className="text-sm text-foreground/80">
                       {software.skillName}
                     </span>
                   </motion.div>
@@ -64,7 +64,7 @@ const Skills = () => {
                 {skillGroup.skills.map((sentence, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-3 text-slate-400"
+                    className="flex items-start gap-3 text-muted-foreground"
                   >
                     <span className="text-cyan-500 mt-1 shrink-0">&#8226;</span>
                     <span className="text-sm leading-relaxed">{sentence}</span>

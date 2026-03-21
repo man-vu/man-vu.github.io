@@ -48,7 +48,7 @@ const Contact = () => {
               <img
                 src={getImageUrl(contactSection.profile_image_path)}
                 alt="Man Vu"
-                className="w-64 h-64 object-cover rounded-2xl border border-white/10"
+                className="w-64 h-64 object-cover rounded-2xl border border-border"
                 loading="lazy"
               />
             </div>
@@ -78,7 +78,7 @@ const Contact = () => {
                     className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center ${
                       method.primary
                         ? "bg-blue-500/15 text-blue-400"
-                        : "bg-white/5 text-muted-foreground"
+                        : "bg-muted/50 text-muted-foreground"
                     }`}
                   >
                     {getIcon(method.icon)}
