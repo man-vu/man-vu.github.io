@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Level Select Screen -->
+    <div id="level-select" class="screen">
+        <div class="menu-container">
+            <h1 class="game-title">Tower Defense</h1>
+            <p class="game-subtitle">Defend your base across 5 unique battlefields</p>
+            <div class="shortcuts-hint">
+                Shortcuts: <kbd>1-4</kbd> towers &middot; <kbd>Space</kbd> start wave &middot; <kbd>Esc</kbd> cancel
+            </div>
+            <div id="level-grid" class="level-grid"></div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        <div id="game-wrapper">
+            <div id="game-container">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+            </div>
+            <div id="ui-panel">
+                <div class="panel-header">
+                    <h2 id="level-name">Level</h2>
+                    <button id="back-to-menu" class="btn btn-small btn-muted">Menu</button>
+                </div>
+
+                <div id="stats">
+                    <div class="stat-row">
+                        <span class="stat-label">Money</span>
+                        <span class="stat-value money-value">$<span id="money">150</span></span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Lives</span>
+                        <span class="stat-value lives-value"><span id="lives">20</span></span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Wave</span>
+                        <span class="stat-value"><span id="wave">0 / 10</span></span>
+                    </div>
+                </div>
+
+                <div id="controls">
+                    <h3 class="section-title">Build Towers</h3>
+                    <div id="build-buttons"></div>
+
+                    <h3 class="section-title">Selected Tower</h3>
+                    <div id="selection-info">
+                        <p class="sel-empty">Click a tower to select it</p>
+                    </div>
+                    <button id="upgrade-tower" class="btn btn-upgrade hidden">Upgrade $<span id="upgrade-cost">0</span></button>
+                    <button id="sell-tower" class="btn btn-sell hidden">Sell $<span id="sell-value">0</span></button>
+
+                    <div class="action-area">
+                        <button id="start-wave" class="btn btn-action">Start Wave</button>
+                        <button id="next-level" class="btn btn-action btn-success hidden">Next Level</button>
+                        <button id="retry-level" class="btn btn-action btn-danger hidden">Retry</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

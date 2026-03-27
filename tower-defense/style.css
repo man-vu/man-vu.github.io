@@ -1,0 +1,429 @@
+/* ============================================================
+   style.css — Tower Defense polished dark theme
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121218;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Screens --- */
+.screen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Level Select --- */
+.menu-container {
+    text-align: center;
+    max-width: 900px;
+    padding: 40px 20px;
+}
+
+.game-title {
+    font-size: 52px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #4fc3f7, #e040fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.game-subtitle {
+    color: #888;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.shortcuts-hint {
+    color: #555;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.shortcuts-hint kbd {
+    background: #2a2a35;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 12px;
+    border: 1px solid #3a3a45;
+}
+
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.level-card {
+    background: #1e1e2a;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+}
+
+.level-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    border-color: #4fc3f7;
+}
+
+.level-card.locked {
+    opacity: 0.4;
+    cursor: not-allowed;
+    filter: grayscale(0.8);
+}
+
+.level-card.locked:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.level-card-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.level-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.level-card-body {
+    padding: 14px;
+}
+
+.level-card-body h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.level-card-body p {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.3;
+}
+
+/* --- Game Screen --- */
+#game-wrapper {
+    display: flex;
+    background: #1a1a24;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+#game-container {
+    flex-shrink: 0;
+}
+
+canvas {
+    display: block;
+    cursor: crosshair;
+}
+
+/* --- UI Panel --- */
+#ui-panel {
+    width: 260px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #16161e;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2a2a35;
+    padding-bottom: 10px;
+}
+
+.panel-header h2 {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* --- Stats --- */
+#stats {
+    background: #1e1e2a;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.stat-label {
+    color: #888;
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.money-value {
+    color: #fdd835;
+}
+
+.lives-value {
+    color: #ef5350;
+}
+
+/* --- Sections --- */
+.section-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    margin-top: 4px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+/* --- Build Buttons --- */
+#build-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.build-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    text-align: left;
+    background: #1e1e2a;
+    border: 1px solid #2a2a35;
+}
+
+.build-btn:hover:not(:disabled) {
+    background: #252535;
+    border-color: #4fc3f7;
+}
+
+.build-btn.active {
+    border-color: #ff9800;
+    background: #2a2520;
+}
+
+.tower-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.tower-label {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.tower-label strong {
+    font-size: 13px;
+    color: #e0e0e0;
+}
+
+.tower-label small {
+    font-size: 10px;
+    color: #888;
+}
+
+/* --- Selection Info --- */
+#selection-info {
+    background: #1e1e2a;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    min-height: 50px;
+}
+
+.sel-empty {
+    color: #555;
+    font-style: italic;
+}
+
+.sel-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.sel-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.sel-stats {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: #aaa;
+    flex-wrap: wrap;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 8px 12px;
+    background: #2a2a3a;
+    color: #e0e0e0;
+    border: 1px solid #3a3a4a;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.15s;
+    font-family: inherit;
+}
+
+.btn:hover:not(:disabled) {
+    background: #353548;
+}
+
+.btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.btn-small {
+    padding: 4px 10px;
+    font-size: 11px;
+}
+
+.btn-muted {
+    background: transparent;
+    border-color: #333;
+    color: #777;
+}
+
+.btn-muted:hover:not(:disabled) {
+    color: #aaa;
+    border-color: #555;
+}
+
+.btn-upgrade {
+    background: #1a3a5c;
+    border-color: #2196f3;
+    color: #90caf9;
+}
+
+.btn-upgrade:hover:not(:disabled) {
+    background: #1e4a7a;
+}
+
+.btn-sell {
+    background: #3a2020;
+    border-color: #c62828;
+    color: #ef9a9a;
+}
+
+.btn-sell:hover:not(:disabled) {
+    background: #4a2525;
+}
+
+/* --- Action Buttons --- */
+.action-area {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.btn-action {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #e91e63, #c2185b);
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.btn-action:hover:not(:disabled) {
+    background: linear-gradient(135deg, #f44336, #e91e63);
+    box-shadow: 0 4px 12px rgba(233,30,99,0.3);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+.btn-success:hover:not(:disabled) {
+    background: linear-gradient(135deg, #66bb6a, #388e3c);
+    box-shadow: 0 4px 12px rgba(76,175,80,0.3);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #f44336, #c62828);
+}
+
+.btn-danger:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ef5350, #e53935);
+    box-shadow: 0 4px 12px rgba(244,67,54,0.3);
+}
+
+/* --- Scrollbar --- */
+#ui-panel::-webkit-scrollbar {
+    width: 4px;
+}
+
+#ui-panel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#ui-panel::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 2px;
+}
