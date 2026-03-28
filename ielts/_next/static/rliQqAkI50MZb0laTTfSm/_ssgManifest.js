@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fspeaking\u002F[slug]","\u002Fwriting\u002Ftask1\u002F[slug]","\u002Fwriting\u002Ftask2\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
