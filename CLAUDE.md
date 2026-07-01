@@ -65,4 +65,5 @@ Index renders sections in order: Hero → Skills → Experience → Education �
 - Path alias `@` → `./src` (configured in `vite.config.ts` and `tsconfig.json`)
 - ESM project (`"type": "module"`)
 - The deploy script (`pnpm run deploy`) copies `dist/*` to repo root, commits, and pushes — it modifies the working tree outside `dist/`
+- **`index.template.html` is the canonical HTML source.** Deploy overwrites root `index.html` with the built version, so `dev`/`build` first restore `index.html` from the template. Edit `index.template.html`, never root `index.html`.
 - `.nojekyll` disables Jekyll processing on GitHub Pages

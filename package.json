@@ -4,8 +4,8 @@
   "packageManager": "pnpm@8.10.0",
   "homepage": "https://man-vu.github.io/",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node -e \"require('fs').copyFileSync('index.template.html','index.html')\" && vite",
+    "build": "node -e \"require('fs').copyFileSync('index.template.html','index.html')\" && vite build",
     "lint": "eslint --quiet ./src",
     "preview": "vite preview",
     "deploy": "npm run build && cp -r dist/* . && git add . && git commit -m 'Deploy' && git push",
