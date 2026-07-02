@@ -788,7 +788,7 @@ const projects = {
         "projects/spendinganalyzer_7.webp",
       ],
       videos: [],
-      name: "Spending Analyzer",
+      name: "Finances",
       badge: { text: "Personal Tool", color: "info", icon: "📊" },
       briefDescription:
         "Privacy-first personal-finance analytics: a Next.js web dashboard and React Native mobile app over a custom multi-bank statement-parsing pipeline — all data processed offline, no backend.",
