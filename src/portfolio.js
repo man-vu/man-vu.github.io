@@ -778,7 +778,15 @@ const projects = {
     },
     {
       id: "11",
-      images: ["projects/spendinganalyzer_1.png"],
+      images: [
+        "projects/spendinganalyzer_1.png",
+        "projects/spendinganalyzer_2.webp",
+        "projects/spendinganalyzer_3.webp",
+        "projects/spendinganalyzer_4.webp",
+        "projects/spendinganalyzer_5.webp",
+        "projects/spendinganalyzer_6.webp",
+        "projects/spendinganalyzer_7.webp",
+      ],
       videos: [],
       name: "Spending Analyzer",
       badge: { text: "Personal Tool", color: "info", icon: "📊" },
