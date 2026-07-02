@@ -71,13 +71,10 @@ const Navbar = () => {
           {/* Logo */}
           <a
             href="#home"
-            className="font-mono text-sm tracking-tight text-foreground/80 hover:text-foreground transition-colors duration-200"
+            className="text-lg font-extrabold tracking-tight text-foreground hover:opacity-80 transition-opacity duration-200"
           >
-            <span className="text-blue-400">&lt;</span>
-            <span className="font-agustina text-base">
-              {greeting.full_name}
-            </span>
-            <span className="text-blue-400"> /&gt;</span>
+            {greeting.full_name}
+            <span className="text-blue-500">.</span>
           </a>
 
           {/* Desktop Navigation */}

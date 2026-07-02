@@ -16,10 +16,10 @@ const fadeUp = (delay: number) => ({
 });
 
 const socialLinks = [
-  { href: socialMediaLinks.github, icon: Github, label: "GitHub" },
-  { href: socialMediaLinks.linkedin, icon: Linkedin, label: "LinkedIn" },
-  { href: `mailto:${socialMediaLinks.gmail}`, icon: Mail, label: "Email" },
-  { href: socialMediaLinks.facebook, icon: Facebook, label: "Facebook" },
+  { href: socialMediaLinks.github, icon: Github, label: "GitHub", bg: "#24292e" },
+  { href: socialMediaLinks.linkedin, icon: Linkedin, label: "LinkedIn", bg: "#0A66C2" },
+  { href: `mailto:${socialMediaLinks.gmail}`, icon: Mail, label: "Email", bg: "#EA4335" },
+  { href: socialMediaLinks.facebook, icon: Facebook, label: "Facebook", bg: "#1877F2" },
 ];
 
 const stats = [
@@ -87,14 +87,15 @@ const Hero = () => {
               {...fadeUp(0.6)}
               className="flex flex-wrap items-center gap-3"
             >
-              {socialLinks.map(({ href, icon: Icon, label }) => (
+              {socialLinks.map(({ href, icon: Icon, label, bg }) => (
                 <a
                   key={label}
                   href={href}
                   target={label === "Email" ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/25 transition-colors duration-200"
+                  className="w-11 h-11 rounded-full flex items-center justify-center text-white shadow-md hover:scale-110 hover:shadow-lg transition-all duration-200"
+                  style={{ backgroundColor: bg }}
                 >
                   <Icon size={18} />
                 </a>

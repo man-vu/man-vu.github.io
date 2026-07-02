@@ -412,50 +412,6 @@ const degrees = {
         transcripts: "Show Transcripts",
       },
     },
-    {
-      title: "Bachelor of Technology (BTech)",
-      subtitle: "McMaster University",
-      logo_path: "mcmaster_logo.png",
-      alt_name: "McMaster",
-      duration: "",
-      descriptions: [
-        "Completed a Bachelor of Technology degree with a focus on software systems.",
-      ],
-      website_link: "https://www.mcmaster.ca/",
-    },
-    {
-      title: "Advanced Diploma",
-      subtitle: "Conestoga College",
-      logo_path: "conestoga_logo.png",
-      alt_name: "Conestoga",
-      duration: "",
-      descriptions: [
-        "Earned an advanced diploma in a technology-focused program.",
-      ],
-      website_link: "https://www.conestogac.on.ca/",
-    },
-    {
-      title: "English Certification Program",
-      subtitle: "University of Guelph",
-      logo_path: "guelph_logo.png",
-      alt_name: "Guelph",
-      duration: "",
-      descriptions: [
-        "Completed an English certification program to strengthen academic and professional communication.",
-      ],
-      website_link: "https://www.uoguelph.ca/",
-    },
-    {
-      title: "Bachelor of Science",
-      subtitle: "Bach Khoa University (HCMUT)",
-      logo_path: "bachkhoa_logo.png",
-      alt_name: "Bach Khoa",
-      duration: "",
-      descriptions: [
-        "Completed foundational studies in science and engineering at one of Vietnam's top technical universities.",
-      ],
-      website_link: "https://www.hcmut.edu.vn/",
-    },
   ],
   inProgressDegrees: [],
 };
@@ -789,7 +745,7 @@ const projects = {
     },
     {
       id: "12",
-      images: ["projects/clinicwellness_1.webp"],
+      images: ["projects/clinicwellness_1.webp", "projects/clinicwellness_2.webp", "projects/clinicwellness_3.webp", "projects/clinicwellness_4.webp", "projects/clinicwellness_5.webp", "projects/clinicwellness_6.webp", "projects/clinicwellness_7.webp", "projects/clinicwellness_8.webp", "projects/clinicwellness_9.webp", "projects/clinicwellness_10.webp", "projects/clinicwellness_11.webp"],
       videos: [],
       name: "Chiropractic Wellness App",
       badge: { text: "Client Project", color: "success", icon: "🌿" },
@@ -812,79 +768,6 @@ const projects = {
       ],
       links: [
         { name: "Private Repo", url: "#", iconifyClass: "ri:lock-2-fill" },
-      ],
-    },
-    {
-      id: "1",
-      name: "Bad Habit Buster",
-      badge: { text: "Hackathon Project", color: "success", icon: "💡" },
-      images: [
-        "projects/habitbuster_1.png",
-        "projects/habitbuster_2.png",
-        "projects/habitbuster_3.png",
-        "projects/habitbuster_4.png",
-      ],
-      videos: [
-        "https://www.youtube.com/embed/ViBoMEj1ldA?si=dOhBBYs5AGpOvOj9",
-      ],
-      url: "https://devpost.com/software/bad-habit-buster",
-      briefDescription:
-        "AI-powered web app to help users break bad habits, built for a hackathon using React and GPT-4o.",
-      description: `
-- Built an **AI-powered full-stack web app** using **React**, **Node.js**, and **GPT-4o**
-- Backend: **DynamoDB** to securely store user data
-- Frontend: Designed in **Figma** with **Material UI** for a responsive, polished UI
-- Users reflect daily and receive **AI-adapted plans** tailored to their personality, motivation, and progress
-`,
-      languages: [
-        { name: "React", iconifyClass: "logos-react" },
-        { name: "Node.js", iconifyClass: "logos-nodejs" },
-        { name: "AWS DynamoDB", iconifyClass: "logos:aws-dynamodb" },
-        { name: "Material UI", iconifyClass: "logos:material-ui" },
-        { name: "OpenAI API", iconifyClass: "logos:openai-icon" },
-      ],
-      links: [
-        {
-          name: "GitHub Repo",
-          url: "https://github.com/man-vu/Hack-The-Hill-2-Habit-Buster",
-          iconifyClass: "ri:github-fill",
-        },
-        {
-          name: "Devpost",
-          url: "https://devpost.com/software/habitbuster",
-          iconifyClass: "mdi:web",
-        },
-      ],
-    },
-    {
-      id: "3",
-      images: ["projects/phodelight_1.webp", "projects/phodelight_2.webp"],
-      videos: [],
-      badge: { text: "Course Project", color: "success", icon: "💡" },
-      name: "Pho Delight Restaurant",
-      url: "https://bit.ly/45AA3Mh",
-      briefDescription:
-        "Showcase app for a restaurant, built with React and modern UI/UX for Meta's certification.",
-      description: `
-- Developed a **restaurant showcase app** as the final project for Meta's Front-End Developer Certification.
-- Implemented a **responsive single-page interface** using **React**, with elegant animations and transitions.
-- Simulates real-world UX with **menu browsing**, **order placement mockup**, and **business overview**.
-- Applied **semantic HTML**, **CSS Grid/Flexbox**, and **custom styling** for aesthetic layout and responsive design.
-- Focused on accessibility and performance optimization for a professional portfolio-ready outcome.
-`,
-      languages: [
-        { name: "React", iconifyClass: "logos-react" },
-        { name: "HTML", iconifyClass: "logos-html-5" },
-        { name: "CSS", iconifyClass: "logos-css-3" },
-        { name: "JavaScript", iconifyClass: "logos-javascript" },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/vuminhman/course-8th-meta-front-end-capstone",
-          iconifyClass: "ri:github-fill",
-        },
-        { name: "Live Demo", url: "https://bit.ly/45AA3Mh", iconifyClass: "mdi:web" },
       ],
     },
   ],
