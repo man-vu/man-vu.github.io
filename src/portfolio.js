@@ -707,7 +707,7 @@ const projects = {
       images: ["projects/ieltspassport_1.jpg", "projects/ieltspassport_2.webp"],
       videos: [],
       name: "IELTS Passport",
-      url: "https://ielts.mavox.ca",
+      url: "https://ieltspassport.com",
       badge: { text: "Commercial Product", color: "warning", icon: "🚀" },
       briefDescription:
         "Freemium IELTS prep platform with AI Writing & Speaking feedback calibrated to real examiner standards — 900+ model essays, practice tests, vocabulary training, and subscriptions.",
@@ -715,7 +715,7 @@ const projects = {
 - **AI Writing & Speaking feedback** scored instantly, calibrated against real examiner-marked essays
 - **900+ model essays**, Listening & Reading practice tests, a placement level test, and vocabulary drills
 - **Freemium SaaS**: Supabase Postgres with row-level security, Stripe subscriptions, progress dashboard
-- Built with **Next.js (App Router), React, TypeScript, and Tailwind CSS** — live at ielts.mavox.ca
+- Built with **Next.js (App Router), React, TypeScript, and Tailwind CSS** — live at ieltspassport.com
 `,
       languages: [
         { name: "Next.js", iconifyClass: "logos:nextjs-icon" },
@@ -726,7 +726,7 @@ const projects = {
         { name: "Stripe", iconifyClass: "logos:stripe" },
       ],
       links: [
-        { name: "Live Site", url: "https://ielts.mavox.ca", iconifyClass: "mdi:web" },
+        { name: "Live Site", url: "https://ieltspassport.com", iconifyClass: "mdi:web" },
         { name: "Private Repo", url: "#", iconifyClass: "ri:lock-2-fill" },
       ],
     },
