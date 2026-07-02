@@ -661,7 +661,14 @@ const projects = {
     {
       id: "9",
       images: ["projects/ieltspassport_1.jpg", "projects/ieltspassport_2.webp"],
-      videos: [],
+      videos: [
+        "/videos/ielts/hero-film.mp4",
+        "/videos/ielts/dashboard.mp4",
+        "/videos/ielts/writing.mp4",
+        "/videos/ielts/speaking.mp4",
+        "/videos/ielts/vocabulary.mp4",
+        "/videos/ielts/level-test.mp4",
+      ],
       name: "IELTS Passport",
       url: "https://ieltspassport.com",
       badge: { text: "Commercial Product", color: "warning", icon: "🚀" },
@@ -688,8 +695,19 @@ const projects = {
     },
     {
       id: "10",
-      images: ["projects/superflow_1.png"],
-      videos: [],
+      images: [
+        "projects/superflow_1.png",
+        "projects/superflow_2.webp",
+        "projects/superflow_3.webp",
+        "projects/superflow_4.webp",
+      ],
+      videos: [
+        "https://manvu.ca/super-flow-web/assets/app-hero.mp4",
+        "https://manvu.ca/super-flow-web/assets/app-dictation.mp4",
+        "https://manvu.ca/super-flow-web/assets/feat-polish.mp4",
+        "https://manvu.ca/super-flow-web/assets/feat-transforms.mp4",
+        "https://manvu.ca/super-flow-web/assets/feat-personalization.mp4",
+      ],
       name: "Super Flow — AI Voice Dictation",
       url: "https://manvu.ca/super-flow-web/",
       badge: { text: "Commercial Product", color: "warning", icon: "🎙️" },

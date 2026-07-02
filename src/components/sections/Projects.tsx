@@ -87,6 +87,17 @@ const Lightbox = ({
               alt={`${name} screenshot ${index + 1}`}
               className="max-h-[78vh] max-w-full rounded-xl shadow-2xl object-contain"
             />
+          ) : /\.(mp4|webm)(\?|$)/.test(slide.src) ? (
+            <video
+              key={slide.src}
+              src={slide.src}
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="max-h-[78vh] w-[min(90vw,960px)] rounded-xl shadow-2xl bg-black"
+            />
           ) : (
             <iframe
               src={slide.src}
@@ -215,7 +226,7 @@ const Projects = () => {
                   {slideCount > 1 && (
                     <span className="flex items-center gap-2 px-4 py-2 bg-white/15 text-white rounded-lg text-sm font-medium">
                       <Images className="w-4 h-4" />
-                      {slideCount} shots
+                      Gallery · {slideCount}
                     </span>
                   )}
                   {project.url && (
