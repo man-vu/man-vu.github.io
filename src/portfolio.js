@@ -734,6 +734,46 @@ const projects = {
       ],
     },
     {
+      id: "13",
+      images: [
+        "projects/usagedash_1.webp",
+        "projects/usagedash_2.webp",
+        "projects/usagedash_3.webp",
+      ],
+      videos: [],
+      name: "Claude Code Usage Dashboard",
+      url: "https://marketplace.visualstudio.com/items?itemName=man-vu.claude-code-usage-dashboard",
+      badge: { text: "Published Extension", color: "info", icon: "🧩" },
+      briefDescription:
+        "Open-source VS Code extension with 1,300+ installs and a 5.0-star rating — monitors Claude Code rate limits, API-equivalent costs, and token usage from the status bar, with a full analytics dashboard.",
+      description: `
+- **Published on the VS Code Marketplace** (1,300+ installs, 5.0 stars) and MIT-licensed on GitHub
+- **Zero-dependency TypeScript** — raw Node https client for Anthropic's usage API, no third-party runtime libs
+- **Local-first analytics**: streams Claude Code's transcript files to compute cost, token, tool, and per-project metrics — the only network call is the rate-limit check
+- **Hand-built dashboard with no charting library**: bezier trend charts, model-distribution donut, cache tiles, and a 24-hour activity heatmap in a self-contained webview
+- Subscription-tier detection with an API-equivalent "value multiplier", rich status-bar hover tooltips, and 429-aware exponential backoff
+- **Vitest-tested** API client, credential handling, and transcript scanner
+`,
+      languages: [
+        { name: "TypeScript", iconifyClass: "logos:typescript-icon" },
+        { name: "VS Code API", iconifyClass: "logos:visual-studio-code" },
+        { name: "Node.js", iconifyClass: "logos-nodejs" },
+        { name: "Vitest", iconifyClass: "logos:vitest" },
+      ],
+      links: [
+        {
+          name: "VS Code Marketplace",
+          url: "https://marketplace.visualstudio.com/items?itemName=man-vu.claude-code-usage-dashboard",
+          iconifyClass: "mdi:web",
+        },
+        {
+          name: "GitHub Repo",
+          url: "https://github.com/man-vu/claude-usage-bar",
+          iconifyClass: "ri:github-fill",
+        },
+      ],
+    },
+    {
       id: "11",
       images: ["projects/spendinganalyzer_1.png"],
       videos: [],
