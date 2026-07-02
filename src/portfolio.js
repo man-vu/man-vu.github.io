@@ -788,6 +788,33 @@ const projects = {
       ],
     },
     {
+      id: "12",
+      images: ["projects/clinicwellness_1.webp"],
+      videos: [],
+      name: "Chiropractic Wellness App",
+      badge: { text: "Client Project", color: "success", icon: "🌿" },
+      briefDescription:
+        "Cross-platform wellness companion built for an Ottawa chiropractic clinic — guided movement routines, on-device habit tracking, live classes, and premium subscriptions across iOS, Android, and web.",
+      description: `
+- **Expo / React Native + TypeScript (strict)** sharing one codebase across iOS, Android, and web
+- **Privacy by design**: habit tracking stays on-device and booking hands off with no patient identifiers — deliberately architected outside HIPAA scope
+- **Supabase content CMS with row-level security** and an in-app creator dashboard so the clinic publishes its own routines, articles, and videos
+- **HealthKit / Health Connect** step and sleep integration with a graceful web fallback, plus scheduled reminder notifications
+- **Apple/Google/email sign-in and in-app subscriptions** with premium content gating
+- **Playwright e2e, GitHub Actions CI, and EAS** build/submit/hosting pipeline
+`,
+      languages: [
+        { name: "React Native", iconifyClass: "logos-react" },
+        { name: "Expo", iconifyClass: "logos:expo-icon" },
+        { name: "TypeScript", iconifyClass: "logos:typescript-icon" },
+        { name: "Supabase", iconifyClass: "logos:supabase-icon" },
+        { name: "Playwright", iconifyClass: "logos:playwright" },
+      ],
+      links: [
+        { name: "Private Repo", url: "#", iconifyClass: "ri:lock-2-fill" },
+      ],
+    },
+    {
       id: "1",
       name: "Bad Habit Buster",
       badge: { text: "Hackathon Project", color: "success", icon: "💡" },
