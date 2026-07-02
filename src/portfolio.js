@@ -8,7 +8,7 @@ const greeting = {
   nickname: "",
   full_name: "Man Vu",
   subTitle:
-    "Software Developer @ ABELSoft | 496 PRs | 6+ Years | CS Student @ uOttawa | AI & Cloud Enthusiast",
+    "I build software at ABELSoft — six years shipping systems that hundreds of dental practices rely on every day. On the side, I'm finishing my CS degree at uOttawa and building AI-powered products.",
   resumeLink: "/assets/resumes/Man_Resume.pdf",
   mail: "mailto:manvminh@gmail.com",
 };
@@ -704,7 +704,7 @@ const projects = {
     },
     {
       id: "9",
-      images: ["projects/ieltspassport_1.jpg", "projects/ieltspassport_2.png"],
+      images: ["projects/ieltspassport_1.jpg", "projects/ieltspassport_2.webp"],
       videos: [],
       name: "IELTS Passport",
       url: "https://ielts.mavox.ca",
@@ -831,7 +831,7 @@ const projects = {
     },
     {
       id: "3",
-      images: ["projects/phodelight_1.png", "projects/phodelight_2.png"],
+      images: ["projects/phodelight_1.webp", "projects/phodelight_2.webp"],
       videos: [],
       badge: { text: "Course Project", color: "success", icon: "💡" },
       name: "Pho Delight Restaurant",

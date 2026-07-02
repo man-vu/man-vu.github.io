@@ -13,8 +13,16 @@ import Footer from "../components/sections/Footer";
 
 const Index = () => {
     useEffect(() => {
-        // Scroll to top on mount
-        window.scrollTo(0, 0);
+        const hash = window.location.hash.slice(1);
+        if (hash) {
+            // Sections mount with the app, so the anchor target doesn't exist
+            // at document load — scroll after first paint instead.
+            requestAnimationFrame(() => {
+                document.getElementById(hash)?.scrollIntoView();
+            });
+        } else {
+            window.scrollTo(0, 0);
+        }
     }, []);
 
     return (
@@ -27,11 +35,11 @@ const Index = () => {
 
             <main className="min-h-screen relative z-10 font-sans">
                 <Hero />
-                <Skills />
                 <Experience />
+                <Projects />
+                <Skills />
                 <Education />
                 <Certifications />
-                <Projects />
                 <Testimonials />
                 <Contact />
                 <Footer />

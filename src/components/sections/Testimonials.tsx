@@ -22,10 +22,9 @@ const Testimonials = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.95] text-foreground mb-4">
             {testimonialsHeader.title}
           </h2>
-          <div className="w-12 h-1 bg-cyan-500 mx-auto mb-4 rounded-full" />
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {testimonialsHeader.description}
           </p>

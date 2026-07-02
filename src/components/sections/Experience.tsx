@@ -34,10 +34,9 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.95] text-foreground mb-6">
             {experience.title}
           </h2>
-          <div className="w-12 h-1 bg-cyan-500 rounded-full mb-6" />
           <p className="text-muted-foreground max-w-2xl text-lg">
             {experience.description}
           </p>

@@ -6,11 +6,11 @@ import { greeting } from "../../portfolio";
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
   { name: "Education", href: "#education" },
   { name: "Certifications", href: "#certifications" },
-  { name: "Projects", href: "#projects" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
 ];

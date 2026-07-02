@@ -52,7 +52,7 @@ const Hero = () => {
             {/* Name */}
             <motion.h1
               {...fadeUp(0.15)}
-              className="text-6xl md:text-7xl lg:text-8xl font-agustina gradient-text mb-6 leading-tight"
+              className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.98] gradient-text mb-6"
             >
               {greeting.full_name}
             </motion.h1>
@@ -68,19 +68,16 @@ const Hero = () => {
             {/* Stats row */}
             <motion.div
               {...fadeUp(0.45)}
-              className="flex items-center gap-8 mb-10"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-3 md:gap-x-8 mb-10"
             >
-              {stats.map((stat, i) => (
+              {stats.map((stat) => (
                 <div key={stat.label} className="flex items-baseline gap-1.5">
-                  <span className="font-mono text-2xl md:text-3xl font-semibold text-amber-400">
+                  <span className="font-mono text-xl md:text-3xl font-semibold text-amber-400">
                     {stat.value}
                   </span>
                   <span className="text-sm text-muted-foreground">
                     {stat.label}
                   </span>
-                  {i < stats.length - 1 && (
-                    <span className="ml-6 text-muted-foreground/20 select-none">|</span>
-                  )}
                 </div>
               ))}
             </motion.div>
