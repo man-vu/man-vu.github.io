@@ -703,6 +703,91 @@ const projects = {
       ],
     },
     {
+      id: "9",
+      images: ["projects/ieltspassport_1.jpg", "projects/ieltspassport_2.png"],
+      videos: [],
+      name: "IELTS Passport",
+      url: "https://ielts.mavox.ca",
+      badge: { text: "Commercial Product", color: "warning", icon: "🚀" },
+      briefDescription:
+        "Freemium IELTS prep platform with AI Writing & Speaking feedback calibrated to real examiner standards — 900+ model essays, practice tests, vocabulary training, and subscriptions.",
+      description: `
+- **AI Writing & Speaking feedback** scored instantly, calibrated against real examiner-marked essays
+- **900+ model essays**, Listening & Reading practice tests, a placement level test, and vocabulary drills
+- **Freemium SaaS**: Supabase Postgres with row-level security, Stripe subscriptions, progress dashboard
+- Built with **Next.js (App Router), React, TypeScript, and Tailwind CSS** — live at ielts.mavox.ca
+`,
+      languages: [
+        { name: "Next.js", iconifyClass: "logos:nextjs-icon" },
+        { name: "React", iconifyClass: "logos-react" },
+        { name: "TypeScript", iconifyClass: "logos:typescript-icon" },
+        { name: "Tailwind CSS", iconifyClass: "logos:tailwindcss-icon" },
+        { name: "Supabase", iconifyClass: "logos:supabase-icon" },
+        { name: "Stripe", iconifyClass: "logos:stripe" },
+      ],
+      links: [
+        { name: "Live Site", url: "https://ielts.mavox.ca", iconifyClass: "mdi:web" },
+        { name: "Private Repo", url: "#", iconifyClass: "ri:lock-2-fill" },
+      ],
+    },
+    {
+      id: "10",
+      images: ["projects/superflow_1.png"],
+      videos: [],
+      name: "Super Flow — AI Voice Dictation",
+      url: "https://manvu.ca/super-flow-web/",
+      badge: { text: "Commercial Product", color: "warning", icon: "🎙️" },
+      briefDescription:
+        "Windows desktop app: press F9 in any app and speak — Super Flow types the cleaned-up, polished text at your cursor. Hybrid on-device and cloud transcription.",
+      description: `
+- **Electron + React + TypeScript** desktop app with global hotkeys and system-wide text injection
+- **Hybrid speech-to-text**: on-device Whisper (offline, private) plus cloud streaming for speed
+- **LLM cleanup** drops filler and fixes grammar in real time, with four polish levels
+- **Freemium SaaS**: Supabase auth and usage metering with Stripe subscriptions
+- Bilingual **English/Vietnamese code-switching** and a VS Code IDE bridge
+`,
+      languages: [
+        { name: "Electron", iconifyClass: "logos:electron" },
+        { name: "React", iconifyClass: "logos-react" },
+        { name: "TypeScript", iconifyClass: "logos:typescript-icon" },
+        { name: "Supabase", iconifyClass: "logos:supabase-icon" },
+        { name: "Stripe", iconifyClass: "logos:stripe" },
+        { name: "OpenAI API", iconifyClass: "logos:openai-icon" },
+      ],
+      links: [
+        { name: "Live Demo", url: "https://manvu.ca/super-flow-web/", iconifyClass: "mdi:web" },
+        { name: "Private Repo", url: "#", iconifyClass: "ri:lock-2-fill" },
+      ],
+    },
+    {
+      id: "11",
+      images: ["projects/spendinganalyzer_1.png"],
+      videos: [],
+      name: "Spending Analyzer",
+      badge: { text: "Personal Tool", color: "info", icon: "📊" },
+      briefDescription:
+        "Privacy-first personal-finance analytics: a Next.js web dashboard and React Native mobile app over a custom multi-bank statement-parsing pipeline — all data processed offline, no backend.",
+      description: `
+- **Next.js web dashboard + Expo/React Native mobile app** sharing one TypeScript analytics core
+- **Multi-bank ingestion pipeline** (TypeScript + Python) parsing PDF/CSV statements from 7 account types, with dedupe and reconciliation
+- **Line-item enrichment** matching Uber, Lyft, DoorDash, and Amazon orders back to card transactions
+- Spending trends, income analytics, **cashback optimization**, anomaly and subscription detection, net-worth tracking, and **CAD + VND multi-currency** support
+- **Privacy-first**: data processed offline and statically bundled — no backend, database, or runtime API calls
+- ~30k lines of TS/TSX/Python with **Vitest, Playwright, and Maestro E2E** coverage; hand-rolled SVG charts
+`,
+      languages: [
+        { name: "Next.js", iconifyClass: "logos:nextjs-icon" },
+        { name: "React", iconifyClass: "logos-react" },
+        { name: "TypeScript", iconifyClass: "logos:typescript-icon" },
+        { name: "Expo", iconifyClass: "logos:expo-icon" },
+        { name: "Tailwind CSS", iconifyClass: "logos:tailwindcss-icon" },
+        { name: "Python", iconifyClass: "logos:python" },
+      ],
+      links: [
+        { name: "Private Repo", url: "#", iconifyClass: "ri:lock-2-fill" },
+      ],
+    },
+    {
       id: "1",
       name: "Bad Habit Buster",
       badge: { text: "Hackathon Project", color: "success", icon: "💡" },
@@ -745,53 +830,6 @@ const projects = {
       ],
     },
     {
-      id: "2",
-      images: [
-        "projects/capstone003.png", "projects/capstone004.png", "projects/capstone005.png", "projects/capstone006.png",
-        "projects/capstone007.png", "projects/capstone008.png", "projects/capstone009.png", "projects/capstone010.png",
-        "projects/capstone011.png", "projects/capstone012.png", "projects/capstone013.png", "projects/capstone014.png",
-        "projects/capstone015.png", "projects/capstone016.png", "projects/capstone017.png", "projects/capstone018.png",
-        "projects/capstone019.png", "projects/capstone020.png", "projects/capstone021.png", "projects/capstone022.png",
-        "projects/capstone023.png", "projects/capstone024.png", "projects/capstone025.png", "projects/capstone026.png",
-        "projects/capstone027.png", "projects/capstone028.png", "projects/capstone029.png", "projects/capstone030.png",
-        "projects/capstone031.png", "projects/capstone032.png", "projects/capstone033.png", "projects/capstone034.png",
-        "projects/capstone035.png", "projects/capstone036.png", "projects/capstone037.png", "projects/capstone038.png",
-        "projects/capstone039.png", "projects/capstone040.png", "projects/capstone041.png", "projects/capstone042.png",
-        "projects/capstone043.png", "projects/capstone044.png", "projects/capstone045.png", "projects/capstone046.png",
-        "projects/capstone047.png", "projects/capstone048.png",
-      ],
-      videos: [],
-      badge: { text: "Capstone Project", color: "danger", icon: "🎓" },
-      name: "Learning English Web App",
-      url: "http://bit.ly/3QiW9OW",
-      briefDescription:
-        "E-learning platform for English learners with interactive lessons and adaptive quizzes.",
-      description: `
-- Built a **full-featured e-learning platform** for non-native English speakers as my final capstone project.
-- Modeled after systems like **MyCanvas** and **Desire2Learn** to ensure familiarity and usability.
-- Implemented **interactive lessons**, **progress tracking**, and **adaptive quizzes** using **Vue**, **Node.js**, and **MySQL**.
-- Deployed on **Microsoft Azure**, utilizing cloud services for scalability and secure access.
-- Designed with a mobile-first, responsive layout using **Bootstrap** and **custom CSS**.
-- Features include **admin management**, **student dashboards**, and **certificate generation** on course completion.
-`,
-      languages: [
-        { name: "JavaScript", iconifyClass: "logos-javascript" },
-        { name: "Bootstrap", iconifyClass: "logos-bootstrap" },
-        { name: "Vue", iconifyClass: "logos-vue" },
-        { name: "Node.js", iconifyClass: "logos-nodejs" },
-        { name: "MySQL", iconifyClass: "logos-mysql" },
-        { name: "Microsoft Azure", iconifyClass: "logos-microsoft-azure" },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/man-vu/mohawk-capstone-study-english",
-          iconifyClass: "ri:github-fill",
-        },
-        { name: "Live Demo", url: "http://bit.ly/3QiW9OW", iconifyClass: "mdi:web" },
-      ],
-    },
-    {
       id: "3",
       images: ["projects/phodelight_1.png", "projects/phodelight_2.png"],
       videos: [],
@@ -820,166 +858,6 @@ const projects = {
           iconifyClass: "ri:github-fill",
         },
         { name: "Live Demo", url: "https://bit.ly/45AA3Mh", iconifyClass: "mdi:web" },
-      ],
-    },
-    {
-      id: "4",
-      images: [
-        "projects/dreamy_nails1.png",
-        "projects/dreamy_nails2.png",
-        "projects/dreamy_nails3.png",
-        "projects/dreamy_nails4.png",
-      ],
-      videos: [],
-      badge: { text: "Assignment 2", color: "success", icon: "💅" },
-      name: "Dreamy Nails & Beauty Salon",
-      url: "https://dreamy-nails.netlify.app",
-      briefDescription:
-        "Appointment booking site for a beauty salon, with multi-step flow and modern UI/UX.",
-      description: `
-- Developed a **full-featured appointment booking site** for a beauty & nail salon.
-- Built with **React**, following **modern UI/UX design principles** for a responsive and visually appealing experience.
-- Features include **multi-step booking flow**, service & staff selection, **gallery**, testimonials, pricing, and promotional sections.
-- Integrated **React Big Calendar** for appointment scheduling, and designed custom components for seamless navigation.
-- Focused on **mobile-first design**, accessibility, and performance.
-- Project for University of Ottawa's SEG 3125 (Spring 2025).
-`,
-      languages: [
-        { name: "React", iconifyClass: "logos-react" },
-        { name: "HTML", iconifyClass: "logos-html-5" },
-        { name: "CSS", iconifyClass: "logos-css-3" },
-        { name: "JavaScript", iconifyClass: "logos-javascript" },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/man-vu/SEG-3125-Assignment2-Nail-Salon",
-          iconifyClass: "ri:github-fill",
-        },
-        {
-          name: "Live Demo",
-          url: "https://dreamy-nails.netlify.app",
-          iconifyClass: "mdi:web",
-        },
-      ],
-    },
-    {
-      id: "6",
-      images: [
-        "projects/matching_cards1.png",
-        "projects/matching_cards2.png",
-        "projects/matching_cards3.png",
-        "projects/matching_cards4.png",
-      ],
-      videos: [],
-      badge: { text: "Assignment 3", color: "info", icon: "🃏" },
-      name: "Matching Cards Memory Game",
-      url: "https://my-matching-cards.netlify.app/",
-      briefDescription:
-        "Responsive card-matching memory game with light/dark themes and accessible design.",
-      description: `
-- Developed a **responsive card-matching memory game** for web, as part of University of Ottawa's CSI 3125 (Spring 2025).
-- Features **two personas**: Anna (light theme, desktop) & David (dark theme, mobile), reflecting inclusive and accessible design.
-- Designed with **modern UI/UX principles**: large, touch-friendly cards, quick feedback, clear results, and motivational end screens.
-- Built with **React** and deployed a **high-fidelity prototype** using Figma and Netlify.
-`,
-      languages: [
-        { name: "React", iconifyClass: "logos-react" },
-        { name: "HTML", iconifyClass: "logos-html-5" },
-        { name: "CSS", iconifyClass: "logos-css-3" },
-        { name: "JavaScript", iconifyClass: "logos-javascript" },
-        { name: "Figma", iconifyClass: "logos-figma" },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/man-vu/SEG3125-Assignment3-MatchingCards",
-          iconifyClass: "ri:github-fill",
-        },
-        {
-          name: "Live Demo",
-          url: "https://my-matching-cards.netlify.app/",
-          iconifyClass: "mdi:web",
-        },
-      ],
-    },
-    {
-      id: "7",
-      images: [
-        "projects/ecommerce_1.png",
-        "projects/ecommerce_2.png",
-        "projects/ecommerce_3.png",
-        "projects/ecommerce_4.png",
-        "projects/ecommerce_5.png",
-        "projects/ecommerce_6.png",
-      ],
-      videos: [],
-      badge: { text: "Assignment 4", color: "primary", icon: "🛒" },
-      name: "E-commerce Website",
-      url: "https://sparkling-profiterole-0149e0.netlify.app/",
-      briefDescription:
-        "Modern e-commerce site for online courses, with filtering, checkout, and accessibility features.",
-      description: `
-- Modern **e-commerce site** for online courses, built for University of Ottawa's **CSI 3125** (Summer 2023).
-- Features: filtering, category, difficulty, price, duration, rating, a clear **checkout progress bar**, and a friendly, accessible design.
-- Inspired by **Udemy, Coursera, Codecademy, and Pluralsight**. Built with **React**, with a bold purple/blue theme and mobile layout.
-- **Accessibility**, dark/light mode, and lively, supportive communication style throughout.
-`,
-      languages: [
-        { name: "React", iconifyClass: "logos-react" },
-        { name: "HTML", iconifyClass: "logos-html-5" },
-        { name: "CSS", iconifyClass: "logos-css-3" },
-        { name: "JavaScript", iconifyClass: "logos-javascript" },
-        { name: "Figma", iconifyClass: "logos-figma" },
-      ],
-      links: [
-        {
-          name: "Live Demo",
-          url: "https://sparkling-profiterole-0149e0.netlify.app/",
-          iconifyClass: "mdi:web",
-        },
-        {
-          name: "Github",
-          url: "https://github.com/man-vu/SEG3125-Assignment4",
-          iconifyClass: "ri:github-fill",
-        },
-      ],
-    },
-    {
-      id: "8",
-      images: ["projects/analytics_1.png"],
-      videos: [],
-      badge: { text: "Assignment 5", color: "success", icon: "💡" },
-      name: "Canadian University Analytics Dashboard",
-      url: "https://canada-university-enrollment.netlify.app/",
-      briefDescription:
-        "Interactive dashboard visualizing Canadian university student enrollment data with bilingual support and modern UX/UI.",
-      description: `
-- Visualizes enrollment data by university, province, and student type (full-time, part-time, undergrad, grad)
-- Interactive **bar and line charts**
-- **Filter** by province and top universities
-- **Language toggle** (EN/FR) updates UI text and chart labels
-- Clean, card-based layout with accessible colors and tooltips
-- Responsive and accessible (ARIA labels, keyboard navigation)
-- Built with **React** for SEG 3125 (demo figures)
-`,
-      languages: [
-        { name: "React", iconifyClass: "logos-react" },
-        { name: "HTML", iconifyClass: "logos-html-5" },
-        { name: "CSS", iconifyClass: "logos-css-3" },
-        { name: "JavaScript", iconifyClass: "logos-javascript" },
-      ],
-      links: [
-        {
-          name: "Live Dashboard",
-          url: "https://canada-university-enrollment.netlify.app/",
-          iconifyClass: "mdi:web",
-        },
-        {
-          name: "GitHub Repository",
-          url: "https://github.com/man-vu/SEG3125-Assignment5-university-dashboard",
-          iconifyClass: "ri:github-fill",
-        },
       ],
     },
   ],
